@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>购物车</title>
+	<link rel="shortcut icon" href="image/favicon.png">
+	<link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+	<div class="header">
+		<a href="#"><img src="image/return.png" alt="返回"></a>
+		<p>购课车</p>
+	</div>
+	<form action="" onsubmit="return check()">
+	<div class="main">
+		<div id="content-0" class="content">
+			<div class="choose">
+				<img src="image/choose.png" alt="勾选" class="choose_img">
+			</div>
+			<img src="image/bg.png" alt="img" class="bg">
+			<div class="word">
+				<div class="word_p1">标题好地精神科和付想款萨克的的福x 斯就打瞌睡丰富的开看...地方士大夫发</div>
+				<div class="word_hour">
+					<p>共</p>
+					<p>12</p>
+					<p>课时</p>
+				</div>
+				<a href="">本社教育</a>
+			</div>
+			<div class="content-1_price price">
+				<p class="yun num">￥</p>
+				<p class="num">1234</p>
+				<p class="add-to">+</p>
+				<p class="num2">20</p>
+				<p class="coin">赞币</p>
+			</div>
+			<div class="sub-add">
+				<input class="sub" name="" type="button" value="-" />
+				<input class="text_box" name="goodnum" type="text" value="1" readonly="true" />
+				<input class="add" name="" type="button" value="+" />
+			</div>
+			<div class="delete">
+				<p class="delete_p">删除</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="choose">
+			<img src="image/choose.png" alt="勾选" class="choose_img">
+		</div>
+		<p class="allChoose">全选</p>
+		<p class="total">合计：</p>
+		<div class="price">
+			<p class="yun num">￥</p>
+			<p class="num">1234</p>
+			<p class="add-to">+</p>
+			<p class="num2">20</p>
+			<p class="coin">赞币</p>
+		</div>
+		<div class="now">
+			<p>当前持有</p>
+			<p>12335</p>
+			<p>赞币</p>
+		</div>
+		<input type="submit" value="提交订单" class="submit">
+	</div>
+	</form>
+	<div class="curtain"></div>
+	<div class="pay">
+		<div class="pay_title pay_tzwq">
+			<p class="pp">付款方式</p>
+		</div>
+		<div class="pay_zfb pay_tzwq pay_zwq">
+			<div class="pay_choose choose">
+				<img src="image/choose.png" alt="勾选" class="choose_img">
+			</div>
+			<div class="logo"><img src="image/zfb.png" alt="img"></div>
+			<p class="pp">支付宝</p>
+		</div>
+		<div class="pay_wx pay_tzwq pay_zwq">
+			<div class="pay_choose choose">
+				<img src="image/choose.png" alt="勾选" class="choose_img">
+			</div>
+			<div class="logo"><img src="image/wx.png" alt="img"></div>
+			<p class="pp">微信支付</p>
+			<div class="pay_num">
+				<p>(￥</p>
+				<p>0.00</p>
+				<p>)</p>
+			</div>
+		</div>
+		<div class="pay_qb pay_tzwq pay_zwq">
+			<div class="pay_choose choose">
+				<img src="image/choose.png" alt="勾选" class="choose_img">
+			</div>
+			<div class="logo"><img src="image/qb.png" alt="img"></div>
+			<p class="pp">钱包余额</p>
+		</div>
+		<button>立即支付</button>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/viewport.js"></script>
+	<script type="text/javascript" src="js/cart.js"></script>
+</body>
+</html>
