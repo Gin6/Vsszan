@@ -1,11 +1,23 @@
-// window.onload = function () { 
-// 	var sourceNode = document.getElementById("content-0"); // 获得被克隆的节点对象 
-// 	for (var i = 1; i < 3; i++) { 
-// 		var clonedNode = sourceNode.cloneNode(true); // 克隆节点 
-// 		clonedNode.setAttribute("id", "content-" + i); // 修改一下id 值，避免id 重复 
-// 		sourceNode.parentNode.appendChild(clonedNode); // 在父节点插入克隆的节点 
-// 	} 
-// };
+window.onload = function () { 
+	var sourceNode = document.getElementById("content-0"); // 获得被克隆的节点对象 
+	for (var i = 1; i < 6; i++) { 
+		var clonedNode = sourceNode.cloneNode(true); // 克隆节点 
+		clonedNode.setAttribute("id", "content-" + i); // 修改一下id 值，避免id 重复 
+		sourceNode.parentNode.appendChild(clonedNode); // 在父节点插入克隆的节点 
+	} 
+};
+
+var ww = $(window).width();
+var wh = $(window).height();
+
+(function() {
+    var hh = $(".header").height();
+    var fh = $(".footer").height();
+    var mp = $(".main").outerWidth();
+    var mw = ww-mp;
+    var mh = wh-hh-fh-mp;
+    $(".main").css({width: mw +'px',height: mh +'px',});
+})(document, window);
 
 $(".choose").click(function(event) {
 	var c = $(".choose_img");
@@ -75,9 +87,8 @@ $(".content").on("touchmove", function(e) {
     }
 });
 
-var curtainHeight = $(window).height();
 $(".curtain").css({
-	height: curtainHeight + 'px',
+	height: wh + 'px',
 });
 
 function check() {

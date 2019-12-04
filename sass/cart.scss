@@ -107,6 +107,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
   background-color: #fbfbfb;
 }
 p {
@@ -140,8 +141,10 @@ p {
   }
 }
 .main {
+  position: fixed;
   @include px-dpr(padding, 30px);
-  @include px-dpr(padding-bottom, 0px);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   .content {
     position: relative;
     width:100%;
@@ -310,6 +313,9 @@ p {
     @include translateX(transform, 108px);
   }
 }
+.main::-webkit-scrollbar {
+  display: none;
+}
 .footer {
   position: absolute;
   width: 100%;
@@ -421,7 +427,7 @@ p {
   @include px-dpr(top, 89px);
 }
 .pay {
-  position: absolute;
+  position: fixed;
   @include px-dpr(bottom, -488px);
   width: 100%;
   @include px-dpr(height, 487px);
