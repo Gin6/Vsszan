@@ -1,0 +1,60 @@
+body { margin: 0px; padding: 0px; overflow: hidden; background-color: #fbfbfb; }
+
+p { margin: 0px; }
+
+.header { position: relative; width: 100%; height: 44px; background: white; text-align: center; border-bottom: 1px solid #dddddd; }
+[data-dpr="2"] .header { height: 88px; }
+[data-dpr="2.625"] .header { height: 115.5px; }
+[data-dpr="3"] .header { height: 132px; }
+[data-dpr="3.5"] .header { height: 154px; }
+.header .return { position: absolute; text-decoration: none; line-height: 0px; z-index: 1; font-size: 14px; font-family: PingFang SC; font-weight: 500; letter-spacing: 1px; color: black; left: 15px; top: 16px; }
+[data-dpr="2"] .header .return { font-size: 28px; }
+[data-dpr="2.625"] .header .return { font-size: 36.75px; }
+[data-dpr="3"] .header .return { font-size: 42px; }
+[data-dpr="3.5"] .header .return { font-size: 49px; }
+[data-dpr="2"] .header .return { left: 30px; }
+[data-dpr="2.625"] .header .return { left: 39.375px; }
+[data-dpr="3"] .header .return { left: 45px; }
+[data-dpr="3.5"] .header .return { left: 52.5px; }
+[data-dpr="2"] .header .return { top: 32px; }
+[data-dpr="2.625"] .header .return { top: 42px; }
+[data-dpr="3"] .header .return { top: 48px; }
+[data-dpr="3.5"] .header .return { top: 56px; }
+.header .return img { width: 7px; padding-right: 7.5px; }
+[data-dpr="2"] .header .return img { width: 14px; }
+[data-dpr="2.625"] .header .return img { width: 18.375px; }
+[data-dpr="3"] .header .return img { width: 21px; }
+[data-dpr="3.5"] .header .return img { width: 24.5px; }
+[data-dpr="2"] .header .return img { padding-right: 15px; }
+[data-dpr="2.625"] .header .return img { padding-right: 19.6875px; }
+[data-dpr="3"] .header .return img { padding-right: 22.5px; }
+[data-dpr="3.5"] .header .return img { padding-right: 26.25px; }
+.header .message { position: absolute; line-height: 0px; z-index: 1; right: 15px; top: 15px; }
+[data-dpr="2"] .header .message { right: 30px; }
+[data-dpr="2.625"] .header .message { right: 39.375px; }
+[data-dpr="3"] .header .message { right: 45px; }
+[data-dpr="3.5"] .header .message { right: 52.5px; }
+[data-dpr="2"] .header .message { top: 30px; }
+[data-dpr="2.625"] .header .message { top: 39.375px; }
+[data-dpr="3"] .header .message { top: 45px; }
+[data-dpr="3.5"] .header .message { top: 52.5px; }
+.header .message img { width: 16px; }
+[data-dpr="2"] .header .message img { width: 32px; }
+[data-dpr="2.625"] .header .message img { width: 42px; }
+[data-dpr="3"] .header .message img { width: 48px; }
+[data-dpr="3.5"] .header .message img { width: 56px; }
+.header .xx { position: relative; top: 14.5px; font-size: 15px; font-family: PingFang SC; font-weight: 500; letter-spacing: 1px; color: black; line-height: 15px; }
+[data-dpr="2"] .header .xx { top: 29px; }
+[data-dpr="2.625"] .header .xx { top: 38.0625px; }
+[data-dpr="3"] .header .xx { top: 43.5px; }
+[data-dpr="3.5"] .header .xx { top: 50.75px; }
+[data-dpr="2"] .header .xx { font-size: 30px; }
+[data-dpr="2.625"] .header .xx { font-size: 39.375px; }
+[data-dpr="3"] .header .xx { font-size: 45px; }
+[data-dpr="3.5"] .header .xx { font-size: 52.5px; }
+[data-dpr="2"] .header .xx { line-height: 30px; }
+[data-dpr="2.625"] .header .xx { line-height: 39.375px; }
+[data-dpr="3"] .header .xx { line-height: 45px; }
+[data-dpr="3.5"] .header .xx { line-height: 52.5px; }
+
+/*# sourceMappingURL=study.css.map */

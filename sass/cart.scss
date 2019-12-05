@@ -93,7 +93,6 @@
   outline: none;
 }
 
-
 @function px2rem($px, $base-font-size: 32px) {
   @if (unitless($px)) {
     @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
@@ -122,12 +121,17 @@ p {
   border-bottom: 1px solid #c1c1c1;
   a {
     position: absolute;
+    text-decoration: none;
     line-height: 0px;
     z-index: 1;
+    @include font-dpr(28px);
+    @include font-fw;
+    color:rgba(0,0,0,1);
     @include px-dpr(left, 30px);
     @include px-dpr(top, 32px);
     img {
       @include px-dpr(width, 14px);
+      @include px-dpr(padding-right, 15px);
     }
   }
   p {
@@ -153,7 +157,7 @@ p {
     box-shadow:0px 1px 14px 0px rgba(1,1,1,0.18);
     border-radius:6px;
     @include px-dpr(margin-bottom, 29px);
-    transition: transform .4s ease;
+    transition: transform .4s ease, height .5s ease;
     .choose {
       position: absolute;
       @include px-dpr(left, 20px);
@@ -217,7 +221,7 @@ p {
       @include px-dpr(line-height, 20px);
     }
   }
-  .content-1_price {
+  .price {
     position: absolute;
     display: flex;
     @include px-dpr(left, 290px);
@@ -317,7 +321,7 @@ p {
   display: none;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 108px;
   @include px-dpr(height, 108px);
