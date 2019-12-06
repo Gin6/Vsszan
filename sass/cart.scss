@@ -76,20 +76,22 @@
 }
 @mixin font-fw {
   font-family: PingFang SC;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
+}
+@mixin font-fw-0 {
+  font-family: PingFang SC;
+  font-weight: 400;
 }
 @mixin add-sub {
   position: absolute;
-  @include px-dpr(top, 1px);
   background: rgba(255,255,255,1);
-  border: none;
   @include px-dpr(height, 35px);
-  @include px-dpr(width, 45px);
+  @include px-dpr(width, 43px);
   color: #9c9c9c;
   @include font-fw;
   @include font-dpr(25px);
-  line-height: 0px;
+  @include px-dpr(line-height, 32px);
   outline: none;
 }
 
@@ -108,9 +110,13 @@ body {
   padding: 0px;
   overflow: hidden;
   background-color: #fbfbfb;
+  // -webkit-overflow-scrolling: touch;
 }
 p {
   margin: 0px;
+}
+a, div {
+  -webkit-tap-highlight-color:rgba(255,0,0,0);
 }
 .header {
   position: fixed;
@@ -118,7 +124,7 @@ p {
   @include px-dpr(height, 88px);
   background: rgba(255,255,255,1);
   text-align: center;
-  border-bottom: 1px solid #c1c1c1;
+  border-bottom: 1px solid rgba(221,221,221,1);
   z-index: 2;
   a {
     position: absolute;
@@ -135,6 +141,14 @@ p {
       @include px-dpr(padding-right, 15px);
     }
   }
+  span {
+    position: relative;
+    @include px-dpr(top, -2px);
+    @include px-dpr(left, -10px);
+    @include font-dpr(28px);
+    @include font-fw;
+    color: rgba(0,0,0,1);
+  }
   p {
     position: relative;
     @include px-dpr(top, 29px);
@@ -148,8 +162,9 @@ p {
 .main {
   position: fixed;
   @include px-dpr(padding, 30px);
-  @include px-dpr(padding-top, 115px);
+  @include px-dpr(padding-top, 120px);
   overflow-y: scroll;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   .content {
     position: relative;
@@ -159,13 +174,13 @@ p {
     box-shadow:0px 1px 14px 0px rgba(1,1,1,0.18);
     border-radius:6px;
     @include px-dpr(margin-bottom, 29px);
-    transition: transform .4s ease, height .5s ease;
+    transition: transform .4s ease, height .2s ease;
     .choose {
       position: absolute;
       @include px-dpr(left, 20px);
       @include px-dpr(top, 84px);
-      @include px-dpr(width, 32px);
-      @include px-dpr(height, 32px);
+      @include px-dpr(width, 30px);
+      @include px-dpr(height, 30px);
       background:rgba(255,255,255,1);
       border:1px solid rgba(187,187,187,1);
       border-radius:50%;
@@ -207,9 +222,8 @@ p {
       @include px-dpr(bottom, 0px);
       @include font-dpr(20px);
       @include font-fw;
-      letter-spacing: 3px;
       color:rgba(153,153,153,1);
-      @include px-dpr(line-height, 20px);
+      @include px-dpr(line-height, 19px);
     }
     a {
       position: absolute;
@@ -217,43 +231,43 @@ p {
       @include px-dpr(bottom, 1px);
       @include font-dpr(20px);
       @include font-fw;
-      letter-spacing: 3px;
       color:rgba(36,101,255,1);
       text-decoration: none;
-      @include px-dpr(line-height, 20px);
+      @include px-dpr(line-height, 19px);
     }
   }
   .price {
     position: absolute;
     display: flex;
+    @include px-dpr(height, 21px);
     @include px-dpr(left, 290px);
-    @include px-dpr(bottom, 44px);
+    @include px-dpr(top, 188px);
     color:rgba(232,49,4,1);
     .num {
-    @include px-dpr(width, 73px);
-    @include font-dpr(30px);
+    @include px-dpr(width, 66px);
+    @include font-dpr(28px);
     @include px-dpr(line-height, 23px);
-    @include font-fw;
+    @include font-fw-0;
     }
     .yun {
       @include px-dpr(width, 30px);
     }
     .add-to {
       @include font-dpr(24px);
-      @include font-fw;
-      @include px-dpr(line-height, 24px);
-      @include px-dpr(margin-left, 5px);
+      @include font-fw-0;
+      @include px-dpr(line-height, 26px);
     }
     .num2 {
       @include font-dpr(24px);
-      @include font-fw;
-      margin: 2px 10px 0px 0px;
+      @include font-fw-0;
+      @include px-dpr(margin-top, 2px);
+      @include px-dpr(margin-right, 5px);
       @include px-dpr(line-height, 24px);
     }
     .coin {
       @include font-dpr(21px);
-      @include font-fw;
-      margin-top: 3px;
+      @include font-fw-0;
+      @include px-dpr(margin-top, 3px);
       @include px-dpr(line-height, 21px);
     }
   }
@@ -261,36 +275,37 @@ p {
     position: absolute;
     @include px-dpr(right, 20px);
     @include px-dpr(bottom, 36px);
-    @include px-dpr(width, 139px);
-    @include px-dpr(height, 37px);
+    @include px-dpr(width, 137px);
+    @include px-dpr(height, 35px);
     background:rgba(255,255,255,1);
-    border:1px solid rgb(187, 187, 187);
+    text-align: center;
+    border:1px solid rgba(221,221,221,1);
     @include px-dpr(border-radius, 6px);
     .sub {
-      left: 0px;
+      @include px-dpr(left, 2px);
       @include add-sub;
-      border-right: 1px solid rgb(187, 187, 187);
       @include px-dpr(border-top-left-radius, 6px);
       @include px-dpr(border-bottom-left-radius, 6px);
     }
     .text_box {
       position: absolute;
-      @include px-dpr(top, 1px);
-      @include px-dpr(left, 46px);
+      @include px-dpr(left, 45px);
       @include px-dpr(width, 47px);
       @include px-dpr(height, 35px);
       border: 0px;
+      border-left: 1px solid rgba(221,221,221,1);
+      border-right: 1px solid rgba(221,221,221,1);
       padding: 0px;
       text-align: center;
       color: #9c9c9c;
       @include font-fw;
       @include font-dpr(21px);
+      @include px-dpr(border-radius, 0px);
       outline: none;
     }
     .add {
       right: 0px;
       @include add-sub;
-      border-left: 1px solid rgb(187, 187, 187);
       @include px-dpr(border-top-right-radius, 6px);
       @include px-dpr(border-bottom-right-radius, 6px);
     }
@@ -330,13 +345,13 @@ p {
   bottom: 0px;
   background:rgba(255,255,255,1);
   box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.04);
-  border-top: 1px solid #c1c1c1;
+  border-top: 1px solid rgba(221,221,221,1);
   .choose {
     position: absolute;
     @include px-dpr(left, 50px);
     @include px-dpr(top, 38px);
-    @include px-dpr(width, 32px);
-    @include px-dpr(height, 32px);
+    @include px-dpr(width, 30px);
+    @include px-dpr(height, 30px);
     background:rgba(255,255,255,1);
     border:1px solid rgba(187,187,187,1);
     border-radius:50%;
@@ -351,9 +366,8 @@ p {
     @include px-dpr(top, 41px);
     @include font-dpr(28px);
     @include font-fw;
-    letter-spacing: 3px;
     color:rgba(0,0,0,1);
-    @include px-dpr(line-height, 28px);
+    @include px-dpr(line-height, 26px);
   }
   .submit {
     position: absolute;
@@ -363,22 +377,20 @@ p {
     @include px-dpr(height, 52px);
     background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
     @include px-dpr(border-radius, 6px);
-    border: 1px solid #6692fa;
+    border: 1px;
     @include font-dpr(28px);
     @include font-fw;
-    letter-spacing: 3px;
     color:rgba(255,255,255,1);
     padding: 0px;
   }
   .total {
     position: absolute;
-    @include px-dpr(right, 409px);
+    @include px-dpr(right, 391px);
     @include px-dpr(top, 41px);
     @include font-dpr(28px);
     @include font-fw;
-    letter-spacing: 3px;
     color:rgba(0,0,0,1);
-    @include px-dpr(line-height, 28px);
+    @include px-dpr(line-height, 26px);
   }
   .price {
     position: absolute;
@@ -398,19 +410,20 @@ p {
     .add-to {
       @include font-dpr(24px);
       @include font-fw;
-      @include px-dpr(line-height, 24px);
-      @include px-dpr(margin-left, 5px);
+      @include px-dpr(line-height, 27px);
     }
     .num2 {
       @include font-dpr(24px);
       @include font-fw;
-      margin: 2px 10px 0px 0px;
+      margin: 0px;
+      @include px-dpr(margin-top, 2px);
+      @include px-dpr(margin-right, 5px);
       @include px-dpr(line-height, 24px);
     }
     .coin {
       @include font-dpr(21px);
       @include font-fw;
-      margin-top: 3px;
+      @include px-dpr(margin-top, 3px);
       @include px-dpr(line-height, 21px);
     }
   }
@@ -422,7 +435,7 @@ p {
     @include font-dpr(20px);
     @include font-fw;
     color:rgba(153,153,153,1);
-    @include px-dpr(line-height, 20px);
+    @include px-dpr(line-height, 19px);
   }
 }
 .curtain {
@@ -437,7 +450,7 @@ p {
   position: fixed;
   @include px-dpr(bottom, -488px);
   width: 100%;
-  @include px-dpr(height, 487px);
+  @include px-dpr(height, 486px);
   background:rgba(255,255,255,1);
   @include px-dpr(border-top-right-radius, 6px);
   @include px-dpr(border-top-left-radius, 6px);
@@ -450,8 +463,8 @@ p {
     .pay_choose {
       position: absolute;
       @include px-dpr(top, 36px);
-      @include px-dpr(width, 32px);
-      @include px-dpr(height, 32px);
+      @include px-dpr(width, 30px);
+      @include px-dpr(height, 30px);
       background:rgba(255,255,255,1);
       border:1px solid rgba(187,187,187,1);
       border-radius:50%;
@@ -476,7 +489,6 @@ p {
       @include font-dpr(30px);
       @include font-fw;
       color:rgba(0,0,0,1);
-      letter-spacing: 3px;
     }
   }
   .pay_zwq {

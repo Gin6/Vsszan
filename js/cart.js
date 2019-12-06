@@ -16,11 +16,12 @@ window.onload = function () {
 		title: '啊发娥夫人try徒弟师傅v梵蒂冈地方很多个放到公司官方的手感温润特意让他一人兔兔上市公司股份地方', 
 		hour: '18', url: '5', name: '科技教育', price: '1366', coin: '62'},
 	]
-	var content = document.getElementById("content-0"); // 获得被克隆的节点对象 
+	var content = $("#content-0");
+	var cc = document.getElementById("content-0"); // 获得被克隆的节点对象 
 	for (var i = 1, k = 0; i < 6; i++, k++) { 
-		var clonedNode = content.cloneNode(true); // 克隆节点 
-		var oItems = clonedNode.childNodes;
-		clonedNode.setAttribute("id", "content-" + i); // 修改一下id 值，避免id 重复
+		var clonedNode = content.clone(true); // 克隆节点 
+		var oItems = cc.childNodes;
+		clonedNode.attr("id", "content-" + i); // 修改一下id 值，避免id 重复
 		for (var j = 1; j < 13;) {
 			oItems[j].setAttribute("id", oItems[j].className+ "-" + i);
 			// console.log(oItems[j].id);
@@ -43,7 +44,7 @@ window.onload = function () {
 		oItems[3].setAttribute("src", data[k].img);
 		cn4.setAttribute("href", data[k].url);
 		cn4.innerHTML = data[k].name;
-		content.parentNode.appendChild(clonedNode); // 在父节点插入克隆的节点 
+		content.before(clonedNode); // 在父节点插入克隆的节点 
 	} 
 };
 
@@ -55,7 +56,7 @@ var wh = $(window).height();
     var fh = $(".footer").height();
     var mp = $(".main").outerWidth();
     var mw = ww-mp;
-    var mh = wh-hh-fh-mp;
+    var mh = wh-hh-fh-mp-2;
     $(".main").css({width: mw +'px',height: mh +'px',});
 })(document, window);
 
@@ -145,30 +146,39 @@ $('.content').on("touchmove", function(e) {
     X = moveEndX - startX,
     Y = moveEndY - startY;
       
+    var p = $(this).children('div:last');
     if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
     	$(this).removeClass('content_left');
-    	$(this).children('div:last').removeClass('delete_right');
+    	p.removeClass('delete_right');
 		setTimeout(function(){
-    		$(".delete_p").css({display: 'none',});
+    		p.children('p:first').css({display: 'none',});
     	},100);
+    	// console.log('右');
     }
     else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
     	$(this).addClass('content_left');
-    	$(this).children('div:last').addClass('delete_right');
+    	p.addClass('delete_right');
     	setTimeout(function(){
-    		$(".delete_p").css({display: 'block',});
+    		p.children('p:first').css({display: 'block',});
     	},200);
+    	// console.log('左');
     }
-    // else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
-    //     alert("Top to Bottom");
-    // }
-    // else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
-    //     alert("Bottom to Top");
-    // }
+    else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+        // $(this).unbind('touchmove');
+        // console.log('下');
+    }
+    else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+        // $(this).unbind('touchmove');
+        // console.log('上');
+
+    }
     // else{
     //     alert("Just Touch");
     // }
 });
+// $('.content').on("touchend", function(e) {
+// 	e.preventDefault();
+// });
 
 $(".curtain").css({
 	height: wh + 'px',
