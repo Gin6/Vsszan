@@ -113,12 +113,13 @@ p {
   margin: 0px;
 }
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
   @include px-dpr(height, 88px);
   background: rgba(255,255,255,1);
   text-align: center;
   border-bottom: 1px solid #c1c1c1;
+  z-index: 2;
   a {
     position: absolute;
     text-decoration: none;
@@ -147,6 +148,7 @@ p {
 .main {
   position: fixed;
   @include px-dpr(padding, 30px);
+  @include px-dpr(padding-top, 115px);
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   .content {
@@ -366,6 +368,7 @@ p {
     @include font-fw;
     letter-spacing: 3px;
     color:rgba(255,255,255,1);
+    padding: 0px;
   }
   .total {
     position: absolute;

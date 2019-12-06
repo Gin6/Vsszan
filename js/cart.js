@@ -165,9 +165,9 @@ $('.content').on("touchmove", function(e) {
     // else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
     //     alert("Bottom to Top");
     // }
-    else{
-        alert("Just Touch");
-    }
+    // else{
+    //     alert("Just Touch");
+    // }
 });
 
 $(".curtain").css({

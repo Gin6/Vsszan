@@ -2,7 +2,7 @@ body { margin: 0px; padding: 0px; overflow: hidden; background-color: #fbfbfb; }
 
 p { margin: 0px; }
 
-.header { position: relative; width: 100%; height: 44px; background: white; text-align: center; border-bottom: 1px solid #c1c1c1; }
+.header { position: fixed; width: 100%; height: 44px; background: white; text-align: center; border-bottom: 1px solid #c1c1c1; z-index: 2; }
 [data-dpr="2"] .header { height: 88px; }
 [data-dpr="2.625"] .header { height: 115.5px; }
 [data-dpr="3"] .header { height: 132px; }
@@ -43,11 +43,15 @@ p { margin: 0px; }
 [data-dpr="3"] .header p { line-height: 45px; }
 [data-dpr="3.5"] .header p { line-height: 52.5px; }
 
-.main { position: fixed; padding: 15px; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+.main { position: fixed; padding: 15px; padding-top: 57.5px; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
 [data-dpr="2"] .main { padding: 30px; }
 [data-dpr="2.625"] .main { padding: 39.375px; }
 [data-dpr="3"] .main { padding: 45px; }
 [data-dpr="3.5"] .main { padding: 52.5px; }
+[data-dpr="2"] .main { padding-top: 115px; }
+[data-dpr="2.625"] .main { padding-top: 150.9375px; }
+[data-dpr="3"] .main { padding-top: 172.5px; }
+[data-dpr="3.5"] .main { padding-top: 201.25px; }
 .main .content { position: relative; width: 100%; height: 126.5px; background: #f8faff; box-shadow: 0px 1px 14px 0px rgba(1, 1, 1, 0.18); border-radius: 6px; margin-bottom: 14.5px; transition: transform .4s ease, height .5s ease; }
 [data-dpr="2"] .main .content { height: 253px; }
 [data-dpr="2.625"] .main .content { height: 332.0625px; }
@@ -377,7 +381,7 @@ p { margin: 0px; }
 [data-dpr="2.625"] .footer .allChoose { line-height: 36.75px; }
 [data-dpr="3"] .footer .allChoose { line-height: 42px; }
 [data-dpr="3.5"] .footer .allChoose { line-height: 49px; }
-.footer .submit { position: absolute; right: 15px; top: 14px; width: 75px; height: 26px; background: linear-gradient(122deg, #6692fa, #3873ff); border-radius: 3px; border: 1px solid #6692fa; font-size: 14px; font-family: PingFang SC; font-weight: 500; letter-spacing: 1px; letter-spacing: 3px; color: white; }
+.footer .submit { position: absolute; right: 15px; top: 14px; width: 75px; height: 26px; background: linear-gradient(122deg, #6692fa, #3873ff); border-radius: 3px; border: 1px solid #6692fa; font-size: 14px; font-family: PingFang SC; font-weight: 500; letter-spacing: 1px; letter-spacing: 3px; color: white; padding: 0px; }
 [data-dpr="2"] .footer .submit { right: 30px; }
 [data-dpr="2.625"] .footer .submit { right: 39.375px; }
 [data-dpr="3"] .footer .submit { right: 45px; }
