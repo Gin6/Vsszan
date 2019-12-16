@@ -1,18 +1,18 @@
 window.onload = function () {
 	var data = [
-		{ img: 'image/bg-0.png', 
+		{ img: 'image/cart/bg-0.png', 
 		title: '士大夫士大夫随风倒十分的供货合同今天要凤飞飞法山豆根豆腐干豆腐干的武打风格个多个地方换个地方', 
 		hour: '15', url: '1', name: '网络教育', price: '1564', coin: '22'},
-		{ img: 'image/bg-0.png', 
+		{ img: 'image/cart/bg-0.png', 
 		title: '克里夫获利丰厚瑞龙发v那给发给对方就会改恶个发果断减肥古额复读了个发uiu啊了官府关啦房贷首付', 
 		hour: '12', url: '2', name: '人民教育', price: '1467', coin: '46'},
-		{ img: 'image/bg-0.png', 
+		{ img: 'image/cart/bg-0.png', 
 		title: '更符合健康全额退几个好菜干部选拔v想日法国try让他一人图如今的刚好四个人的风格个十分广泛大概', 
 		hour: '16', url: '3', name: '安徽教育', price: '1545', coin: '24'},
-		{ img: 'image/bg-0.png', 
+		{ img: 'image/cart/bg-0.png', 
 		title: '发顺丰到付的公共电话亭教育集团电风扇广泛故事感人太热也页也分公司管饭官方给他然后try人', 
 		hour: '13', url: '4', name: '中国教育', price: '1267', coin: '39'},
-		{ img: 'image/bg-0.png', 
+		{ img: 'image/cart/bg-0.png', 
 		title: '啊发娥夫人try徒弟师傅v梵蒂冈地方很多个放到公司官方的手感温润特意让他一人兔兔上市公司股份地方', 
 		hour: '18', url: '5', name: '科技教育', price: '1366', coin: '62'},
 	]

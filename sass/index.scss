@@ -1,0 +1,328 @@
+@mixin font-dpr($font-size){
+  font-size: $font-size/2;
+
+  [data-dpr="2"] & {
+    font-size: $font-size;
+  }
+  
+  [data-dpr="2.625"] & {
+    font-size: $font-size * 2.625/2;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3/1.82;
+  }
+
+  [data-dpr="3.5"] & {
+    font-size: $font-size * 3.5/2;
+  }
+}
+@mixin px-dpr($property, $px) {
+  #{$property}: $px/2;
+
+  [data-dpr="2"] & {
+    #{$property}: $px;
+  }
+  
+  [data-dpr="2.625"] & {
+    #{$property}: $px * 2.625/2;
+  }
+
+  [data-dpr="3"] & {
+    #{$property}: $px * 3/1.82;
+  }
+
+  [data-dpr="3.5"] & {
+    #{$property}: $px * 3.5/2;
+  }
+}
+@mixin translateX($property, $px) {
+  #{$property}: translateX($px/2);
+
+  [data-dpr="2"] & {
+    #{$property}: translateX($px);
+  }
+  
+  [data-dpr="2.625"] & {
+    #{$property}: translateX($px * 2.625/2);
+  }
+
+  [data-dpr="3"] & {
+    #{$property}: translateX($px * 3/1.82);
+  }
+
+  [data-dpr="3.5"] & {
+    #{$property}: translateX($px * 3.5/2);
+  }
+}
+@mixin translateY($property, $px) {
+  #{$property}: translateY($px/2);
+
+  [data-dpr="2"] & {
+    #{$property}: translateY($px);
+  }
+  
+  [data-dpr="2.625"] & {
+    #{$property}: translateY($px * 2.625/2);
+  }
+
+  [data-dpr="3"] & {
+    #{$property}: translateY($px * 3/1.82);
+  }
+
+  [data-dpr="3.5"] & {
+    #{$property}: translateY($px * 3.5/2);
+  }
+}
+@mixin font-fw {
+  font-family: PingFang SC;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+@function px2rem($px, $base-font-size: 32px) {
+  @if (unitless($px)) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return px2rem($px + 0px); // That may fail.
+  } @else if (unit($px) == rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  // overflow: hidden;
+  background-color: #f6f6f6;
+}
+p {
+  margin: 0px;
+}
+a, div {
+  text-decoration: none;
+  -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  @include px-dpr(height, 88px);
+  background: rgba(255,255,255,1);
+  text-align: center;
+  border-bottom: 1px solid rgba(221,221,221,1);
+  z-index: 2;
+  .return {
+    position: absolute;
+    line-height: 0px;
+    z-index: 1;
+    @include font-dpr(28px);
+    @include font-fw;
+    color:rgba(0,0,0,1);
+    @include px-dpr(left, 30px);
+    @include px-dpr(top, 32px);
+    img {
+      @include px-dpr(width, 14px);
+      @include px-dpr(padding-right, 15px);
+    }
+  }
+  span {
+    position: relative;
+    @include px-dpr(top, -2px);
+    @include px-dpr(left, -10px);
+    @include font-dpr(28px);
+    @include font-fw;
+    color: rgba(0,0,0,1);
+  }
+  .user {
+    position: absolute;
+    line-height: 0px;
+    z-index: 1;
+    @include px-dpr(right, 26px);
+    @include px-dpr(top, 15px);
+    img {
+      @include px-dpr(width, 58.8px);
+      @include px-dpr(height, 58.8px);
+      border-radius:50%;
+    }
+  }
+  p {
+    position: relative;
+    @include px-dpr(top, 29px);
+    @include font-dpr(30px);
+    @include font-fw;
+    color: rgba(0,0,0,1);
+    @include px-dpr(line-height, 30px);
+  }
+}
+.main {
+  width: 100%;
+  background:rgba(255,255,255,1);
+  @include px-dpr(padding-top, 120px);
+  .scroll {
+    @include px-dpr(padding-left, 24px);
+    @include px-dpr(padding-right, 24px);
+    @include px-dpr(height, 269px);
+    .container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      @include px-dpr(border-radius, 6px);
+      .list {
+        width: 500%;
+        height: 100%;
+        position: absolute;
+      }
+      .list > img {
+          float: left;
+          width: 20%;
+          height: 100%;
+      }
+    }
+  }
+  .nav {
+    @include px-dpr(margin-top, 44px);
+    @include px-dpr(margin-bottom, 44px);
+    display: flex;
+    div {
+      width: 16.666666%;
+      text-align: center;
+      img {
+        @include px-dpr(width, 72px);
+        @include px-dpr(height, 72px);
+      }
+      p {
+        @include font-dpr(20px);
+        @include font-fw;
+        color:rgba(102,102,102,1);
+        @include px-dpr(line-height, 36px);
+      }
+    }
+  }
+  .message {
+    position: relative;
+    @include px-dpr(margin-left, 24px);
+    @include px-dpr(margin-right, 24px);
+    @include px-dpr(margin-bottom, 44px);
+    @include px-dpr(height, 54px);
+    background:rgba(246,246,246,1);
+    @include px-dpr(border-radius, 6px);
+    img {
+      position: absolute;
+      @include px-dpr(top, 11px);
+      @include px-dpr(left, 14px);
+      @include px-dpr(width, 34px);
+      @include px-dpr(height, 32px);
+    }
+    .p1 {
+      position: absolute;
+      @include px-dpr(top, 16px);
+      @include px-dpr(left, 62px);
+      @include font-dpr(22px);
+      @include font-fw;
+      color:rgba(0,0,0,1);
+      @include px-dpr(line-height, 21px);
+    }
+    .p2 {
+      position: absolute;
+      @include px-dpr(top, 16px);
+      @include px-dpr(left, 123px);
+      @include font-dpr(22px);
+      @include font-fw;
+      color:rgba(153,153,153,1);
+      @include px-dpr(line-height, 21px);
+    }
+  }
+  .recommend {
+    position: relative;
+    .rec-header {
+      position: relative;
+      @include px-dpr(margin-left, 24px);
+      @include px-dpr(margin-right, 24px);
+      @include px-dpr(margin-bottom, 4px);
+      p {
+        @include font-dpr(30px);
+        @include font-fw;
+        font-weight: 500;
+        color:rgba(0,0,0,1);
+        @include px-dpr(line-height, 30px);
+      }
+      a {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        @include px-dpr(width, 90px);
+        @include font-dpr(26px);
+        @include font-fw;
+        font-weight: 500;
+        color:rgba(0,0,0,1);
+        @include px-dpr(line-height, 30px);
+        img {
+          position: absolute;
+          @include px-dpr(top, 5px);
+          @include px-dpr(right, 1px);
+          @include px-dpr(width, 23px);
+          @include px-dpr(height, 20px);
+        }
+      }
+    }
+    .rec-content {
+      height: 1200px;
+      @include px-dpr(margin-left, 9px);
+      @include px-dpr(margin-right, 9px);
+      .content-0 {
+        position: relative;
+        @include px-dpr(width, 336px);
+        @include px-dpr(margin-left, 15px);
+        @include px-dpr(margin-right, 15px);
+        float: left;
+        @include px-dpr(margin-top, 34px);
+        img {
+          width: 100%;
+          @include px-dpr(margin-bottom, 15px);
+          @include px-dpr(border-radius, 6px);
+        }
+        .hour {
+          position: absolute;
+          @include px-dpr(top, 150px);
+          @include px-dpr(right, 10px);
+          @include px-dpr(width, 102px);
+          @include px-dpr(height, 30px);
+          background:rgba(0,0,0,1);
+          opacity:0.5;
+          @include px-dpr(border-radius, 15px);
+          display: flex;
+          p {
+            @include font-dpr(20px);
+            @include font-fw;
+            color:rgba(255,255,255,1);
+            @include px-dpr(line-height, 36px);
+          }
+        }
+        .title {
+          @include font-dpr(24px);
+          @include font-fw;
+          color:rgba(0,0,0,1);
+          @include px-dpr(line-height, 23px);
+        }
+        .price {
+          position: relative;
+          @include px-dpr(left, -5px);
+          @include px-dpr(margin-top, 25px);
+          display: flex;
+          p {
+            @include font-dpr(28px);
+            @include font-fw;
+            color:rgba(232,49,4,1);
+            @include px-dpr(line-height, 22px);
+          }
+          .p5 {
+            @include px-dpr(margin-left, 12px);
+          }
+        }
+      }
+    }
+  }
+}

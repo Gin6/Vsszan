@@ -10,7 +10,7 @@
   }
 
   [data-dpr="3"] & {
-    font-size: $font-size * 3/2;
+    font-size: $font-size * 3/1.82;
   }
 
   [data-dpr="3.5"] & {
@@ -29,7 +29,7 @@
   }
 
   [data-dpr="3"] & {
-    #{$property}: $px * 3/2;
+    #{$property}: $px * 3/1.82;
   }
 
   [data-dpr="3.5"] & {
@@ -48,7 +48,7 @@
   }
 
   [data-dpr="3"] & {
-    #{$property}: translateX($px * 3/2);
+    #{$property}: translateX($px * 3/1.82);
   }
 
   [data-dpr="3.5"] & {
@@ -67,7 +67,7 @@
   }
 
   [data-dpr="3"] & {
-    #{$property}: translateY($px * 3/2);
+    #{$property}: translateY($px * 3/1.82);
   }
 
   [data-dpr="3.5"] & {
@@ -94,10 +94,13 @@ body {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-  background-color: #fbfbfb;
+  background-color: #f6f6f6;
 }
 p {
   margin: 0px;
+}
+a, div {
+  -webkit-tap-highlight-color:rgba(255,0,0,0);
 }
 .header {
   position: fixed;
@@ -156,15 +159,129 @@ p {
   @include px-dpr(height, 665px);
   @include px-dpr(margin-top, 89px);
   background:rgba(255,255,255,1);
+  .user {
+    position: relative;
+    width: 100%;
+    @include px-dpr(height, 195px);
+    img {
+      position: absolute;
+      @include px-dpr(width, 128px);
+      @include px-dpr(top, 32px);
+      @include px-dpr(left, 32px);
+      border-radius: 50%;
+    }
+    span {
+      position: absolute;
+      @include px-dpr(top, 47px);
+      @include px-dpr(left, 188px);
+      @include font-dpr(34px);
+      @include font-fw;
+      font-weight:500;
+      color: rgba(0,0,0,1);
+      @include px-dpr(line-height, 36px);
+    }
+    p {
+      position: absolute;
+      @include px-dpr(bottom, 48px);
+      @include px-dpr(left, 193px);
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(102,102,102,1);
+      @include px-dpr(line-height, 25px);
+    }
+    // a {
+    //   position: absolute;
+    //   @include px-dpr(top, 41px);
+    //   @include px-dpr(right, 30px);
+    //   @include px-dpr(padding-left, 16px);
+    //   @include px-dpr(padding-right, 7px);
+    //   text-decoration: none;
+    //   @include font-dpr(24px);
+    //   @include font-fw;
+    //   @include px-dpr(line-height, 40px);
+    //   color:rgba(153,153,153,1);
+    //   border:1px solid rgba(221,221,221,1);
+    //   @include px-dpr(border-radius, 21px);
+    // }
+  }
   .box {
+    position: relative;
+    height: 100px;
+    @include px-dpr(margin-left, 30px);
+    @include px-dpr(margin-right, 30px);
+  }
+  .box_main {
     position: absolute;
-    @include px-dpr(width, 690px);
+    width: 100%;
+    display: flex;
     @include px-dpr(height, 168px);
-    @include px-dpr(top, 195px);
-    @include px-dpr(left, 30px);
     background:rgba(255,255,255,1);
     box-shadow:0px 1px 35px 1px rgba(0, 0, 0, 0.08);
     @include px-dpr(border-radius, 6px);
+    div {
+      width: 33.333333%;
+      text-align: center;
+      a {
+        @include font-dpr(28px);
+        @include font-fw;
+        color:rgba(0,0,0,1);
+        @include px-dpr(line-height, 27px);
+        text-decoration: none;
+        span {
+          position: relative;
+          @include px-dpr(top, 45px);
+          @include font-dpr(50px);
+          @include font-fw;
+          color:rgba(232,49,4,1);
+        }
+      }
+      img {
+        position: relative;
+        @include px-dpr(top, 32px);
+      }
+    }
+    .order {
+      img {
+        @include px-dpr(width, 47px);
+      }
+    }
+    .ecord {
+      img {
+        @include px-dpr(width, 53px);
+      }
+    }
+    .oe {
+      p {
+        position: relative;
+        @include px-dpr(top, 45px);
+      }
+    }
+    .bard {
+      position: relative;
+      @include px-dpr(top, 27px);
+      width: 1px;
+      @include px-dpr(height, 114px);
+      background: rgba(221,221,221,1);
+    }
+    .balance {
+      p {
+        position: absolute;
+        width: 33.333333%;
+        @include px-dpr(bottom, 32px);
+      }
+    }
+  }
+  .box-2 {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    .box-2_main {
+      @include px-dpr(padding-left, 30px);
+      @include px-dpr(padding-right, 30px);
+      .ca {
+        border-bottom: 1px solid rgba(221,221,221,1);
+      }
+    }
   }
 }
 .make {
@@ -174,8 +291,58 @@ p {
   @include px-dpr(margin-bottom, 30px);
   background:rgba(255,255,255,1);
 }
-.help {
+.list {
+  position: relative;
   width:100%;
   @include px-dpr(height, 93px);
   background:rgba(255,255,255,1);
+  a {
+    text-decoration: none;
+    @include font-dpr(26px);
+    @include font-fw;
+    color:rgba(0,0,0,1);
+    @include px-dpr(line-height, 28px);
+    .list-img {
+      position: absolute;
+      @include px-dpr(left, 6px);
+    }
+    .list-title {
+      position: absolute;
+      @include font-dpr(28px);
+      @include px-dpr(top, 33px);
+      @include px-dpr(left, 63px);
+    }
+    .nu {
+      position: absolute;
+      @include px-dpr(bottom, 35px);
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(153,153,153,1);
+      @include px-dpr(line-height, 24px);
+    }
+    .list-num {
+      @include px-dpr(right, 55px);
+    }
+    .list-unit {
+      @include px-dpr(right, 26px);
+    }
+    .into {
+      position: absolute;
+      right: 0px;
+      @include px-dpr(bottom, 35px);
+      @include px-dpr(width, 14px);  
+    }
+  }
+}
+.curriculum {.list-img {@include px-dpr(width, 25px); @include px-dpr(top, 32px);}}
+.attention {.list-img {@include px-dpr(width, 28px); @include px-dpr(top, 34px);}}
+.evaluate {.list-img {@include px-dpr(width, 32px); @include px-dpr(top, 32px);}}
+.make {.list-img {@include px-dpr(width, 30px); @include px-dpr(top, 32px);}}
+.help {.list-img {@include px-dpr(width, 26px); @include px-dpr(top, 34px);}}
+.mh {
+  a {
+    .list-img {@include px-dpr(left, 36px);}
+    .list-title {@include px-dpr(left, 93px);}
+    .into {@include px-dpr(right, 30px);}
+  }
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b181fc13-f525-4040-80f9-d6164197c458" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/cart.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/cart.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/study.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/study.scssc" afterDir="false" />
@@ -11,6 +10,12 @@
       <change beforePath="$PROJECT_DIR$/css/cart.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/study.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/study.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/study.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/study.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/bg-0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/choose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/message.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/qb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/wx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/zfb.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/cart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/study.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/study.scss" afterDir="false" />
@@ -80,7 +85,8 @@
       <updated>1575547706351</updated>
       <workItem from="1575547707795" duration="4094000" />
       <workItem from="1575594770372" duration="24000" />
-      <workItem from="1575594795177" duration="3596000" />
+      <workItem from="1575594795177" duration="4214000" />
+      <workItem from="1576458013049" duration="4579000" />
     </task>
     <servers />
   </component>
