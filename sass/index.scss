@@ -185,6 +185,8 @@ a, div {
   .nav {
     @include px-dpr(margin-top, 44px);
     @include px-dpr(margin-bottom, 44px);
+    @include px-dpr(padding-left, 8px);
+    @include px-dpr(padding-right, 8px);
     display: flex;
     div {
       width: 16.666666%;
@@ -268,43 +270,58 @@ a, div {
         }
       }
     }
+    .rec-content-right {
+      position: absolute;
+      right: 0px;
+      @include px-dpr(bottom, 0px);
+      .content-0 {
+        float: right;
+        @include px-dpr(margin-right, 24px);
+      }
+    }
+    .rec-content-left {
+      .content-0 {
+        @include px-dpr(margin-left, 24px);
+      }
+    }
     .rec-content {
-      height: 1200px;
-      @include px-dpr(margin-left, 9px);
-      @include px-dpr(margin-right, 9px);
+      width: 50%;
       .content-0 {
         position: relative;
-        @include px-dpr(width, 336px);
-        @include px-dpr(margin-left, 15px);
-        @include px-dpr(margin-right, 15px);
-        float: left;
+        width: 89.6%;
         @include px-dpr(margin-top, 34px);
         img {
           width: 100%;
-          @include px-dpr(margin-bottom, 15px);
           @include px-dpr(border-radius, 6px);
+        }
+        .box {
+          position: relative;
+          @include px-dpr(margin-bottom, 15px);
         }
         .hour {
           position: absolute;
-          @include px-dpr(top, 150px);
+          @include px-dpr(bottom, 18px);
           @include px-dpr(right, 10px);
-          @include px-dpr(width, 102px);
+          @include px-dpr(width, 88px);
           @include px-dpr(height, 30px);
-          background:rgba(0,0,0,1);
-          opacity:0.5;
+          @include px-dpr(padding-left, 8px);
+          @include px-dpr(padding-right, 6px);
+          background:rgba(0,0,0,0.5);
           @include px-dpr(border-radius, 15px);
           display: flex;
           p {
             @include font-dpr(20px);
             @include font-fw;
             color:rgba(255,255,255,1);
-            @include px-dpr(line-height, 36px);
+            @include px-dpr(line-height, 30px);
           }
         }
         .title {
           @include font-dpr(24px);
           @include font-fw;
           color:rgba(0,0,0,1);
+          overflow: hidden;
+          @include px-dpr(height, 23px);
           @include px-dpr(line-height, 23px);
         }
         .price {
@@ -324,5 +341,131 @@ a, div {
         }
       }
     }
+  }
+  .teacher {
+    @include px-dpr(margin-top, 61px);
+    @include px-dpr(margin-bottom, 51px);
+    .t-title {
+      @include font-dpr(30px);
+      @include font-fw;
+      font-weight: 500;
+      color:rgba(0,0,0,1);
+      @include px-dpr(line-height, 28px);
+      @include px-dpr(padding-left, 25px);
+    }
+    .bar {
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      display: -webkit-inline-box;
+      @include px-dpr(margin-top, 39px);
+      div {
+        width: 16.2%;
+        text-align: center;
+        @include px-dpr(margin-right, 24px);
+      }
+      #t1 {
+        @include px-dpr(margin-left, 24px);
+      }
+      img {
+        width: 100%;
+        border-radius:50%;
+      }
+      p {
+        @include font-dpr(26px);
+        @include font-fw;
+        color:rgba(0,0,0,1);
+        @include px-dpr(line-height, 24px);
+        @include px-dpr(margin-top, 18px);
+      }
+    }
+  }
+  .tutorial {
+    @include px-dpr(margin-top, 60px);
+    .tu-title {
+      @include font-dpr(30px);
+      @include font-fw;
+      font-weight: 500;
+      color:rgba(0,0,0,1);
+      @include px-dpr(line-height, 28px);
+      @include px-dpr(padding-left, 25px);
+    }
+    .shop {
+      position: relative;
+      @include px-dpr(margin-top, 39px);
+      @include px-dpr(margin-left, 24px);
+      @include px-dpr(margin-right, 24px);
+      .shop-left {
+        width: 50%;
+      }
+      .shop-right {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 50%;
+        div{
+          float: right;
+        }
+      }
+      .shopNode {
+        width: 43%;
+        float: left;
+        text-align: center;
+        background:rgba(255,255,255,1);
+        border:1px solid rgba(238,238,238,1);
+        @include px-dpr(border-radius, 10px);
+        @include px-dpr(margin-bottom, 30px);
+        img {
+          @include px-dpr(width, 55px);
+        }
+        p {
+          position: relative;
+          @include font-dpr(20px);
+          @include font-fw;
+          color:rgba(0,0,0,1);
+          @include px-dpr(line-height, 16px);
+        }
+      }
+      .shopNode-1357 {
+        @include px-dpr(margin-right, 30px);
+      }
+      .more {
+        p {
+          @include px-dpr(line-height, 40px);
+        }
+      }
+    }
+  }
+  .banner {
+    @include px-dpr(margin-left, 23px);
+    @include px-dpr(margin-right, 23px);
+    @include px-dpr(margin-top, 60px);
+    @include px-dpr(margin-bottom, 60px);
+    img {
+      width: 100%;
+      @include px-dpr(border-radius, 6px);
+    }
+  }
+}
+.footer {
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  @include px-dpr(padding-top, 54px);
+  @include px-dpr(padding-bottom, 54px);
+  .but {
+    @include px-dpr(width, 200px);
+    @include px-dpr(height, 60px);
+    margin: auto;
+    @include px-dpr(border-radius, 10px);
+    background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
+  }
+  a {
+    @include font-dpr(28px);
+    @include font-fw;
+    color:rgba(255,255,255,1);
+    @include px-dpr(line-height, 61px);
+    
+    
   }
 }

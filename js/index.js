@@ -1,10 +1,46 @@
 window.onload = function () {
-	var content = $(".content-0"); // 获得被克隆的节点对象 
-	for (var i = 1; i < 6; i++) { 
-		var clonedNode = content.clone(true); // 克隆节点 
-		clonedNode.attr("id", "content-" + i); // 修改一下id 值，避免id 重复
-		content.before(clonedNode); // 在父节点插入克隆的节点 
+	var contentleft = $("#content-left-0"); // 获得被克隆的节点对象
+	var contentright = $("#content-right-0"); 
+	var descontentleft = $("#des-content-left-0"); 
+	var descontentright = $("#des-content-right-0"); 
+	var exccontentleft = $("#exc-content-left-0"); 
+	var exccontentright = $("#exc-content-right-0"); 
+	var t0 = $("#t0");
+	for (var i = 1; i < 3; i++) { 
+		var clonedNodeleft = contentleft.clone(true); // 克隆节点
+		var clonedNoderight = contentright.clone(true); 
+		var desleft = descontentleft.clone(true); 
+		var desright = descontentright.clone(true); 
+		var excleft = exccontentleft.clone(true); 
+		var excright = exccontentright.clone(true); 
+		clonedNodeleft.attr("id", "content-left-" + i); // 修改一下id 值，避免id 重复
+		clonedNoderight.attr("id", "content-right-" + i);
+		desleft.attr("id", "des-content-left-" + i);
+		desright.attr("id", "des-content-right-" + i);
+		excleft.attr("id", "exc-content-left-" + i);
+		excright.attr("id", "exc-content-right-" + i);
+		contentleft.before(clonedNodeleft); // 在父节点插入克隆的节点 
+		contentright.before(clonedNoderight);
+		descontentleft.before(desleft);
+		descontentright.before(desright);
+		exccontentleft.before(excleft);
+		exccontentright.before(excright);
 	} 
+	for (var k = 1; k < 8; k++) { 
+		var clonedNodet0 = t0.clone(true);
+		clonedNodet0.attr("id", "t" + k);
+		t0.before(clonedNodet0);
+	} 
+
+	var shopNodeHeight = $('.shopNode').width();
+	var margintop = shopNodeHeight*0.2317;
+	var paddingtop = shopNodeHeight*0.1721;
+	var top = shopNodeHeight*0.1258;
+	$('.shopNode').css('height',shopNodeHeight);
+	$('.more-p1').css('margin-top',margintop);
+	$('.shopNode-img').css('padding-top',paddingtop);
+	$('.shopNode-p').css('top',top);
+	// console.log(shopNodeHeight);
 };
 
 //Banner
@@ -37,7 +73,6 @@ function nextPage(next){
             index--;
             targetLeft = -100*(index-1);
         }
-
     }
     $('.list').animate({left:targetLeft+'%'});
 }
