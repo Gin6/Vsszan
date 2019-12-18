@@ -103,6 +103,25 @@ a, div {
   text-decoration: none;
   -webkit-tap-highlight-color:rgba(255,0,0,0);
 }
+ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  li {
+    position: relative;
+    @include px-dpr(height, 25px);
+    list-style: none;
+    @include px-dpr(padding-top, 20px);
+    @include px-dpr(padding-bottom, 31px);
+    @include font-dpr(26px);
+    @include font-fw;
+    color:rgba(0,0,0,1);
+    @include px-dpr(line-height, 25px);
+  }
+  .default {
+    @include px-dpr(padding-top, 30px);
+  }
+}
 .header {
   position: fixed;
   top: 0px;
@@ -204,5 +223,160 @@ a, div {
     img {
       @include px-dpr(right, 131px);
     }
+  }
+}
+.curtain {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  background:rgba(0,0,0,1);
+  opacity:0.5;
+  display: none;
+}
+.subMenu-left {
+  position: absolute;
+  // @include px-dpr(top, -147px);
+  width: 100%;
+  z-index: 1;
+  @include px-dpr(height, 313px);
+  background:rgba(246,246,246,1);
+  transition: top 0.5s ease;
+  display: none;
+  p {
+    @include px-dpr(padding-top, 30px);
+    @include px-dpr(padding-bottom, 20px);
+    @include px-dpr(padding-left, 31px);
+    @include px-dpr(padding-right, 31px);
+    @include font-dpr(26px);
+    @include font-fw;
+    color: rgba(0,0,0,1);
+    @include px-dpr(line-height, 25px);
+  }
+  .default {
+    color: rgba(36,101,255,1);
+  }
+}
+.subMenu-right {
+  position: absolute;
+  // @include px-dpr(top, -376px);
+  width: 100%;
+  z-index: 1;
+  // @include px-dpr(height, 542px);
+  background: rgba(255,255,255,1);
+  transition: top 0.45s ease;
+  display: none;
+  .sidebar {
+    width: 22.4%;
+    @include px-dpr(height, 542px);
+    background:rgba(246,246,246,1);
+    .curtain-2 {
+      position: absolute;
+      width: 100%;
+      @include px-dpr(height, 86px);
+      top: 0px;
+      background: #fff;
+      transition: top 0.2s ease;
+    }
+  }
+  .content {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 77.6%;
+    background: #fff;
+    div {
+      position: relative;
+      @include px-dpr(margin-top, 30px);
+      @include px-dpr(padding-bottom, 21px);
+      @include px-dpr(margin-left, 67px);
+      @include px-dpr(margin-right, 30px);
+    }
+    .title {
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(36,101,255,1);
+      @include px-dpr(line-height, 25px);
+    }
+    .num {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(153,153,153,1);
+      @include px-dpr(line-height, 20px);
+    }
+  }
+}
+.main {
+  overflow: auto;
+  background: #fff;
+  @include px-dpr(margin-top, 168px);
+  @include px-dpr(padding-bottom, 22px);
+  @include px-dpr(padding-top, 2px);
+  .list {
+    position: relative;
+    @include px-dpr(padding-top, 42px);
+    @include px-dpr(padding-left, 30px);
+    @include px-dpr(padding-right, 28px);
+    img {
+      @include px-dpr(width, 250px);
+      @include px-dpr(height, 142px);
+      @include px-dpr(border-radius, 6px);
+    }
+    .word {
+      position: absolute;
+      top: 0px;
+      @include px-dpr(left, 309px);
+      @include px-dpr(margin-right, 28px);
+      .word_p1 {
+        @include px-dpr(height, 25px);
+        @include px-dpr(margin-top, 45px);
+        overflow-y: hidden;
+        @include font-dpr(26px);
+        @include font-fw;
+        color:rgba(0,0,0,1);
+        @include px-dpr(line-height, 25px);
+      }
+      .w-hp {
+        position: absolute;
+        @include px-dpr(top, 93px);
+        display: -webkit-inline-box;
+        @include font-dpr(20px);
+        @include font-fw;
+        color:rgba(153,153,153,1);
+        @include px-dpr(line-height, 19px);
+      }
+      .word_people {
+        @include px-dpr(right, 0px);
+      }
+    }
+    .price {
+      position: absolute;
+      @include px-dpr(top, 163px);
+      @include px-dpr(left, 305px);
+      display: -webkit-inline-box;
+      @include font-dpr(28px);
+      @include font-fw;
+      color:rgba(232,49,4,1);
+      @include px-dpr(line-height, 21px);
+    }
+    .word_a {
+      position: absolute;
+      @include px-dpr(top, 167px);
+      @include px-dpr(right, 30px);
+      @include font-dpr(20px);
+      @include font-fw;
+      color:rgba(36,101,255,1);
+      @include px-dpr(line-height, 19px);
+    }
+  }
+}
+.footer {
+  img {
+    @include px-dpr(width, 62px);
+    @include px-dpr(height, 62px);
+    border-radius: 50%;
   }
 }
