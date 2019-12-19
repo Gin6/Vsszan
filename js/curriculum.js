@@ -35,7 +35,7 @@ for (var i = 2; i < 11; i++) {
 for (var j = 2; j < 10; j++) {
 	var clonedNodeList = list.clone(true);
 	clonedNodeList.attr("id", "list-" + j);
-	list.after(clonedNodeList);
+	list.before(clonedNodeList);
 }
 var conHeight = $('.content').height();
 var sidHeight = $('.sidebar').height();
@@ -148,4 +148,18 @@ $('.subMenu-right-li').click(function() {
 		$('.curtain-2').css({top: exaHeight*5+'px',});
 	if (elementId == 7) 
 		$('.curtain-2').css({top: exaHeight*6+'px',});
+});
+
+$('.side').click(function() {
+	if($(this).hasClass('strip')) {
+		$(this).attr("src", 'image/curriculum/side.png');
+		$(this).removeClass('strip');
+		$('.list').removeClass('list-f');
+		// $('.word').removeClass('word-f');
+	}else {
+		$(this).attr("src", 'image/curriculum/strip.png');
+		$(this).addClass('strip');
+		$('.list').addClass('list-f');
+		// $('.word').addClass('word-f');
+	}
 });
