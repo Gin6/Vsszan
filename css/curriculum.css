@@ -349,6 +349,20 @@ ul .default { padding-top: 15px; }
 [data-dpr="2.625"] .main .list .price { line-height: 27.5625px; }
 [data-dpr="3"] .main .list .price { line-height: 34.6153846154px; }
 [data-dpr="3.5"] .main .list .price { line-height: 36.75px; }
+.main .list .price .yun-2 { margin-left: 4.5px; }
+[data-dpr="2"] .main .list .price .yun-2 { margin-left: 9px; }
+[data-dpr="2.625"] .main .list .price .yun-2 { margin-left: 11.8125px; }
+[data-dpr="3"] .main .list .price .yun-2 { margin-left: 14.8351648352px; }
+[data-dpr="3.5"] .main .list .price .yun-2 { margin-left: 15.75px; }
+.main .list .price .num-2 { font-size: 10px; font-family: PingFang SC; font-weight: 400; letter-spacing: 1px; text-decoration: line-through; color: #999999; line-height: 14px; }
+[data-dpr="2"] .main .list .price .num-2 { font-size: 20px; }
+[data-dpr="2.625"] .main .list .price .num-2 { font-size: 26.25px; }
+[data-dpr="3"] .main .list .price .num-2 { font-size: 32.967032967px; }
+[data-dpr="3.5"] .main .list .price .num-2 { font-size: 35px; }
+[data-dpr="2"] .main .list .price .num-2 { line-height: 28px; }
+[data-dpr="2.625"] .main .list .price .num-2 { line-height: 36.75px; }
+[data-dpr="3"] .main .list .price .num-2 { line-height: 46.1538461538px; }
+[data-dpr="3.5"] .main .list .price .num-2 { line-height: 49px; }
 .main .list .word_a { transition: 0.8s ease; position: absolute; top: 83.5px; right: 15px; font-size: 10px; font-family: PingFang SC; font-weight: 400; letter-spacing: 1px; color: #2465ff; line-height: 9.5px; }
 [data-dpr="2"] .main .list .word_a { top: 167px; }
 [data-dpr="2.625"] .main .list .word_a { top: 219.1875px; }
@@ -436,5 +450,30 @@ ul .default { padding-top: 15px; }
 [data-dpr="2.625"] .footer .footer-img-1 { margin-bottom: 35.4375px; }
 [data-dpr="3"] .footer .footer-img-1 { margin-bottom: 44.5054945055px; }
 [data-dpr="3.5"] .footer .footer-img-1 { margin-bottom: 47.25px; }
+.footer .num-3 { position: absolute; bottom: 22.5px; right: 2.5px; width: 14px; height: 14px; font-size: 10px; font-family: PingFang SC; font-weight: 400; line-height: 14px; text-align: center; color: white; background: #e83104; border-radius: 50%; }
+[data-dpr="2"] .footer .num-3 { bottom: 45px; }
+[data-dpr="2.625"] .footer .num-3 { bottom: 59.0625px; }
+[data-dpr="3"] .footer .num-3 { bottom: 74.1758241758px; }
+[data-dpr="3.5"] .footer .num-3 { bottom: 78.75px; }
+[data-dpr="2"] .footer .num-3 { right: 5px; }
+[data-dpr="2.625"] .footer .num-3 { right: 6.5625px; }
+[data-dpr="3"] .footer .num-3 { right: 8.2417582418px; }
+[data-dpr="3.5"] .footer .num-3 { right: 8.75px; }
+[data-dpr="2"] .footer .num-3 { width: 28px; }
+[data-dpr="2.625"] .footer .num-3 { width: 36.75px; }
+[data-dpr="3"] .footer .num-3 { width: 46.1538461538px; }
+[data-dpr="3.5"] .footer .num-3 { width: 49px; }
+[data-dpr="2"] .footer .num-3 { height: 28px; }
+[data-dpr="2.625"] .footer .num-3 { height: 36.75px; }
+[data-dpr="3"] .footer .num-3 { height: 46.1538461538px; }
+[data-dpr="3.5"] .footer .num-3 { height: 49px; }
+[data-dpr="2"] .footer .num-3 { font-size: 20px; }
+[data-dpr="2.625"] .footer .num-3 { font-size: 26.25px; }
+[data-dpr="3"] .footer .num-3 { font-size: 32.967032967px; }
+[data-dpr="3.5"] .footer .num-3 { font-size: 35px; }
+[data-dpr="2"] .footer .num-3 { line-height: 28px; }
+[data-dpr="2.625"] .footer .num-3 { line-height: 36.75px; }
+[data-dpr="3"] .footer .num-3 { line-height: 46.1538461538px; }
+[data-dpr="3.5"] .footer .num-3 { line-height: 49px; }
 
 /*# sourceMappingURL=curriculum.css.map */

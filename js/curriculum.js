@@ -1,4 +1,5 @@
 var wh = $(window).height();
+var ww = $(window).width();
 var dpr = window.devicePixelRatio;
 var headerHeight = $('.header').height();
 var navHeight = $('.nav').height();
@@ -155,11 +156,13 @@ $('.side').click(function() {
 		$(this).attr("src", 'image/curriculum/side.png');
 		$(this).removeClass('strip');
 		$('.list').removeClass('list-f');
+		$('.list-img').removeAttr("style");
 		// $('.word').removeClass('word-f');
 	}else {
 		$(this).attr("src", 'image/curriculum/strip.png');
 		$(this).addClass('strip');
 		$('.list').addClass('list-f');
+		$('.list-img').css({width: ww*0.43066667+'px',});
 		// $('.word').addClass('word-f');
 	}
 });

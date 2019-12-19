@@ -365,6 +365,16 @@ ul {
       @include font-fw;
       color:rgba(232,49,4,1);
       @include px-dpr(line-height, 21px);
+      .yun-2 {
+        @include px-dpr(margin-left, 9px);
+      }
+      .num-2 {
+        @include font-dpr(20px);
+        @include font-fw;
+        text-decoration:line-through;
+        color:rgba(153,153,153,1);
+        @include px-dpr(line-height, 28px);
+      }
     }
     .word_a {
       transition:0.8s ease;
@@ -413,5 +423,20 @@ ul {
   }
   .footer-img-1 {
     @include px-dpr(margin-bottom, 27px);
+  }
+  .num-3 {
+    position: absolute;
+    @include px-dpr(bottom, 45px);
+    @include px-dpr(right, 5px);
+    @include px-dpr(width, 28px);
+    @include px-dpr(height, 28px);
+    @include font-dpr(20px);
+    font-family: PingFang SC;
+    font-weight: 400;
+    @include px-dpr(line-height, 28px);
+    text-align: center;
+    color:rgba(255,255,255,1);
+    background:rgba(232,49,4,1);
+    border-radius:50%;
   }
 }

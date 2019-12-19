@@ -190,11 +190,10 @@ a, div {
       }
     }
     .bg {
+      width: 28.985507%;
       position: absolute;
       @include px-dpr(left, 72px);
       @include px-dpr(top, 44px);
-      @include px-dpr(width, 200px);
-      @include px-dpr(height, 112px);
       @include px-dpr(border-radius, 6px);
     }
   }
@@ -203,9 +202,9 @@ a, div {
   }
   .word {
     position: absolute;
-    @include px-dpr(left, 293px);
     @include px-dpr(top, 43px);
     @include px-dpr(margin-right, 18px);
+    @include px-dpr(margin-left, 93px);
     @include px-dpr(height, 112px);
     .word_p1 {
       @include px-dpr(height, 64px);
@@ -240,7 +239,7 @@ a, div {
     position: absolute;
     display: flex;
     @include px-dpr(height, 21px);
-    @include px-dpr(left, 290px);
+    @include px-dpr(margin-left, 90px);
     @include px-dpr(top, 188px);
     color:rgba(232,49,4,1);
     .num {
@@ -392,7 +391,7 @@ a, div {
     color:rgba(0,0,0,1);
     @include px-dpr(line-height, 26px);
   }
-  .price {
+  .allprice {
     position: absolute;
     display: flex;
     @include px-dpr(right, 210px);

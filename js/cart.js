@@ -163,26 +163,24 @@ $('.content').on("touchmove", function(e) {
     	},200);
     	// console.log('左');
     }
-    else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
-        // $(this).unbind('touchmove');
-        // console.log('下');
-    }
-    else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
-        // $(this).unbind('touchmove');
-        // console.log('上');
-
-    }
+    // else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+    //     // $(this).unbind('touchmove');
+    //     // console.log('下');
+    // }
+    // else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+    //     // $(this).unbind('touchmove');
+    //     // console.log('上');
+    // }
     // else{
     //     alert("Just Touch");
     // }
 });
-// $('.content').on("touchend", function(e) {
-// 	e.preventDefault();
-// });
 
-$(".curtain").css({
-	height: wh + 'px',
-});
+$(".curtain").css({height: wh + 'px',});
+var bgWidth = $('.bg').width();
+$('.bg').css({height: bgWidth*0.57 + 'px',});
+$('.word').css({left: bgWidth + 'px',});
+$('.price').css({left: bgWidth + 'px',});
 
 function check() {
 	console.log('xxx');
@@ -199,5 +197,5 @@ $(".curtain").click(function() {
 $(".delete").click(function(event) {
 	$(this).parent().css({'transform':'translateX(-125%)', 'height':'0px', 'margin':'0px',});
 	$(this).parent().delay(1000).hide(0);
-	console.log('测试');
+	// console.log('测试');
 });

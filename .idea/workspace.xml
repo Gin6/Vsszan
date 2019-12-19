@@ -3,12 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="b181fc13-f525-4040-80f9-d6164197c458" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/cart.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/cart.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/curriculum.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/curriculum.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/index.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cart.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/curriculum.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/curriculum.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/curriculum.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/curriculum.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curriculum.html" beforeDir="false" afterPath="$PROJECT_DIR$/curriculum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/curriculum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/cart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/curriculum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/curriculum.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study.html" beforeDir="false" afterPath="$PROJECT_DIR$/study.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +91,7 @@
       <workItem from="1576458013049" duration="4579000" />
       <workItem from="1576544701290" duration="5387000" />
       <workItem from="1576631437781" duration="4285000" />
+      <workItem from="1576717488368" duration="3348000" />
     </task>
     <servers />
   </component>

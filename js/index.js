@@ -33,6 +33,12 @@ window.onload = function () {
 	} 
 
 	var shopNodeHeight = $('.shopNode').width();
+	var shopNodeWidth = $('.shopNode').outerWidth(true);
+	var shopNodeMargin = shopNodeWidth-shopNodeHeight;
+	var conHeight = $('.content-0').height();
+	var conHeightAll = $('.content-0').outerHeight(true);
+	var conMargin = conHeightAll-conHeight;
+	var shopHeight = shopNodeHeight*2+shopNodeMargin*2-conMargin;
 	var margintop = shopNodeHeight*0.2317;
 	var paddingtop = shopNodeHeight*0.1721;
 	var top = shopNodeHeight*0.1258;
@@ -40,7 +46,8 @@ window.onload = function () {
 	$('.more-p1').css('margin-top',margintop);
 	$('.shopNode-img').css('padding-top',paddingtop);
 	$('.shopNode-p').css('top',top);
-	// console.log(shopNodeHeight);
+	$('.shop').css('height',shopHeight);
+	// console.log(shopHeight);
 };
 
 //Banner
@@ -76,3 +83,7 @@ function nextPage(next){
     }
     $('.list').animate({left:targetLeft+'%'});
 }
+
+var contentWidth = $('.content-0').width();
+var boxHeight = contentWidth*0.56969697;
+$('.box').css({height: boxHeight+'px'});
