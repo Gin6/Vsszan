@@ -93,7 +93,6 @@
 body {
   margin: 0px;
   padding: 0px;
-  // overflow: hidden;
   background-color: #f6f6f6;
 }
 p {
@@ -104,7 +103,11 @@ a, div {
   -webkit-tap-highlight-color:rgba(255,0,0,0);
 }
 video {
-  height: 100%;
+  position: fixed;
+  left: 0px;
+  object-fit: fill;
+  z-index: 2;
+  @include px-dpr(height, 450px);
 }
 .header {
   position: fixed;
@@ -163,9 +166,9 @@ video {
   @include px-dpr(margin-top, 89px);
   @include px-dpr(height, 450px);
   .video-img {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    top: 50%;
+    @include px-dpr(top, 314px);
     z-index: 2;
     img {
       position: relative;
@@ -176,10 +179,11 @@ video {
 }
 .main {
   .nav {
-    position: relative;
+    position: fixed;
+    z-index: 2;
     @include px-dpr(padding-left, 31px);
     @include px-dpr(padding-right, 30px);
-    @include px-dpr(height, 84px);
+    @include px-dpr(height, 82px);
     background:rgba(255,255,255,1);
     border:1px solid rgba(221,221,221,1);
     .nav-list {
@@ -189,10 +193,10 @@ video {
         @include font-dpr(32px);
         @include font-fw;
         color: rgba(0,0,0,1);
-        @include px-dpr(line-height, 84px);
+        @include px-dpr(line-height, 82px);
       }
     }
-    .list-1 {p {color:rgba(36,101,255,1);}}
+    .list-1 {p {color:rgba(36,101,255,1); float: left;}}
     .list-2 {text-align: center;}
     .list-3 {p {float: right;}}
     .bar {
@@ -202,7 +206,110 @@ video {
       @include px-dpr(width, 128px);
       @include px-dpr(height, 4px);
       background:rgba(36,101,255,1);
-      transition: 0.5s ease;
+    }
+  }
+  .content {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(246,246,246,1);
+    @include px-dpr(padding-top, 84px);
+    .list{
+      width: 100%;
+      background: #fff;
+      ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li {
+          position: relative;
+          width: 100%;
+          -webkit-transition: .3s ease;
+          -moz-transition: .3s ease;
+          -o-transition: .3s ease;
+          transition: .3s ease;
+          .title {
+            background : rgba(246,246,246,1);
+            @include px-dpr(height, 84px);
+            @include px-dpr(padding-left, 31px);
+            @include px-dpr(padding-right, 30px);
+            @include font-dpr(28px);
+            @include font-fw;
+            color: rgba(0,0,0,1);
+            @include px-dpr(line-height, 84px);
+            padding    : 0;
+            border     : none;
+            position   : relative;
+            span {
+              position: absolute;
+              @include px-dpr(right, 30px);
+            }
+            img {
+              position: absolute;
+              @include px-dpr(top, 35px);
+              @include px-dpr(right, 30px);
+            }
+          }
+          .title-2 {
+            position: absolute;
+            top: 0px;
+            @include font-dpr(28px);
+            @include font-fw;
+            color: rgba(0,0,0,1);
+            background:rgba(246,246,246,1) !important;
+            @include px-dpr(left, 143px);
+            @include px-dpr(line-height, 84px);
+          }
+        }
+      }
+    }
+    .list-se {
+      overflow: hidden;
+      display: none;
+      p {
+        background: rgba(255,255,255,1) !important;
+        color: rgba(0,0,0,1);
+      }
+      .title {
+        background:rgba(246,246,246,1) !important;
+        @include px-dpr(margin-bottom, 8px);
+      }
+      li {
+        position: relative;
+        right   : -100%;
+        -webkit-transition: right .5s;
+        -moz-transition   : right .5s;
+        -o-transition     : right .5s;
+        transition        : right .5s;
+        img {
+          position: absolute;
+          @include px-dpr(top, 33px);
+          @include px-dpr(left, 53px);
+          @include px-dpr(width, 30px);
+          @include px-dpr(height, 24px);
+        }
+        .li-p1 {
+          @include px-dpr(padding-left, 95px);
+          @include px-dpr(padding-right, 147px);
+          @include font-dpr(24px);
+          @include font-fw;
+          @include px-dpr(line-height, 84px);
+          @include px-dpr(height, 84px);
+          -webkit-transition   : border .5s; 
+               transition  : border .5s;
+          -webkit-transition   : background .3s;
+               transition  : background .3s;
+        }
+        .li-p2 {
+          position: absolute;
+          top: 0px;
+          @include px-dpr(right, 28px);
+          @include font-dpr(24px);
+          @include font-fw;
+          color:rgba(153,153,153,1) !important;
+          @include px-dpr(line-height, 84px);
+        }
+        .live-p {@include px-dpr(right, 34px);}
+      }
     }
   }
 }

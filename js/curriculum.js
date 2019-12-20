@@ -9,6 +9,7 @@ var exaHeight = $('.example').outerHeight();
 var hnHeight = headerHeight + navHeight;
 var topLHeight = smlHeight - hnHeight;
 
+$('.main').css({height: wh-hnHeight,});
 $('.subMenu-left').css({display: 'block',});
 $('.subMenu-right').css({display: 'block',});
 var data = [

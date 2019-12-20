@@ -249,7 +249,7 @@ ul .default { padding-top: 15px; }
 [data-dpr="3"] .subMenu-right .content .num { line-height: 32.967032967px; }
 [data-dpr="3.5"] .subMenu-right .content .num { line-height: 35px; }
 
-.main { overflow: auto; background: #fff; margin-top: 84px; padding-bottom: 11px; padding-top: 1px; }
+.main { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #fff; margin-top: 84px; padding-bottom: 11px; padding-top: 1px; }
 [data-dpr="2"] .main { margin-top: 168px; }
 [data-dpr="2.625"] .main { margin-top: 220.5px; }
 [data-dpr="3"] .main { margin-top: 276.9230769231px; }

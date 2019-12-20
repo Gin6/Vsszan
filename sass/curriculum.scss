@@ -310,7 +310,8 @@ ul {
   }
 }
 .main {
-  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   background: #fff;
   @include px-dpr(margin-top, 168px);
   @include px-dpr(padding-bottom, 22px);
