@@ -89,7 +89,7 @@
   }
   @return ($px / $base-font-size) * 1rem;
 }
-
+*{margin: 0; padding: 0; }
 body {
   margin: 0px;
   padding: 0px;
@@ -102,11 +102,13 @@ a, div {
   text-decoration: none;
   -webkit-tap-highlight-color:rgba(255,0,0,0);
 }
+ul, li { list-style: none; }
 video {
   position: fixed;
   left: 0px;
   object-fit: fill;
   z-index: 2;
+  width: 100%;
   @include px-dpr(height, 450px);
 }
 .header {
@@ -117,7 +119,7 @@ video {
   background: rgba(255,255,255,1);
   text-align: center;
   border-bottom: 1px solid rgba(221,221,221,1);
-  z-index: 2;
+  z-index: 4;
   .return {
     position: absolute;
     text-decoration: none;
@@ -143,15 +145,18 @@ video {
   }
   .message {
     position: absolute;
-    line-height: 0px;
-    z-index: 1;
-    @include px-dpr(right, 30px);
-    @include px-dpr(top, 30px);
+    @include px-dpr(width, 33px);
+    @include px-dpr(height, 30px);
+    @include px-dpr(right, 31px);
+    @include px-dpr(top, 29px);
     img {
-      @include px-dpr(width, 32px);
+      width: 100%;
+      position: absolute;
+      @include px-dpr(top, 13px);
+      right: 0px;
     }
   }
-  p {
+  .header-title {
     position: relative;
     @include px-dpr(top, 29px);
     @include font-dpr(30px);
@@ -159,6 +164,59 @@ video {
     color: rgba(0,0,0,1);
     @include px-dpr(line-height, 30px);
   }
+  .popModal {
+    @include px-dpr(width, 270px);
+    @include px-dpr(height, 180px);
+    @include px-dpr(padding, 20px);
+    @include px-dpr(top, 119px);
+    @include px-dpr(right, 10px);
+    @include px-dpr(border-radius, 12px);
+    .drop {
+      @include px-dpr(height, 69px);
+      img {
+        position: absolute;
+        // @include px-dpr(top, 12px);
+        @include px-dpr(left, 44px);
+        @include px-dpr(width, 30px);
+        @include px-dpr(height, 33px);
+      }
+      p {
+        position: absolute;
+        @include px-dpr(right, 50px);
+        @include font-dpr(28px);
+        @include font-fw;
+        color: rgba(0,0,0,1);
+        @include px-dpr(line-height, 27px);
+      }
+    }
+    .drop-1 {
+      border-bottom: 1px solid #ddd;
+      img {@include px-dpr(top, 32px);}
+      p {@include px-dpr(top, 36px);}
+    }
+    .drop-2 {
+      img {@include px-dpr(bottom, 33px);}
+      p {@include px-dpr(bottom, 35px);}
+    }
+  }
+  .popModal.bottomRight:before, .popModal.bottomRight:after {
+    @include px-dpr(right, 20px);
+  }
+  .popModal.bottomLeft:after, .popModal.bottomRight:after, .popModal.bottomCenter:after {
+    @include px-dpr(right, 20px);
+  }
+  .popModal.bottomLeft:before, .popModal.bottomRight:before, .popModal.bottomCenter:before {
+    @include px-dpr(right, 20px);
+  }
+}
+.curtain {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 3;
+  background:rgba(0,0,0,1);
+  opacity:0.5;
+  display: none;
 }
 .video-box {
   position: relative;
@@ -177,7 +235,20 @@ video {
     }
   }
 }
+.mt-tabpage-count {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.mt-tabpage-cont__wrap {
+  position: absolute;
+  width: 300%;
+}
+.mt-tabpage-count .mt-tabpage-item {
+  width: 33.3333333%;
+}
 .main {
+  background:rgba(246,246,246,1);
   .nav {
     position: fixed;
     z-index: 2;
@@ -203,7 +274,7 @@ video {
       position: absolute;
       @include px-dpr(left, 31px);
       bottom: 0px;
-      @include px-dpr(width, 128px);
+      @include px-dpr(width, 130px);
       @include px-dpr(height, 4px);
       background:rgba(36,101,255,1);
     }
@@ -217,9 +288,6 @@ video {
       width: 100%;
       background: #fff;
       ul {
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
         li {
           position: relative;
           width: 100%;
@@ -310,6 +378,102 @@ video {
         }
         .live-p {@include px-dpr(right, 34px);}
       }
+    }
+  }
+  .content-2 {
+    position: relative;
+    .content-2-header {
+      position: absolute;
+      @include px-dpr(top, 84px);
+      width: 100%;
+      @include px-dpr(height, 100px);
+      background:rgba(246,246,246,1);
+    }
+    .content-2-main {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      position: absolute;
+      @include px-dpr(top, 184px);
+      width: 100%;
+      background: #fff;
+      .comment {
+        .comment-header {
+          img {
+            @include px-dpr(width, 62px);
+            @include px-dpr(height, 62px);
+            border-radius: 50%;
+          }
+          .username {
+            @include font-dpr(24px);
+            @include font-fw;
+            color: rgba(0,0,0,1);
+            @include px-dpr(line-height, 36px);
+          }
+          .time {
+            @include font-dpr(22px);
+            @include font-fw;
+            color: #999999;
+            @include px-dpr(line-height, 36px);
+          }
+        }
+        .container {
+          p {
+            @include font-dpr(26px);
+            @include font-fw;
+            color: rgba(0,0,0,1);
+            @include px-dpr(line-height, 36px);
+          }
+        }
+      }
+    }
+    .content-2-footer {
+        width: 100%;
+        @include px-dpr(height, 90px);
+        position: fixed;
+        bottom: 0px;
+        background: #fff;
+        display: none;
+        border-top: 1px solid rgba(221,221,221,1);
+        img {
+          position: absolute;
+          @include px-dpr(width, 54px);
+          @include px-dpr(height, 54px);
+          @include px-dpr(top, 18px);
+          @include px-dpr(left, 30px);
+        }
+        input {
+          position: absolute;
+          outline: none;
+          @include font-dpr(28px);
+          @include font-fw;
+          color: rgba(0,0,0,1);
+          @include px-dpr(padding-left, 15px);
+          @include px-dpr(padding-right, 15px);
+          @include px-dpr(bottom, 15px);
+          @include px-dpr(right, 168px);
+          @include px-dpr(width, 447px);
+          @include px-dpr(height, 60px);
+          background: rgba(251,251,251,1);
+          border: 1px solid rgba(221,221,221,1);
+          box-shadow: 0px 0px 5px 0px rgba(4,0,0,0.14);
+          @include px-dpr(border-radius, 6px);
+          outline:0px ; 
+          -webkit-appearance: none;
+        }
+        button {
+          position: absolute;
+          @include px-dpr(top, 15px);
+          @include px-dpr(right, 30px);
+          @include px-dpr(width, 114px);
+          @include px-dpr(height, 60px);
+          background: linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
+          @include px-dpr(border-radius, 6px);
+          border: 0px;
+          @include font-dpr(28px);
+          @include font-fw;
+          color: rgba(255,255,255,1);
+          @include px-dpr(line-height, 36px);
+        }
     }
   }
 }

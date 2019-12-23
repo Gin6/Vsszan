@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b181fc13-f525-4040-80f9-d6164197c458" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/curriculum.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/curriculum.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/video.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/video.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/curriculum.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/curriculum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/curriculum.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/curriculum.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/video.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/video.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/video.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/curriculum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/curriculum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/curriculum.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/video.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/video.html" afterDir="false" />
     </list>
@@ -84,7 +79,8 @@
       <workItem from="1576544701290" duration="5387000" />
       <workItem from="1576631437781" duration="4285000" />
       <workItem from="1576717488368" duration="3348000" />
-      <workItem from="1576808443650" duration="4149000" />
+      <workItem from="1576808443650" duration="4615000" />
+      <workItem from="1577063297233" duration="9166000" />
     </task>
     <servers />
   </component>

@@ -9,9 +9,14 @@ $('.video-play').css({top: '-'+playHeight/2+'px'});
 
 var ww = $(window).width();
 var wh = $(window).height();
+var navHeight = $('.nav').height();
+var ch = $('.content-2-header').height();
+var cf = $('.content-2-footer').height();
 var videoHeight = $('.video-box').outerHeight(true);
-$('.content').css({height: wh-videoHeight,});
-var navlistWidth = $('.list-1').children('p').width();
+$('.content,.content-2,.content-3,.mt-tabpage-count').css({height: wh-videoHeight,});
+$('.content-2-main').css({height: wh-videoHeight-navHeight-ch-cf,});
+
+// var navlistWidth = $('.list-1').children('p').width();
 var navWidth = $('.nav').width();
 var barWidth = $('.bar').width();
 var navWidthAll = $('.nav').outerWidth();
@@ -19,7 +24,8 @@ var padding = (navWidthAll-navWidth)/2;
 $('.nav').css({width: ww-padding*2,});
 var navNewWidth = $('.nav').width();
 var navNewWidthAll = $('.nav').outerWidth();
-// console.log(navWidthAll);
+// console.log(barWidth);
+
 $('.nav-list').click(function() {
 	$('.bar').css({transition: 'left 0.5s ease',});
 	$(this).siblings().children('p').css({color: 'rgba(0,0,0,1)', transition: '0.5s ease',});
@@ -30,10 +36,32 @@ $('.list-1').click(function() {
 });
 $('.list-2').click(function() {
 	$('.bar').css({left: navNewWidthAll/2-barWidth/2,});
+	$('.content-2-footer').css({display: 'block',});
 });
 $('.list-3').click(function() {
-	$('.bar').css({left: navNewWidth-navlistWidth+padding});
+	$('.bar').css({left: navNewWidth-barWidth+padding});
 })
+
+function bodyScroll(event){
+    event.preventDefault();
+}
+$('.curtain').css({height: wh,});
+$('.curtain').click(function() {
+	$(this).css({display: 'none',});
+	document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
+});
+
+$('.message').click(function() {
+	if($(this).hasClass('message-close')) {
+		document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
+		$('.curtain').css({display: 'none',});
+		$(this).removeClass('message-close');
+	}else {
+		document.body.addEventListener('touchmove',bodyScroll, { passive: false });
+		$(this).addClass('message-close');
+		$('.curtain').css({display: 'block',});
+	}
+});
 
 //手风琴折叠板
 jQuery(document).ready(function($)
@@ -88,4 +116,17 @@ $('.list-se li').click(function() {
 		$(this).siblings('.live').children('.vl-img').attr('src','image/video/live-notcheck.png');
 		$(this).children('.vl-img').attr('src','image/video/video-on.png');
 	}
+});
+
+//popModal
+$(function(){	
+	$('#popModal_ex2').click(function(){
+		$('#popModal_ex2').popModal({
+			html : function(callback) {
+				$.ajax({url:"ajax.html",success:function(result){
+					$(".popModal").html(result);
+				}});
+			}
+		});
+	});	
 });
