@@ -14,7 +14,7 @@ var ch = $('.content-2-header').height();
 var cf = $('.content-2-footer').height();
 var videoHeight = $('.video-box').outerHeight(true);
 $('.content,.content-2,.content-3,.mt-tabpage-count').css({height: wh-videoHeight,});
-$('.content-2-main').css({height: wh-videoHeight-navHeight-ch-cf,});
+// $('.content-2-main').css({height: wh-videoHeight-navHeight-ch-cf,});
 
 // var navlistWidth = $('.list-1').children('p').width();
 var navWidth = $('.nav').width();
@@ -40,15 +40,18 @@ $('.list-2').click(function() {
 });
 $('.list-3').click(function() {
 	$('.bar').css({left: navNewWidth-barWidth+padding});
+	$('.content-3-footer').css({display: 'block',});
 })
 
 function bodyScroll(event){
     event.preventDefault();
 }
 $('.curtain').css({height: wh,});
-$('.curtain').click(function() {
-	$(this).css({display: 'none',});
-	document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
+$('.curtain').click(function () {
+	if ($('.content-3-reply').css("display")=="none") {
+		$(this).css({display: 'none',});
+		document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
+	}
 });
 
 $('.message').click(function() {
@@ -59,7 +62,7 @@ $('.message').click(function() {
 	}else {
 		document.body.addEventListener('touchmove',bodyScroll, { passive: false });
 		$(this).addClass('message-close');
-		$('.curtain').css({display: 'block',});
+		$('.curtain').css({display: 'block', zIndex: '3',});
 	}
 });
 
@@ -129,4 +132,45 @@ $(function(){
 			}
 		});
 	});	
+});
+
+$(function(){
+	var i = $('.avatar-list').children('span').length;
+	if (i < 10)
+		$('.avatar-list').children('p').css({display: 'none'});
+});
+
+$('.lecturer-reply').parent().addClass('lec');
+$('.lecturer-delete').click(function() {
+	$(this).parents('.lecturer').slideUp(300, function(){ $(this).parents('.lecturer').remove() });
+});
+$('.lecturer-reply').click(function() {
+	document.body.addEventListener('touchmove',bodyScroll, { passive: false });
+	$('.curtain').css({display: 'block', zIndex: '4',});
+	$('.content-3-reply').css({display: 'block',});
+});
+$('.button-1').click(function() {
+	$('.content-3-reply').css({display: 'none',});
+	$('.curtain').css({display: 'none',});
+	document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
+});
+
+
+$("input,textarea").blur(() => {
+    setTimeout(() => {
+        let ua = navigator.userAgent.toLowerCase()
+        let u = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+        if (ua.match(/MicroMessenger/i) == 'micromessenger' && !!u) {
+          //在iphone 微信中
+          let currentPosition, timer
+          let speed = 1 //页面滚动距离
+          timer = setInterval(function() {
+            currentPosition =
+              document.documentElement.scrollTop || document.body.scrollTop
+            currentPosition -= speed
+            window.scrollTo(0, 0) //页面向上滚动
+            clearInterval(timer)
+          }, 1)
+        }
+    }, 200)  
 });

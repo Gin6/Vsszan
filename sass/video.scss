@@ -235,6 +235,80 @@ video {
     }
   }
 }
+.content-3-reply {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  @include px-dpr(height, 527px);
+  z-index: 4;
+  display: none;
+  .content-3-reply-box {
+    position: relative;
+    @include px-dpr(top, -263.5px);
+    margin: auto;
+    width: 74.133333%;
+    height: 100%;
+    text-align: center;
+    @include px-dpr(border-radius, 10px);
+    background: rgba(255,255,255,1);
+    p {
+      @include font-dpr(28px);
+      @include font-fw;
+      color: rgba(0,0,0,1);
+      @include px-dpr(line-height, 80px);
+    }
+    textarea {
+      border: 0px;
+      width: 100%;
+      @include px-dpr(height, 330px);
+      background: rgba(246,246,246,1);
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(0,0,0,1);
+      @include px-dpr(line-height, 38px);
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(153,153,153,1);
+      @include px-dpr(line-height, 38px);
+    }
+    .content-3-reply-main {
+      background: rgba(246,246,246,1);
+      // box-shadow: 0px 1px 8px 0px rgba(4,0,0,0.07);
+      @include px-dpr(padding-left, 24px);
+      @include px-dpr(padding-right, 24px);
+      @include px-dpr(padding-top, 18px);
+      @include px-dpr(padding-bottom, 18px);
+    }
+    .content-3-reply-footer {
+      position: absolute;
+      width: 100%;
+      @include px-dpr(height, 80px);
+      bottom: 0px;
+      display: flex;
+      border-top: 1px solid #ddd;
+      button {
+        width: 50%;
+        height: 100%;
+        border: 0px;
+        background:rgba(255,255,255,1);
+        @include font-dpr(28px);
+        @include font-fw;
+        @include px-dpr(line-height, 36px);
+      }
+      .button-1 {
+        color:rgba(51,51,51,1);
+        @include px-dpr(border-bottom-left-radius, 10px);
+      }
+      .button-2 {
+        color:rgba(36,101,255,1);
+        @include px-dpr(border-bottom-right-radius, 10px);
+        border-left: 1px solid #ddd;
+      }
+    }
+  }
+}
 .mt-tabpage-count {
   position: relative;
   width: 100%;
@@ -382,98 +456,294 @@ video {
   }
   .content-2 {
     position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     .content-2-header {
       position: absolute;
       @include px-dpr(top, 84px);
       width: 100%;
       @include px-dpr(height, 100px);
       background:rgba(246,246,246,1);
+      .avatar-list {
+        position: relative;
+        @include px-dpr(height, 62px);
+        @include px-dpr(padding-top, 19px);
+        @include px-dpr(padding-bottom, 19px);
+        @include px-dpr(padding-left, 29px);
+        @include px-dpr(margin-right, 212px);
+        p {
+          position: absolute;
+          @include px-dpr(right, -35px);
+          @include px-dpr(top, 30px);
+          @include font-dpr(30px);
+        }
+      }
+      .avatar {
+        @include px-dpr(width, 62px);
+        @include px-dpr(height, 62px);
+        display: inline-block;
+        border-radius: 50%;
+        @include px-dpr(margin-right, -22px);
+      }
+      p {
+        position: absolute;
+        @include px-dpr(top, 39px);
+        @include px-dpr(right, 30px);
+        @include font-dpr(22px);
+        @include font-fw;
+        color:rgba(153,153,153,1);
+        @include px-dpr(line-height, 21px);
+      }
     }
     .content-2-main {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
       position: absolute;
       @include px-dpr(top, 184px);
+      @include px-dpr(padding-bottom, 90px);
       width: 100%;
       background: #fff;
+      z-index: 1;
       .comment {
         .comment-header {
+          position: relative;
+          @include px-dpr(height, 105px);
           img {
+            position: absolute;
+            @include px-dpr(top, 30px);
+            @include px-dpr(left, 30px);
             @include px-dpr(width, 62px);
             @include px-dpr(height, 62px);
             border-radius: 50%;
           }
           .username {
+            position: absolute;
+            @include px-dpr(top, 49px);
+            @include px-dpr(left, 112px);
             @include font-dpr(24px);
             @include font-fw;
             color: rgba(0,0,0,1);
-            @include px-dpr(line-height, 36px);
+            @include px-dpr(line-height, 23px);
           }
           .time {
+            position: absolute;
+            @include px-dpr(top, 51px);
+            @include px-dpr(right, 31px);
             @include font-dpr(22px);
             @include font-fw;
             color: #999999;
-            @include px-dpr(line-height, 36px);
+            @include px-dpr(line-height, 21px);
           }
         }
         .container {
           p {
+            @include px-dpr(margin-left, 31px);
+            @include px-dpr(margin-right, 31px);
+            @include px-dpr(padding-bottom, 30px);
             @include font-dpr(26px);
             @include font-fw;
             color: rgba(0,0,0,1);
             @include px-dpr(line-height, 36px);
+            border-bottom: 1px solid #ddd;
           }
         }
       }
     }
     .content-2-footer {
-        width: 100%;
-        @include px-dpr(height, 90px);
-        position: fixed;
-        bottom: 0px;
-        background: #fff;
-        display: none;
-        border-top: 1px solid rgba(221,221,221,1);
-        img {
-          position: absolute;
-          @include px-dpr(width, 54px);
-          @include px-dpr(height, 54px);
-          @include px-dpr(top, 18px);
-          @include px-dpr(left, 30px);
+      width: 100%;
+      @include px-dpr(height, 90px);
+      position: fixed;
+      bottom: 0px;
+      background: #fff;
+      display: none;
+      z-index: 3;
+      border-top: 1px solid rgba(221,221,221,1);
+      img {
+        position: absolute;
+        @include px-dpr(width, 54px);
+        @include px-dpr(height, 54px);
+        @include px-dpr(top, 18px);
+        @include px-dpr(left, 30px);
+      }
+      input {
+        position: absolute;
+        outline: none;
+        @include font-dpr(28px);
+        @include font-fw;
+        color: rgba(0,0,0,1);
+        @include px-dpr(padding-left, 13px);
+        @include px-dpr(padding-right, 13px);
+        @include px-dpr(bottom, 15px);
+        @include px-dpr(right, 168px);
+        @include px-dpr(width, 451px);
+        @include px-dpr(height, 60px);
+        background: rgba(251,251,251,1);
+        border: 1px solid rgba(221,221,221,1);
+        box-shadow: 0px 0px 5px 0px rgba(4,0,0,0.14);
+        @include px-dpr(border-radius, 6px);
+        outline:0px ; 
+        -webkit-appearance: none;
+      }
+      button {
+        position: absolute;
+        @include px-dpr(top, 15px);
+        @include px-dpr(right, 30px);
+        @include px-dpr(width, 114px);
+        @include px-dpr(height, 60px);
+        background: linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
+        @include px-dpr(border-radius, 6px);
+        border: 0px;
+        @include font-dpr(28px);
+        @include font-fw;
+        color: rgba(255,255,255,1);
+        @include px-dpr(line-height, 36px);
+      }
+    }
+  }
+  .content-3 {
+    position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    .content-3-main {
+      position: absolute;
+      @include px-dpr(top, 84px);
+      @include px-dpr(padding-bottom, 90px);
+      width: 100%;
+      background: rgba(255,255,255,1);
+      z-index: 1;
+      .comment {
+        position: relative;
+        @include px-dpr(padding-top, 22px);
+        @include px-dpr(padding-bottom, 30px);
+        @include px-dpr(margin-left, 30px);
+        @include px-dpr(margin-right, 30px);
+        border-bottom: 1px solid #ddd;
+        .span-1 {
+          @include font-dpr(28px);
+          @include font-fw;
+          color:rgba(36,101,255,1);
+          @include px-dpr(line-height, 25px);
+          @include px-dpr(margin-left, -25px);
         }
-        input {
-          position: absolute;
-          outline: none;
+        .p-2 {
+          @include px-dpr(top, 79px);
+          @include px-dpr(left, 2px);
+          @include px-dpr(margin-top, 19px);
+          @include font-dpr(26px);
+          @include font-fw;
+          font-weight: 500;
+          color:rgba(36,101,255,1);
+          @include px-dpr(line-height, 25px);
+        }
+        .question {
           @include font-dpr(28px);
           @include font-fw;
           color: rgba(0,0,0,1);
-          @include px-dpr(padding-left, 15px);
-          @include px-dpr(padding-right, 15px);
-          @include px-dpr(bottom, 15px);
-          @include px-dpr(right, 168px);
-          @include px-dpr(width, 447px);
-          @include px-dpr(height, 60px);
-          background: rgba(251,251,251,1);
-          border: 1px solid rgba(221,221,221,1);
-          box-shadow: 0px 0px 5px 0px rgba(4,0,0,0.14);
-          @include px-dpr(border-radius, 6px);
-          outline:0px ; 
-          -webkit-appearance: none;
+          @include px-dpr(line-height, 27px);
         }
-        button {
-          position: absolute;
-          @include px-dpr(top, 15px);
-          @include px-dpr(right, 30px);
-          @include px-dpr(width, 114px);
-          @include px-dpr(height, 60px);
-          background: linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
-          @include px-dpr(border-radius, 6px);
-          border: 0px;
-          @include font-dpr(28px);
+        .reply {
+          position: relative;
+          @include px-dpr(margin-bottom, 10px);
+          @include px-dpr(padding-left, 72px);
+          @include font-dpr(26px);
           @include font-fw;
-          color: rgba(255,255,255,1);
+          color: rgba(0,0,0,1);
           @include px-dpr(line-height, 36px);
         }
+        .rd {
+          position: relative;
+          @include px-dpr(top, -31px);
+        }
+        .nt {
+          position: absolute;
+          @include font-dpr(24px);
+          @include font-fw;
+          color:rgba(153,153,153,1);
+          @include px-dpr(line-height, 23px);
+        }
+        .name {
+          @include px-dpr(bottom, 29px);
+        }
+        .time {
+          @include px-dpr(bottom, 30px);
+          @include px-dpr(right, 1px);
+        }
+      }
+      .lecturer {
+        .lecturer-reply {
+          position: absolute;
+          @include px-dpr(top, 28px);
+          @include px-dpr(right, 1px);
+          @include font-dpr(26px);
+          @include font-fw;
+          color:rgba(36,101,255,1);
+          @include px-dpr(line-height, 25px);
+        }
+        .p-2 {
+          font-weight: 400;
+          color:rgba(0,0,0,1);
+        }
+        .lecturer-delete {
+          position: absolute;
+          @include px-dpr(bottom, 5px);
+          @include px-dpr(right, 1px);
+          @include font-dpr(26px);
+          @include font-fw;
+          color:rgba(232,49,4,1);
+          @include px-dpr(line-height, 25px);
+        }
+      }
+      .lec {
+        @include px-dpr(height, 81px);
+      }
+    }
+    .content-3-footer {
+      width: 100%;
+      @include px-dpr(height, 90px);
+      position: fixed;
+      bottom: 0px;
+      background: #fff;
+      display: none;
+      z-index: 3;
+      border-top: 1px solid rgba(221,221,221,1);
+      input {
+        position: absolute;
+        outline: none;
+        @include font-dpr(28px);
+        @include font-fw;
+        color: rgba(0,0,0,1);
+        @include px-dpr(padding-left, 13px);
+        @include px-dpr(padding-right, 13px);
+        @include px-dpr(bottom, 15px);
+        @include px-dpr(right, 168px);
+        @include px-dpr(width, 526px);
+        @include px-dpr(height, 60px);
+        background: rgba(251,251,251,1);
+        border: 1px solid rgba(221,221,221,1);
+        box-shadow: 0px 0px 5px 0px rgba(4,0,0,0.14);
+        @include px-dpr(border-radius, 6px);
+        outline:0px ; 
+        -webkit-appearance: none;
+      }
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+        @include font-dpr(24px);
+        @include font-fw;
+        color:rgba(153,153,153,1);
+        @include px-dpr(line-height, 40px);
+      }
+      button {
+        position: absolute;
+        @include px-dpr(top, 15px);
+        @include px-dpr(right, 30px);
+        @include px-dpr(width, 114px);
+        @include px-dpr(height, 60px);
+        background: linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
+        @include px-dpr(border-radius, 6px);
+        border: 0px;
+        @include font-dpr(28px);
+        @include font-fw;
+        color: rgba(255,255,255,1);
+        @include px-dpr(line-height, 36px);
+      }
     }
   }
 }
