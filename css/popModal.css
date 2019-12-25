@@ -9,15 +9,15 @@
 .popModal .popModal_footer {background:#fafafa;padding:15px;border-top:1px solid #ddd;text-align:right;position:absolute;bottom:0;left:0;right:0}
 .popModal .popModal_footer button {margin:0 0 0 5px}
 .popModal:before,
-.popModal:after {content:'';position:absolute;border:10px solid transparent}
+.popModal:after {content:'';position:absolute;/*border:10px solid transparent*/}
 .popModal:after {z-index:1}
 .popModal.bottomRight {right:0}
 .popModal.bottomLeft:before,
 .popModal.bottomRight:before,
-.popModal.bottomCenter:before {border-top-width:0;border-bottom-color:#aaa;top:-10px;/*left:6px*/}
+.popModal.bottomCenter:before {border-top-width:0;border-bottom-color:#aaa/*;top:-10px;left:6px*/}
 .popModal.bottomLeft:after,
 .popModal.bottomRight:after,
-.popModal.bottomCenter:after {border-top-width:0;border-bottom-color:#fff;top:-9px;/*left:6px*/}
+.popModal.bottomCenter:after {border-top-width:0;border-bottom-color:#fff/*;top:-9px;left:6px*/}
 .popModal.bottomRight:before,
 .popModal.bottomRight:after {left:auto;/*right:6px*/}
 .popModal.bottomCenter:before,

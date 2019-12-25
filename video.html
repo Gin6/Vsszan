@@ -157,8 +157,8 @@
 								<span class="avatar cover-image brround" data-image-src="image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg" style="background: url('image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg') center center;background-size: cover;"></span>
 								<span class="avatar cover-image brround" data-image-src="image/chathead/e6774038810afba773b103632a264902.jpeg" style="background: url('image/chathead/e6774038810afba773b103632a264902.jpeg') center center;background-size: cover;"></span>
 								<span class="avatar cover-image brround" data-image-src="image/chathead/7157621b077ccf868e57ffc6e681d02a.jpeg" style="background: url('image/chathead/7157621b077ccf868e57ffc6e681d02a.jpeg') center center;background-size: cover;"></span>
-								<p>...</p>
 							</div>
+							<p class="omit">...</p>
 							<p>在线人数:15</p>
 						</div>
 						<div class="content-2-main">
@@ -271,11 +271,15 @@
 	</div>
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/fastclick.js"></script>
 	<script type="text/javascript" src="js/mt-tabpage.js"></script>
 	<script type="text/javascript" src="js/viewport.js"></script>
 	<script type="text/javascript" src="js/video.js"></script>
 	<script type="text/javascript" src="js/popModal.js"></script>
 	<script type="text/javascript">
+	$(function () {
+		FastClick.attach(document.body);
+	});
 	$(function () {
 		$('[js-tab=2]').tab({
 			mouse: 'click',   //切换方式：over，click

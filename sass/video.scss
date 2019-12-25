@@ -77,7 +77,7 @@
 @mixin font-fw {
   font-family: PingFang SC;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: px2rem(1);
 }
 
 @function px2rem($px, $base-font-size: 32px) {
@@ -109,7 +109,12 @@ video {
   object-fit: fill;
   z-index: 2;
   width: 100%;
-  @include px-dpr(height, 450px);
+  // @include px-dpr(height, 450px);
+  height: px2rem(450);
+}
+textarea {
+  border: solid 0px;
+  outline:none;
 }
 .header {
   position: fixed;
@@ -118,7 +123,6 @@ video {
   @include px-dpr(height, 88px);
   background: rgba(255,255,255,1);
   text-align: center;
-  border-bottom: 1px solid rgba(221,221,221,1);
   z-index: 4;
   .return {
     position: absolute;
@@ -190,7 +194,7 @@ video {
       }
     }
     .drop-1 {
-      border-bottom: 1px solid #ddd;
+      border-bottom: px2rem(1) solid #ddd;
       img {@include px-dpr(top, 32px);}
       p {@include px-dpr(top, 36px);}
     }
@@ -199,15 +203,20 @@ video {
       p {@include px-dpr(bottom, 35px);}
     }
   }
-  .popModal.bottomRight:before, .popModal.bottomRight:after {
-    @include px-dpr(right, 20px);
-  }
-  .popModal.bottomLeft:after, .popModal.bottomRight:after, .popModal.bottomCenter:after {
-    @include px-dpr(right, 20px);
-  }
-  .popModal.bottomLeft:before, .popModal.bottomRight:before, .popModal.bottomCenter:before {
-    @include px-dpr(right, 20px);
-  }
+}
+.popModal.bottomRight:before, .popModal.bottomRight:after {
+  @include px-dpr(right, 20px);
+}
+.popModal.bottomLeft:after, .popModal.bottomRight:after, .popModal.bottomCenter:after {
+  @include px-dpr(right, 20px);
+  @include px-dpr(top, -9px);
+}
+.popModal.bottomLeft:before, .popModal.bottomRight:before, .popModal.bottomCenter:before {
+  @include px-dpr(right, 20px);
+  @include px-dpr(top, -10px);
+}
+.popModal:before, .popModal:after {
+  border: px2rem(10) solid transparent;
 }
 .curtain {
   position: absolute;
@@ -221,8 +230,8 @@ video {
 .video-box {
   position: relative;
   text-align: center;
-  @include px-dpr(margin-top, 89px);
-  @include px-dpr(height, 450px);
+  @include px-dpr(margin-top, 88px);
+  height: px2rem(450);
   .video-img {
     position: fixed;
     width: 100%;
@@ -287,7 +296,7 @@ video {
       @include px-dpr(height, 80px);
       bottom: 0px;
       display: flex;
-      border-top: 1px solid #ddd;
+      border-top: px2rem(1) solid #ddd;
       button {
         width: 50%;
         height: 100%;
@@ -304,7 +313,7 @@ video {
       .button-2 {
         color:rgba(36,101,255,1);
         @include px-dpr(border-bottom-right-radius, 10px);
-        border-left: 1px solid #ddd;
+        border-left: px2rem(1) solid #ddd;
       }
     }
   }
@@ -330,7 +339,7 @@ video {
     @include px-dpr(padding-right, 30px);
     @include px-dpr(height, 82px);
     background:rgba(255,255,255,1);
-    border:1px solid rgba(221,221,221,1);
+    border: px2rem(1) solid rgba(221,221,221,1);
     .nav-list {
       width: 33.333333%;
       float: left;
@@ -407,6 +416,7 @@ video {
     .list-se {
       overflow: hidden;
       display: none;
+      @include px-dpr(padding-bottom, 8px);
       p {
         background: rgba(255,255,255,1) !important;
         color: rgba(0,0,0,1);
@@ -466,24 +476,20 @@ video {
       background:rgba(246,246,246,1);
       .avatar-list {
         position: relative;
+        overflow: hidden;
         @include px-dpr(height, 62px);
         @include px-dpr(padding-top, 19px);
-        @include px-dpr(padding-bottom, 19px);
-        @include px-dpr(padding-left, 29px);
-        @include px-dpr(margin-right, 212px);
-        p {
-          position: absolute;
-          @include px-dpr(right, -35px);
-          @include px-dpr(top, 30px);
-          @include font-dpr(30px);
-        }
+        @include px-dpr(margin-bottom, 19px);
+        @include px-dpr(padding-left, 30px);
+        @include px-dpr(margin-right, 200px);
       }
       .avatar {
         @include px-dpr(width, 62px);
         @include px-dpr(height, 62px);
         display: inline-block;
         border-radius: 50%;
-        @include px-dpr(margin-right, -22px);
+        @include px-dpr(margin-right, -20px);
+        box-shadow:-2px 1px 4px 0px rgba(0, 0, 0, 0.16);
       }
       p {
         position: absolute;
@@ -494,6 +500,12 @@ video {
         color:rgba(153,153,153,1);
         @include px-dpr(line-height, 21px);
       }
+      .omit {
+          position: absolute;
+          @include px-dpr(right, 170px);
+          @include px-dpr(top, 30px);
+          @include font-dpr(30px);
+        }
     }
     .content-2-main {
       position: absolute;
@@ -505,7 +517,7 @@ video {
       .comment {
         .comment-header {
           position: relative;
-          @include px-dpr(height, 105px);
+          @include px-dpr(height, 104px);
           img {
             position: absolute;
             @include px-dpr(top, 30px);
@@ -537,12 +549,12 @@ video {
           p {
             @include px-dpr(margin-left, 31px);
             @include px-dpr(margin-right, 31px);
-            @include px-dpr(padding-bottom, 30px);
+            @include px-dpr(padding-bottom, 32px);
             @include font-dpr(26px);
             @include font-fw;
             color: rgba(0,0,0,1);
             @include px-dpr(line-height, 36px);
-            border-bottom: 1px solid #ddd;
+            border-bottom: px2rem(1) solid #ddd;
           }
         }
       }
@@ -555,7 +567,7 @@ video {
       background: #fff;
       display: none;
       z-index: 3;
-      border-top: 1px solid rgba(221,221,221,1);
+      border-top: px2rem(1) solid rgba(221,221,221,1);
       img {
         position: absolute;
         @include px-dpr(width, 54px);
@@ -576,7 +588,7 @@ video {
         @include px-dpr(width, 451px);
         @include px-dpr(height, 60px);
         background: rgba(251,251,251,1);
-        border: 1px solid rgba(221,221,221,1);
+        border: px2rem(1) solid rgba(221,221,221,1);
         box-shadow: 0px 0px 5px 0px rgba(4,0,0,0.14);
         @include px-dpr(border-radius, 6px);
         outline:0px ; 
@@ -613,10 +625,10 @@ video {
       .comment {
         position: relative;
         @include px-dpr(padding-top, 22px);
-        @include px-dpr(padding-bottom, 30px);
+        @include px-dpr(padding-bottom, 28px);
         @include px-dpr(margin-left, 30px);
         @include px-dpr(margin-right, 30px);
-        border-bottom: 1px solid #ddd;
+        border-bottom: px2rem(1) solid #ddd;
         .span-1 {
           @include font-dpr(28px);
           @include font-fw;
@@ -627,7 +639,7 @@ video {
         .p-2 {
           @include px-dpr(top, 79px);
           @include px-dpr(left, 2px);
-          @include px-dpr(margin-top, 19px);
+          @include px-dpr(margin-top, 20px);
           @include font-dpr(26px);
           @include font-fw;
           font-weight: 500;
@@ -638,7 +650,8 @@ video {
           @include font-dpr(28px);
           @include font-fw;
           color: rgba(0,0,0,1);
-          @include px-dpr(line-height, 27px);
+          @include px-dpr(line-height, 38px);
+          display: inline-block;
         }
         .reply {
           position: relative;
@@ -669,9 +682,10 @@ video {
         }
       }
       .lecturer {
+        @include px-dpr(padding-bottom, 23px);
         .lecturer-reply {
           position: absolute;
-          @include px-dpr(top, 28px);
+          @include px-dpr(top, 26px);
           @include px-dpr(right, 1px);
           @include font-dpr(26px);
           @include font-fw;
@@ -682,9 +696,15 @@ video {
           font-weight: 400;
           color:rgba(0,0,0,1);
         }
+        .reply {
+          @include px-dpr(line-height, 40px);
+        }
+        .rd {
+          @include px-dpr(top, -34px);
+        }
         .lecturer-delete {
           position: absolute;
-          @include px-dpr(bottom, 5px);
+          @include px-dpr(bottom, 10px);
           @include px-dpr(right, 1px);
           @include font-dpr(26px);
           @include font-fw;
@@ -693,7 +713,7 @@ video {
         }
       }
       .lec {
-        @include px-dpr(height, 81px);
+        @include px-dpr(height, 88px);
       }
     }
     .content-3-footer {
@@ -704,7 +724,7 @@ video {
       background: #fff;
       display: none;
       z-index: 3;
-      border-top: 1px solid rgba(221,221,221,1);
+      border-top: px2rem(1) solid rgba(221,221,221,1);
       input {
         position: absolute;
         outline: none;
@@ -718,7 +738,7 @@ video {
         @include px-dpr(width, 526px);
         @include px-dpr(height, 60px);
         background: rgba(251,251,251,1);
-        border: 1px solid rgba(221,221,221,1);
+        border: px2rem(1) solid rgba(221,221,221,1);
         box-shadow: 0px 0px 5px 0px rgba(4,0,0,0.14);
         @include px-dpr(border-radius, 6px);
         outline:0px ; 

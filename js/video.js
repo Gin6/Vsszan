@@ -137,7 +137,7 @@ $(function(){
 $(function(){
 	var i = $('.avatar-list').children('span').length;
 	if (i < 10)
-		$('.avatar-list').children('p').css({display: 'none'});
+		$('.content-2-header').children('.omit').css({display: 'none'});
 });
 
 $('.lecturer-reply').parent().addClass('lec');

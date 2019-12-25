@@ -85,5 +85,5 @@ function nextPage(next){
 }
 
 var contentWidth = $('.content-0').width();
-var boxHeight = contentWidth*0.56969697;
+var boxHeight = contentWidth*0.6;
 $('.box').css({height: boxHeight+'px'});
