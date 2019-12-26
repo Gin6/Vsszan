@@ -105,7 +105,7 @@ a, div {
 }
 .header {
   position: fixed;
-  top: 0px;
+  top: px2rem(0);
   width: 100%;
   height: px2rem(87);
   //@include px-dpr(height, 87px);
@@ -121,9 +121,11 @@ a, div {
     @include font-fw;
     color:rgba(0,0,0,1);
     @include px-dpr(left, 30px);
-    @include px-dpr(top, 32px);
+    top: px2rem(32);
+    //@include px-dpr(top, 32px);
     img {
-      @include px-dpr(width, 14px);
+      width: px2rem(14);
+      //@include px-dpr(width, 14px);
       @include px-dpr(padding-right, 15px);
     }
   }
@@ -140,17 +142,21 @@ a, div {
     line-height: 0px;
     z-index: 1;
     @include px-dpr(right, 32px);
-    @include px-dpr(top, 15px);
+    top: px2rem(15);
+    //@include px-dpr(top, 15px);
     img {
-      @include px-dpr(width, 58.8px);
-      @include px-dpr(height, 58.8px);
+      width: px2rem(58.8);
+      height: px2rem(58.8);
+      // @include px-dpr(width, 58.8px);
+      // @include px-dpr(height, 58.8px);
       border-radius:50%;
       box-shadow:0px 1px 14px 0px rgba(1,1,1,0.18);
     }
   }
   p {
     position: relative;
-    @include px-dpr(top, 29px);
+    top: px2rem(29);
+    //@include px-dpr(top, 29px);
     @include font-dpr(30px);
     @include font-fw;
     color: rgba(0,0,0,1);
@@ -160,7 +166,8 @@ a, div {
 .main {
   width: 100%;
   background:rgba(255,255,255,1);
-  @include px-dpr(padding-top, 118px);
+  padding-top: px2rem(118);
+  //@include px-dpr(padding-top, 118px);
   .scroll {
     @include px-dpr(padding-left, 30px);
     @include px-dpr(padding-right, 30px);
@@ -186,8 +193,10 @@ a, div {
     }
   }
   .nav {
-    @include px-dpr(margin-top, 44px);
-    @include px-dpr(margin-bottom, 44px);
+    margin-top: px2rem(44);
+    margin-bottom: px2rem(44);
+    //@include px-dpr(margin-top, 44px);
+    //@include px-dpr(margin-bottom, 44px);
     @include px-dpr(padding-left, 11px);
     @include px-dpr(padding-right, 11px);
     display: flex;
@@ -195,8 +204,10 @@ a, div {
       width: 16.6666667%;
       text-align: center;
       img {
-        @include px-dpr(width, 72px);
-        @include px-dpr(height, 72px);
+        width: px2rem(72);
+        height: px2rem(72);
+        // @include px-dpr(width, 72px);
+        // @include px-dpr(height, 72px);
       }
       p {
         @include font-dpr(20px);
@@ -217,14 +228,18 @@ a, div {
     @include px-dpr(border-radius, 6px);
     img {
       position: absolute;
-      @include px-dpr(top, 11px);
+      top: px2rem(11);
+      //@include px-dpr(top, 11px);
       @include px-dpr(left, 14px);
-      @include px-dpr(width, 34px);
-      @include px-dpr(height, 32px);
+      width: px2rem(34);
+      height: px2rem(32);
+      // @include px-dpr(width, 34px);
+      // @include px-dpr(height, 32px);
     }
     .p1 {
       position: absolute;
-      @include px-dpr(top, 16px);
+      top: px2rem(16);
+      //@include px-dpr(top, 16px);
       @include px-dpr(left, 62px);
       @include font-dpr(22px);
       @include font-fw;
@@ -233,7 +248,8 @@ a, div {
     }
     .p2 {
       position: absolute;
-      @include px-dpr(top, 16px);
+      top: px2rem(16);
+      //@include px-dpr(top, 16px);
       @include px-dpr(left, 123px);
       @include font-dpr(22px);
       @include font-fw;
@@ -243,8 +259,10 @@ a, div {
   }
   .recommend {
     position: relative;
-    @include px-dpr(margin-bottom, 39px);
-    @include px-dpr(margin-top, 44px);
+    margin-top: px2rem(44);
+    margin-bottom: px2rem(39);
+    // @include px-dpr(margin-bottom, 39px);
+    // @include px-dpr(margin-top, 44px);
     .rec-header {
       position: relative;
       @include px-dpr(margin-left, 30px);
@@ -267,10 +285,12 @@ a, div {
         @include px-dpr(line-height, 36px);
         img {
           position: absolute;
-          @include px-dpr(top, 8px);
+          top: px2rem(8);
+          //@include px-dpr(top, 8px);
           @include px-dpr(right, 1px);
           @include px-dpr(width, 23px);
-          @include px-dpr(height, 20px);
+          height: px2rem(20);
+          //@include px-dpr(height, 20px);
         }
       }
     }
@@ -294,7 +314,8 @@ a, div {
       .content-0 {
         position: relative;
         width: 88%;
-        @include px-dpr(margin-top, 39px);
+        margin-top: px2rem(39);
+        //@include px-dpr(margin-top, 39px);
         img {
           width: 100%;
           height: 100%;
@@ -302,11 +323,13 @@ a, div {
         }
         .box {
           position: relative;
-          @include px-dpr(margin-bottom, 28px);
+          margin-bottom: px2rem(28);
+          //@include px-dpr(margin-bottom, 28px);
         }
         .hour {
           position: absolute;
-          @include px-dpr(bottom, 10px);
+          bottom: px2rem(10);
+          //@include px-dpr(bottom, 10px);
           @include px-dpr(right, 10px);
           @include px-dpr(width, 88px);
           height: px2rem(30);
@@ -335,7 +358,8 @@ a, div {
         .price {
           position: relative;
           @include px-dpr(left, -5px);
-          @include px-dpr(margin-top, 26px);
+          margin-top: px2rem(26);
+          //@include px-dpr(margin-top, 26px);
           display: flex;
           p {
             @include font-dpr(30px);
@@ -354,12 +378,16 @@ a, div {
   }
   .teacher-box {
     background:rgba(246,246,246,1);
-    @include px-dpr(padding-top, 14px);
-    @include px-dpr(padding-bottom, 14px);
+    padding-top: px2rem(14);
+    padding-bottom: px2rem(14);
+    // @include px-dpr(padding-top, 14px);
+    // @include px-dpr(padding-bottom, 14px);
     .teacher {
       background: #fff;
-      @include px-dpr(padding-top, 44px);
-      @include px-dpr(padding-bottom, 37px);
+      //@include px-dpr(padding-top, 44px);
+      padding-top: px2rem(44);
+      padding-bottom: px2rem(37);
+      //@include px-dpr(padding-bottom, 37px);
       @include px-dpr(padding-right, 5px);
       .t-title {
         @include font-dpr(38px);
@@ -374,7 +402,8 @@ a, div {
         overflow-x: scroll;
         overflow-y: hidden;
         display: -webkit-inline-box;
-        @include px-dpr(margin-top, 42px);
+        margin-top: px2rem(42);
+        //@include px-dpr(margin-top, 42px);
         div {
           width: 15.838926%;
           text-align: center;
@@ -392,19 +421,24 @@ a, div {
           @include font-fw;
           color:rgba(0,0,0,1);
           @include px-dpr(line-height, 24px);
-          @include px-dpr(margin-top, 20px);
+          margin-top: px2rem(20);
+          //@include px-dpr(margin-top, 20px);
         }
       }
     }
   }
   .tutorial-box {
     background:rgba(246,246,246,1);
-    @include px-dpr(padding-top, 14px);
-    @include px-dpr(padding-bottom, 14px);
+    padding-top: px2rem(14);
+    padding-bottom: px2rem(14);
+    // @include px-dpr(padding-top, 14px);
+    // @include px-dpr(padding-bottom, 14px);
     .tutorial {
       background: #fff;
-      @include px-dpr(padding-top, 44px);
-      @include px-dpr(padding-bottom, 43px);
+      padding-top: px2rem(44);
+      padding-bottom: px2rem(37);
+      //@include px-dpr(padding-top, 44px);
+      //@include px-dpr(padding-bottom, 43px);
       .tu-title {
         @include font-dpr(38px);
         @include font-fw;
@@ -415,7 +449,8 @@ a, div {
       }
       .shop {
         position: relative;
-        @include px-dpr(margin-top, 40px);
+        margin-top: px2rem(40);
+        //@include px-dpr(margin-top, 40px);
         @include px-dpr(margin-left, 30px);
         @include px-dpr(margin-right, 30px);
         .shop-left {
@@ -437,7 +472,8 @@ a, div {
           background:rgba(255,255,255,1);
           border:1px solid rgba(238,238,238,1);
           @include px-dpr(border-radius, 10px);
-          @include px-dpr(margin-bottom, 30px);
+          margin-bottom: px2rem(30);
+          //@include px-dpr(margin-bottom, 30px);
           img {
             @include px-dpr(width, 55px);
           }
@@ -461,14 +497,16 @@ a, div {
       .exclusive {
         margin: 0px;
         .content-0 {
-          @include px-dpr(margin-top, 39px);
+          margin-top: px2rem(39);
+          //@include px-dpr(margin-top, 39px);
         }
       }
     }
   }
   .banner-box {
     background:rgba(246,246,246,1);
-    @include px-dpr(padding-bottom, 14px);
+    padding-bottom: px2rem(14);
+      //@include px-dpr(padding-bottom, 14px);
     .banner {
       height: px2rem(106);
       //@include px-dpr(height, 106px);
@@ -481,7 +519,8 @@ a, div {
   .vip {
     @include px-dpr(margin-bottom, 0px);
     .rec-header {
-      @include px-dpr(margin-bottom, 4px);
+      margin-bottom: px2rem(4);
+      //@include px-dpr(margin-bottom, 4px);
     }
   }
 }
@@ -489,8 +528,10 @@ a, div {
   width: 100%;
   background: #fff;
   text-align: center;
-  @include px-dpr(padding-top, 54px);
-  @include px-dpr(padding-bottom, 55px);
+  padding-top: px2rem(54);
+  padding-bottom: px2rem(55);
+  // @include px-dpr(padding-top, 54px);
+  // @include px-dpr(padding-bottom, 55px);
   .but {
     @include px-dpr(width, 220px);
     height: px2rem(60);

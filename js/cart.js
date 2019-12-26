@@ -178,7 +178,7 @@ $('.content').on("touchmove", function(e) {
 
 $(".curtain").css({height: wh + 'px',});
 var bgWidth = $('.bg').width();
-$('.bg').css({height: bgWidth*0.57 + 'px',});
+// $('.bg').css({height: bgWidth*0.6 + 'px',});
 $('.word').css({left: bgWidth + 'px',});
 $('.price').css({left: bgWidth + 'px',});
 
