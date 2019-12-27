@@ -77,7 +77,7 @@
 @mixin font-fw {
   font-family: PingFang SC;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: px2rem(1);
 }
 @mixin font-fw-0 {
   font-family: PingFang SC;
@@ -86,8 +86,10 @@
 @mixin add-sub {
   position: absolute;
   background: rgba(255,255,255,1);
-  @include px-dpr(height, 35px);
-  @include px-dpr(width, 43px);
+  width: px2rem(43);
+  height: px2rem(35);
+  // @include px-dpr(height, 35px);
+  // @include px-dpr(width, 43px);
   color: #9c9c9c;
   @include font-fw;
   @include font-dpr(25px);
@@ -135,19 +137,23 @@ a, div {
     @include font-dpr(28px);
     @include font-fw;
     color:rgba(0,0,0,1);
-    @include px-dpr(left, 30px);
+    left: px2rem(30);
+    //@include px-dpr(left, 30px);
     top: px2rem(32);
     //@include px-dpr(top, 32px);
     img {
       width: px2rem(14);
       //@include px-dpr(width, 14px);
-      @include px-dpr(padding-right, 15px);
+      padding-right: px2rem(15);
+      //@include px-dpr(padding-right, 15px);
     }
   }
   span {
     position: relative;
-    @include px-dpr(top, -2px);
-    @include px-dpr(left, -10px);
+    top: px2rem(-2);
+    left: px2rem(-10);
+    // @include px-dpr(top, -2px);
+    // @include px-dpr(left, -10px);
     @include font-dpr(28px);
     @include font-fw;
     color: rgba(0,0,0,1);
@@ -164,10 +170,12 @@ a, div {
   }
 }
 .main {
-  position: fixed;
-  @include px-dpr(padding, 30px);
-  //padding-top: px2rem(119);
-  @include px-dpr(padding-top, 120px);
+  position: absolute;
+  padding: px2rem(30);
+  //@include px-dpr(padding, 30px);
+  padding-top: px2rem(119);
+  padding-bottom: px2rem(108);
+  //@include px-dpr(padding-top, 120px);
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -177,18 +185,21 @@ a, div {
     height: px2rem(253);
     //@include px-dpr(height, 253px);
     background:rgba(248,250,255,1);
-    box-shadow:0px 1px 14px 0px rgba(1,1,1,0.18);
-    border-radius:6px;
+    box-shadow:0px px2rem(1) px2rem(14) 0px rgba(1,1,1,0.18);
+    border-radius:px2rem(6);
     margin-bottom: px2rem(29);
     //@include px-dpr(margin-bottom, 29px);
     transition: transform .4s ease, height .2s ease;
     .choose {
       position: absolute;
-      @include px-dpr(left, 20px);
+      left: px2rem(20);
+      //@include px-dpr(left, 20px);
       top: px2rem(84);
       //@include px-dpr(top, 84px);
-      @include px-dpr(width, 30px);
-      @include px-dpr(height, 30px);
+      width: px2rem(30);
+      height: px2rem(30);
+      // @include px-dpr(width, 30px);
+      // @include px-dpr(height, 30px);
       background:rgba(255,255,255,1);
       border:px2rem(1) solid rgba(187,187,187,1);
       border-radius:50%;
@@ -202,21 +213,27 @@ a, div {
       // width: 28.985507%;
       height: px2rem(120);
       position: absolute;
-      @include px-dpr(left, 72px);
+      left: px2rem(72);
+      //@include px-dpr(left, 72px);
       top: px2rem(44);
       //@include px-dpr(top, 44px);
-      @include px-dpr(border-radius, 6px);
+      border-radius: px2rem(6);
+      //@include px-dpr(border-radius, 6px);
     }
   }
   .content_left {
-    @include translateX(transform, -108px);
+    transform: translateX(px2rem(-108));
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .word {
     position: absolute;
     top: px2rem(40);
     //@include px-dpr(top, 43px);
-    @include px-dpr(margin-right, 18px);
-    @include px-dpr(margin-left, 93px);
+    margin-right: px2rem(18);
+    margin-left: px2rem(93);
+    // @include px-dpr(margin-right, 18px);
+    // @include px-dpr(margin-left, 93px);
     height: px2rem(116);
     //@include px-dpr(height, 112px);
     .word_p1 {
@@ -230,8 +247,10 @@ a, div {
     .word_hour {
       position: absolute;
       display: flex;
-      @include px-dpr(left, 5px);
-      @include px-dpr(bottom, 0px);
+      left: px2rem(5);
+      bottom: 0px;
+      //@include px-dpr(left, 5px);
+      //@include px-dpr(bottom, 0px);
       @include font-dpr(20px);
       @include font-fw;
       color:rgba(153,153,153,1);
@@ -239,8 +258,10 @@ a, div {
     }
     a {
       position: absolute;
-      @include px-dpr(right, 3px);
-      @include px-dpr(bottom, 1px);
+      right: px2rem(3);
+      bottom: px2rem(1);
+      // @include px-dpr(right, 3px);
+      // @include px-dpr(bottom, 1px);
       @include font-dpr(20px);
       @include font-fw;
       color:rgba(36,101,255,1);
@@ -252,15 +273,16 @@ a, div {
     position: absolute;
     display: flex;
     @include px-dpr(height, 21px);
-    @include px-dpr(margin-left, 90px);
+    margin-left: px2rem(90);
+    //@include px-dpr(margin-left, 90px);
     top: px2rem(188);
     //@include px-dpr(top, 188px);
     color:rgba(232,49,4,1);
     .num {
-    @include px-dpr(width, 66px);
-    @include font-dpr(28px);
-    @include px-dpr(line-height, 23px);
-    @include font-fw-0;
+      @include px-dpr(width, 66px);
+      @include font-dpr(28px);
+      @include px-dpr(line-height, 23px);
+      @include font-fw-0;
     }
     .yun {
       @include px-dpr(width, 30px);
@@ -286,26 +308,36 @@ a, div {
   }
   .sub-add {
     position: absolute;
-    @include px-dpr(right, 20px);
+    right: px2rem(20);
+    //@include px-dpr(right, 20px);
     top: px2rem(180);
     // @include px-dpr(bottom, 36px);
-    @include px-dpr(width, 137px);
-    @include px-dpr(height, 35px);
+    width: px2rem(137);
+    height: px2rem(35);
+    // @include px-dpr(width, 137px);
+    // @include px-dpr(height, 35px);
     background:rgba(255,255,255,1);
     text-align: center;
     border:px2rem(1) solid rgba(221,221,221,1);
-    @include px-dpr(border-radius, 6px);
+    border-radius: px2rem(6);
+    //@include px-dpr(border-radius, 6px);
     .sub {
-      @include px-dpr(left, 2px);
+      left: px2rem(2);
+      //@include px-dpr(left, 2px);
       @include add-sub;
-      @include px-dpr(border-top-left-radius, 6px);
-      @include px-dpr(border-bottom-left-radius, 6px);
+      border-top-left-radius: px2rem(6);
+      border-bottom-left-radius: px2rem(6);
+      // @include px-dpr(border-top-left-radius, 6px);
+      // @include px-dpr(border-bottom-left-radius, 6px);
     }
     .text_box {
       position: absolute;
-      @include px-dpr(left, 45px);
-      @include px-dpr(width, 47px);
-      @include px-dpr(height, 35px);
+      left: px2rem(45);
+      width: px2rem(47);
+      height: px2rem(35);
+      // @include px-dpr(left, 45px);
+      // @include px-dpr(width, 47px);
+      // @include px-dpr(height, 35px);
       border: 0px;
       border-left: px2rem(1) solid rgba(221,221,221,1);
       border-right: px2rem(1) solid rgba(221,221,221,1);
@@ -314,14 +346,16 @@ a, div {
       color: #9c9c9c;
       @include font-fw;
       @include font-dpr(21px);
-      @include px-dpr(border-radius, 0px);
+      border-radius: 0px;
       outline: none;
     }
     .add {
       right: 0px;
       @include add-sub;
-      @include px-dpr(border-top-right-radius, 6px);
-      @include px-dpr(border-bottom-right-radius, 6px);
+      border-top-right-radius: px2rem(6);
+      border-bottom-right-radius: px2rem(6);
+      // @include px-dpr(border-top-right-radius, 6px);
+      // @include px-dpr(border-bottom-right-radius, 6px);
     }
   }
   .delete {
@@ -331,8 +365,8 @@ a, div {
     right: 0px;
     z-index: -1;
     background: rgba(255,59,50,1);
-    border-radius: 0px 6px 6px 0px;
-    box-shadow: 0px 1px 14px 0px rgba(1,1,1,0.18);
+    border-radius: 0px px2rem(6) px2rem(6) 0px;
+    box-shadow: 0px px2rem(1) px2rem(14) 0px rgba(1,1,1,0.18);
     transition: .4s;
     p {
       text-align: center;
@@ -345,8 +379,10 @@ a, div {
     }
   }
   .delete_right {
+    width: px2rem(108);
+    transform: translateX(px2rem(108));
     @include px-dpr(width, 108px);
-    @include translateX(transform, 108px);
+    //@include translateX(transform, 108px);
   }
 }
 .main::-webkit-scrollbar {
@@ -359,15 +395,18 @@ a, div {
   //@include px-dpr(height, 108px);
   bottom: 0px;
   background:rgba(255,255,255,1);
-  box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.04);
+  box-shadow:0px 0px px2rem(10) 0px rgba(0, 0, 0, 0.04);
   border-top: px2rem(1) solid rgba(221,221,221,1);
   .choose {
     position: absolute;
-    @include px-dpr(left, 50px);
+    left: px2rem(50);
+    //@include px-dpr(left, 50px);
     top: px2rem(38);
     //@include px-dpr(top, 38px);
-    @include px-dpr(width, 30px);
-    @include px-dpr(height, 30px);
+    width: px2rem(30);
+    height: px2rem(30);
+    // @include px-dpr(width, 30px);
+    // @include px-dpr(height, 30px);
     background:rgba(255,255,255,1);
     border:px2rem(1) solid rgba(187,187,187,1);
     border-radius:50%;
@@ -378,8 +417,9 @@ a, div {
   }
   .allChoose {
     position: absolute;
-    @include px-dpr(left, 102px);
-    top: px2rem(41);
+    left: px2rem(102);
+    //@include px-dpr(left, 102px);
+    bottom: px2rem(41);
     //@include px-dpr(top, 41px);
     @include font-dpr(28px);
     @include font-fw;
@@ -388,13 +428,17 @@ a, div {
   }
   .submit {
     position: absolute;
-    @include px-dpr(right, 30px);
+    right: px2rem(30);
+    //@include px-dpr(right, 30px);
     top: px2rem(28);
     //@include px-dpr(top, 28px);
-    @include px-dpr(width, 150px);
-    @include px-dpr(height, 52px);
+    width: px2rem(150);
+    height: px2rem(52);
+    // @include px-dpr(width, 150px);
+    // @include px-dpr(height, 52px);
     background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
-    @include px-dpr(border-radius, 6px);
+    border-radius: px2rem(6);
+    // @include px-dpr(border-radius, 6px);
     border: px2rem(1);
     @include font-dpr(28px);
     @include font-fw;
@@ -414,15 +458,16 @@ a, div {
   .allprice {
     position: absolute;
     display: flex;
-    @include px-dpr(right, 210px);
+    right: px2rem(210);;
+    //@include px-dpr(right, 210px);
     top: px2rem(43);
     //@include px-dpr(top, 43px);
     color:rgba(232,49,4,1);
     .num {
-    @include px-dpr(width, 73px);
-    @include font-dpr(30px);
-    @include px-dpr(line-height, 23px);
-    @include font-fw;
+      @include px-dpr(width, 73px);
+      @include font-dpr(30px);
+      @include px-dpr(line-height, 23px);
+      @include font-fw;
     }
     .yun {
       @include px-dpr(width, 30px);
@@ -450,7 +495,8 @@ a, div {
   .now {
     position: absolute;
     display: flex;
-    @include px-dpr(right, 215px);
+    right: px2rem(215);
+    //@include px-dpr(right, 215px);
     bottom: px2rem(11);
     //@include px-dpr(bottom, 11px);
     @include font-dpr(20px);
@@ -476,20 +522,24 @@ a, div {
   height: px2rem(486);
   //@include px-dpr(height, 486px);
   background:rgba(255,255,255,1);
-  @include px-dpr(border-top-right-radius, 6px);
-  @include px-dpr(border-top-left-radius, 6px);
+  border-top-right-radius: px2rem(6);
+  border-top-left-radius: px2rem(6);
+  // @include px-dpr(border-top-right-radius, 6px);
+  // @include px-dpr(border-top-left-radius, 6px);
   transition: .4s ease;
   .pay_tzwq {
     position: relative;
     height: px2rem(97);
     //@include px-dpr(height, 97px); 
-    @include px-dpr(padding-left, 30px);
+    padding-left: px2rem(30);
+    //@include px-dpr(padding-left, 30px);
     border-top: px2rem(1) solid rgba(221,221,221,1);
     .pay_choose {
       position: absolute;
       top: px2rem(36);
       //@include px-dpr(top, 36px);
-      @include px-dpr(width, 30px);
+      width: px2rem(30);
+      //@include px-dpr(width, 30px);
       height: px2rem(30);
       //@include px-dpr(height, 30px);
       background:rgba(255,255,255,1);
@@ -502,11 +552,14 @@ a, div {
     }
     .logo {
       position: absolute;
-      @include px-dpr(width, 33px);
-      @include px-dpr(height, 33px);
+      width: px2rem(33);
+      height: px2rem(33);
+      // @include px-dpr(width, 33px);
+      // @include px-dpr(height, 33px);
       top: px2rem(34);
       //@include px-dpr(top, 34px);
-      @include px-dpr(left, 84px);
+      left: px2rem(84);
+      //@include px-dpr(left, 84px);
       img {
         position: absolute;
         width: 100%;
@@ -524,7 +577,8 @@ a, div {
       position: absolute;
       top: px2rem(36);
       //@include px-dpr(top, 36px);
-      @include px-dpr(left, 139px);
+      left: px2rem(139);
+      //@include px-dpr(left, 139px);
       @include px-dpr(line-height, 29px);
     }
   }
@@ -535,7 +589,8 @@ a, div {
   }
   .pay_num {
     position: absolute;
-    @include px-dpr(left, 285px);
+    left: px2rem(285);
+    //@include px-dpr(left, 285px);
     top: px2rem(35);
     //@include px-dpr(top, 35px);
     display: flex;

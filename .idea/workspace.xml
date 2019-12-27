@@ -6,16 +6,31 @@
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/cart.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/cart.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/curriculum.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/curriculum.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/index.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/particulars.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/particulars.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/study.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/study.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/video.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/video.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/cart.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/curriculum.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/curriculum.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/curriculum.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/curriculum.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/particulars.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/particulars.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/particulars.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/particulars.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/study.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/study.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/study.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/study.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/video.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/video.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/video.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/curriculum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/particulars.html" beforeDir="false" afterPath="$PROJECT_DIR$/particulars.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/cart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/curriculum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/curriculum.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/particulars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/particulars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/study.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/study.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/video.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study.html" beforeDir="false" afterPath="$PROJECT_DIR$/study.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +111,8 @@
       <workItem from="1577342371755" duration="606000" />
       <workItem from="1577342988144" duration="2510000" />
       <workItem from="1577350658799" duration="2094000" />
+      <workItem from="1577408800437" duration="2098000" />
+      <workItem from="1577413001751" duration="7831000" />
     </task>
     <servers />
   </component>

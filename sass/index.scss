@@ -36,48 +36,10 @@
     #{$property}: $px * 3.5/2;
   }
 }
-@mixin translateX($property, $px) {
-  #{$property}: translateX($px/2);
-
-  [data-dpr="2"] & {
-    #{$property}: translateX($px);
-  }
-  
-  [data-dpr="2.625"] & {
-    #{$property}: translateX($px * 2.625/2);
-  }
-
-  [data-dpr="3"] & {
-    #{$property}: translateX($px * 3/1.82);
-  }
-
-  [data-dpr="3.5"] & {
-    #{$property}: translateX($px * 3.5/2);
-  }
-}
-@mixin translateY($property, $px) {
-  #{$property}: translateY($px/2);
-
-  [data-dpr="2"] & {
-    #{$property}: translateY($px);
-  }
-  
-  [data-dpr="2.625"] & {
-    #{$property}: translateY($px * 2.625/2);
-  }
-
-  [data-dpr="3"] & {
-    #{$property}: translateY($px * 3/1.82);
-  }
-
-  [data-dpr="3.5"] & {
-    #{$property}: translateY($px * 3.5/2);
-  }
-}
 @mixin font-fw {
   font-family: PingFang SC;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: px2rem(1);
 }
 
 @function px2rem($px, $base-font-size: 32px) {
@@ -120,19 +82,23 @@ a, div {
     @include font-dpr(28px);
     @include font-fw;
     color:rgba(0,0,0,1);
-    @include px-dpr(left, 30px);
+    left: px2rem(30);
+    //@include px-dpr(left, 30px);
     top: px2rem(32);
     //@include px-dpr(top, 32px);
     img {
       width: px2rem(14);
       //@include px-dpr(width, 14px);
-      @include px-dpr(padding-right, 15px);
+      padding-right: px2rem(15);
+      //@include px-dpr(padding-right, 15px);
     }
   }
   span {
     position: relative;
-    @include px-dpr(top, -2px);
-    @include px-dpr(left, -10px);
+    top: px2rem(-2);
+    left: px2rem(-10);
+    // @include px-dpr(top, -2px);
+    // @include px-dpr(left, -10px);
     @include font-dpr(28px);
     @include font-fw;
     color: rgba(0,0,0,1);
@@ -141,7 +107,8 @@ a, div {
     position: absolute;
     line-height: 0px;
     z-index: 1;
-    @include px-dpr(right, 32px);
+    right: px2rem(32);
+    //@include px-dpr(right, 32px);
     top: px2rem(15);
     //@include px-dpr(top, 15px);
     img {
@@ -150,7 +117,7 @@ a, div {
       // @include px-dpr(width, 58.8px);
       // @include px-dpr(height, 58.8px);
       border-radius:50%;
-      box-shadow:0px 1px 14px 0px rgba(1,1,1,0.18);
+      box-shadow:0px px2rem(1) px2rem(14) 0px rgba(1,1,1,0.18);
     }
   }
   p {
@@ -169,8 +136,10 @@ a, div {
   padding-top: px2rem(118);
   //@include px-dpr(padding-top, 118px);
   .scroll {
-    @include px-dpr(padding-left, 30px);
-    @include px-dpr(padding-right, 30px);
+    padding-left: px2rem(30);
+    padding-right: px2rem(30);
+    // @include px-dpr(padding-left, 30px);
+    // @include px-dpr(padding-right, 30px);
     //@include px-dpr(height, 268px);
     height: px2rem(268);
     .container {
@@ -179,7 +148,8 @@ a, div {
       overflow: hidden;
       position: relative;
       margin: 0 auto;
-      @include px-dpr(border-radius, 6px);
+      border-radius: px2rem(6);
+      //@include px-dpr(border-radius, 6px);
       .list {
         width: 500%;
         height: 100%;
@@ -197,8 +167,10 @@ a, div {
     margin-bottom: px2rem(44);
     //@include px-dpr(margin-top, 44px);
     //@include px-dpr(margin-bottom, 44px);
-    @include px-dpr(padding-left, 11px);
-    @include px-dpr(padding-right, 11px);
+    padding-left: px2rem(11);
+    padding-right: px2rem(11);
+    // @include px-dpr(padding-left, 11px);
+    // @include px-dpr(padding-right, 11px);
     display: flex;
     div {
       width: 16.6666667%;
@@ -214,23 +186,28 @@ a, div {
         @include font-fw;
         color:rgba(102,102,102,1);
         @include px-dpr(line-height, 19px);
-        @include px-dpr(margin-top, 8px);
+        margin-top: px2rem(8);
+        //@include px-dpr(margin-top, 8px);
       }
     }
   }
   .message {
     position: relative;
-    @include px-dpr(margin-left, 30px);
-    @include px-dpr(margin-right, 30px);
+    margin-left: px2rem(30);
+    margin-right: px2rem(30);
+    // @include px-dpr(margin-left, 30px);
+    // @include px-dpr(margin-right, 30px);
     height: px2rem(54);
     //@include px-dpr(height, 54px);
     background:rgba(246,246,246,1);
-    @include px-dpr(border-radius, 6px);
+    border-radius: px2rem(6);
+    //@include px-dpr(border-radius, 6px);
     img {
       position: absolute;
       top: px2rem(11);
       //@include px-dpr(top, 11px);
-      @include px-dpr(left, 14px);
+      left: px2rem(14);
+      //@include px-dpr(left, 14px);
       width: px2rem(34);
       height: px2rem(32);
       // @include px-dpr(width, 34px);
@@ -240,7 +217,8 @@ a, div {
       position: absolute;
       top: px2rem(16);
       //@include px-dpr(top, 16px);
-      @include px-dpr(left, 62px);
+      left: px2rem(62);
+      //@include px-dpr(left, 62px);
       @include font-dpr(22px);
       @include font-fw;
       color:rgba(0,0,0,1);
@@ -250,7 +228,8 @@ a, div {
       position: absolute;
       top: px2rem(16);
       //@include px-dpr(top, 16px);
-      @include px-dpr(left, 123px);
+      left: px2rem(123);
+      //@include px-dpr(left, 123px);
       @include font-dpr(22px);
       @include font-fw;
       color:rgba(153,153,153,1);
@@ -265,8 +244,10 @@ a, div {
     // @include px-dpr(margin-top, 44px);
     .rec-header {
       position: relative;
-      @include px-dpr(margin-left, 30px);
-      @include px-dpr(margin-right, 30px);
+      margin-left: px2rem(30);
+      margin-right: px2rem(30);
+      //@include px-dpr(margin-left, 30px);
+      //@include px-dpr(margin-right, 30px);
       p {
         @include font-dpr(38px);
         @include font-fw;
@@ -278,7 +259,8 @@ a, div {
         position: absolute;
         top: 0px;
         right: 0px;
-        @include px-dpr(width, 90px);
+        width: px2rem(90);
+        //@include px-dpr(width, 90px);
         @include font-dpr(26px);
         @include font-fw;
         color:rgba(0,0,0,1);
@@ -287,8 +269,10 @@ a, div {
           position: absolute;
           top: px2rem(8);
           //@include px-dpr(top, 8px);
-          @include px-dpr(right, 1px);
-          @include px-dpr(width, 23px);
+          right: px2rem(1);
+          //@include px-dpr(right, 1px);
+          width: px2rem(23);
+          //@include px-dpr(width, 23px);
           height: px2rem(20);
           //@include px-dpr(height, 20px);
         }
@@ -297,20 +281,23 @@ a, div {
     .rec-content-right {
       position: absolute;
       right: 0px;
-      @include px-dpr(bottom, 0px);
+      bottom: 0px;
       .content-0 {
         float: right;
-        @include px-dpr(margin-right, 30px);
+        margin-right: px2rem(30);
+        //@include px-dpr(margin-right, 30px);
       }
     }
     .rec-content-left {
       .content-0 {
-        @include px-dpr(margin-left, 30px);
+        margin-left: px2rem(30);
+        //@include px-dpr(margin-left, 30px);
       }
     }
     .rec-content {
       width: 50%;
-      @include px-dpr(padding-top, 1px);
+      padding-top: px2rem(1);
+      //@include px-dpr(padding-top, 1px);
       .content-0 {
         position: relative;
         width: 88%;
@@ -319,7 +306,8 @@ a, div {
         img {
           width: 100%;
           height: 100%;
-          @include px-dpr(border-radius, 6px);
+          border-radius: px2rem(6);
+          //@include px-dpr(border-radius, 6px);
         }
         .box {
           position: relative;
@@ -330,14 +318,19 @@ a, div {
           position: absolute;
           bottom: px2rem(10);
           //@include px-dpr(bottom, 10px);
-          @include px-dpr(right, 10px);
-          @include px-dpr(width, 88px);
+          right: px2rem(10);
+          // @include px-dpr(right, 10px);
+          width: px2rem(88);
+          //@include px-dpr(width, 88px);
           height: px2rem(30);
           //@include px-dpr(height, 30px);
-          @include px-dpr(padding-left, 8px);
-          @include px-dpr(padding-right, 6px);
+          padding-left: px2rem(8);
+          padding-right: px2rem(6);
+          // @include px-dpr(padding-left, 8px);
+          // @include px-dpr(padding-right, 6px);
           background:rgba(0,0,0,0.5);
-          @include px-dpr(border-radius, 15px);
+          border-radius: px2rem(15);
+          //@include px-dpr(border-radius, 15px);
           display: flex;
           p {
             @include font-dpr(20px);
@@ -357,7 +350,8 @@ a, div {
         }
         .price {
           position: relative;
-          @include px-dpr(left, -5px);
+          left: px2rem(-5);
+          //@include px-dpr(left, -5px);
           margin-top: px2rem(26);
           //@include px-dpr(margin-top, 26px);
           display: flex;
@@ -388,14 +382,16 @@ a, div {
       padding-top: px2rem(44);
       padding-bottom: px2rem(37);
       //@include px-dpr(padding-bottom, 37px);
-      @include px-dpr(padding-right, 5px);
+      padding-right: px2rem(5);
+      //@include px-dpr(padding-right, 5px);
       .t-title {
         @include font-dpr(38px);
         @include font-fw;
         font-weight: 500;
         color:rgba(0,0,0,1);
         @include px-dpr(line-height, 36px);
-        @include px-dpr(padding-left, 31px);
+        padding-left: px2rem(31);
+        //@include px-dpr(padding-left, 31px);
       }
       .bar {
         width: 100%;
@@ -407,10 +403,12 @@ a, div {
         div {
           width: 15.838926%;
           text-align: center;
-          @include px-dpr(margin-right, 25px);
+          margin-right: px2rem(25);
+          //@include px-dpr(margin-right, 25px);
         }
         #t1 {
-          @include px-dpr(margin-left, 30px);
+          margin-left: px2rem(30);
+          //@include px-dpr(margin-left, 30px);
         }
         img {
           width: 100%;
@@ -436,7 +434,7 @@ a, div {
     .tutorial {
       background: #fff;
       padding-top: px2rem(44);
-      padding-bottom: px2rem(37);
+      padding-bottom: px2rem(43);
       //@include px-dpr(padding-top, 44px);
       //@include px-dpr(padding-bottom, 43px);
       .tu-title {
@@ -445,14 +443,17 @@ a, div {
         font-weight: 500;
         color:rgba(0,0,0,1);
         @include px-dpr(line-height, 36px);
-        @include px-dpr(padding-left, 31px);
+        padding-left: px2rem(31);
+        //@include px-dpr(padding-left, 31px);
       }
       .shop {
         position: relative;
         margin-top: px2rem(40);
         //@include px-dpr(margin-top, 40px);
-        @include px-dpr(margin-left, 30px);
-        @include px-dpr(margin-right, 30px);
+        margin-left: px2rem(30);
+        margin-right: px2rem(30);
+        // @include px-dpr(margin-left, 30px);
+        // @include px-dpr(margin-right, 30px);
         .shop-left {
           width: 50%;
         }
@@ -470,12 +471,14 @@ a, div {
           float: left;
           text-align: center;
           background:rgba(255,255,255,1);
-          border:1px solid rgba(238,238,238,1);
-          @include px-dpr(border-radius, 10px);
+          border:px2rem(1) solid rgba(238,238,238,1);
+          border-radius: px2rem(10);
+          //@include px-dpr(border-radius, 10px);
           margin-bottom: px2rem(30);
           //@include px-dpr(margin-bottom, 30px);
           img {
-            @include px-dpr(width, 55px);
+            width: px2rem(55);
+            //@include px-dpr(width, 55px);
           }
           p {
             position: relative;
@@ -486,7 +489,8 @@ a, div {
           }
         }
         .shopNode-1357 {
-          @include px-dpr(margin-right, 30px);
+          margin-right: px2rem(30);
+          //@include px-dpr(margin-right, 30px);
         }
         .more {
           p {
@@ -517,7 +521,7 @@ a, div {
     }
   }
   .vip {
-    @include px-dpr(margin-bottom, 0px);
+    margin-bottom: 0px;
     .rec-header {
       margin-bottom: px2rem(4);
       //@include px-dpr(margin-bottom, 4px);
@@ -533,17 +537,19 @@ a, div {
   // @include px-dpr(padding-top, 54px);
   // @include px-dpr(padding-bottom, 55px);
   .but {
-    @include px-dpr(width, 220px);
+    width: px2rem(220);
+    //@include px-dpr(width, 220px);
     height: px2rem(60);
     //@include px-dpr(height, 60px);
     margin: auto;
-    @include px-dpr(border-radius, 10px);
+    border-radius: px2rem(10);
+    //@include px-dpr(border-radius, 10px);
     background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
   }
   a {
     @include font-dpr(28px);
     @include font-fw;
     color:rgba(255,255,255,1);
-    @include px-dpr(line-height, 61px); 
+    line-height: px2rem(60);; 
   }
 }

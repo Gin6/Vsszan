@@ -36,48 +36,10 @@
     #{$property}: $px * 3.5/2;
   }
 }
-@mixin translateX($property, $px) {
-  #{$property}: translateX($px/2);
-
-  [data-dpr="2"] & {
-    #{$property}: translateX($px);
-  }
-  
-  [data-dpr="2.625"] & {
-    #{$property}: translateX($px * 2.625/2);
-  }
-
-  [data-dpr="3"] & {
-    #{$property}: translateX($px * 3/1.82);
-  }
-
-  [data-dpr="3.5"] & {
-    #{$property}: translateX($px * 3.5/2);
-  }
-}
-@mixin translateY($property, $px) {
-  #{$property}: translateY($px/2);
-
-  [data-dpr="2"] & {
-    #{$property}: translateY($px);
-  }
-  
-  [data-dpr="2.625"] & {
-    #{$property}: translateY($px * 2.625/2);
-  }
-
-  [data-dpr="3"] & {
-    #{$property}: translateY($px * 3/1.82);
-  }
-
-  [data-dpr="3.5"] & {
-    #{$property}: translateY($px * 3.5/2);
-  }
-}
 @mixin font-fw {
   font-family: PingFang SC;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: px2rem(1);
 }
 
 @function px2rem($px, $base-font-size: 32px) {
@@ -109,7 +71,8 @@ ul {
   text-align: center;
   li {
     position: relative;
-    @include px-dpr(height, 25px);
+    height: px2rem(25);
+    //@include px-dpr(height, 25px);
     list-style: none;
     padding-top: px2rem(26);
     padding-bottom: px2rem(26);
@@ -118,7 +81,8 @@ ul {
     @include font-dpr(26px);
     @include font-fw;
     color:rgba(0,0,0,1);
-    @include px-dpr(line-height, 25px);
+    line-height: px2rem(25);
+    //@include px-dpr(line-height, 25px);
   }
   // .default {
   //   @include px-dpr(padding-top, 30px);
@@ -141,18 +105,23 @@ ul {
     @include font-dpr(28px);
     @include font-fw;
     color:rgba(0,0,0,1);
-    @include px-dpr(left, 30px);
+    left: px2rem(30);
+    //@include px-dpr(left, 30px);
     top: px2rem(32);
     //@include px-dpr(top, 32px);
     img {
-      @include px-dpr(width, 14px);
-      @include px-dpr(padding-right, 15px);
+      width: px2rem(14);
+      //@include px-dpr(width, 14px);
+      padding-right: px2rem(15);
+      //@include px-dpr(padding-right, 15px);
     }
   }
   span {
     position: relative;
-    @include px-dpr(top, -2px);
-    @include px-dpr(left, -10px);
+    top: px2rem(-2);
+    left: px2rem(-10);
+    // @include px-dpr(top, -2px);
+    // @include px-dpr(left, -10px);
     @include font-dpr(28px);
     @include font-fw;
     color: rgba(0,0,0,1);
@@ -161,7 +130,8 @@ ul {
     position: absolute;
     line-height: 0px;
     z-index: 1;
-    @include px-dpr(right, 26px);
+    right: px2rem(26);
+    //@include px-dpr(right, 26px);
     top: px2rem(15);
     //@include px-dpr(top, 15px);
     img {
@@ -170,7 +140,8 @@ ul {
       height: px2rem(30);
       // @include px-dpr(width, 30px);
       // @include px-dpr(height, 30px);
-      @include px-dpr(right, 7px);
+      right: px2rem(7);
+      //@include px-dpr(right, 7px);
       top: px2rem(15);
       //@include px-dpr(top, 15px);
     }
@@ -211,7 +182,8 @@ ul {
       position: absolute;
       top: px2rem(33);
       //@include px-dpr(top, 33px);
-      @include px-dpr(width, 19px);
+      width: px2rem(19);
+      //@include px-dpr(width, 19px);
       transition: transform 0.5s ease;
     }
     .lr-img {
@@ -220,10 +192,12 @@ ul {
   }
   .nav-left {
     p {
-      @include px-dpr(left, 132px);
+      left: px2rem(132);
+      //@include px-dpr(left, 132px);
     }
     img{
-      @include px-dpr(left, 254px);
+      left: px2rem(254);
+      //@include px-dpr(left, 254px);
     }
   }
   .nav-right {
@@ -231,10 +205,12 @@ ul {
     top: 0px;
     right: 0px;
     p {
-      @include px-dpr(right, 167px);
+      right: px2rem(167);
+      //@include px-dpr(right, 167px);
     }
     img {
-      @include px-dpr(right, 131px);
+      right: px2rem(131);
+      //@include px-dpr(right, 131px);
     }
   }
 }
@@ -262,8 +238,10 @@ ul {
     padding-bottom: px2rem(26);
     //@include px-dpr(padding-top, 26px);
     //@include px-dpr(padding-bottom, 26px);
-    @include px-dpr(padding-left, 31px);
-    @include px-dpr(padding-right, 31px);
+    padding-left: px2rem(31);
+    padding-right: px2rem(31);
+    // @include px-dpr(padding-left, 31px);
+    // @include px-dpr(padding-right, 31px);
     @include font-dpr(26px);
     @include font-fw;
     color: rgba(0,0,0,1);
@@ -309,8 +287,10 @@ ul {
       padding-bottom: px2rem(26);
       //@include px-dpr(margin-top, 30px);
       //@include px-dpr(padding-bottom, 21px);
-      @include px-dpr(margin-left, 67px);
-      @include px-dpr(margin-right, 30px);
+      margin-left: px2rem(67);
+      margin-right: px2rem(30);
+      // @include px-dpr(margin-left, 67px);
+      // @include px-dpr(margin-right, 30px);
     }
     .title {
       @include font-dpr(26px);
@@ -343,21 +323,27 @@ ul {
     padding-top: px2rem(44);
     height: px2rem(150);
     //@include px-dpr(padding-top, 44px);
-    @include px-dpr(padding-left, 30px);
-    @include px-dpr(padding-right, 28px);
+    padding-left: px2rem(30);
+    padding-right: px2rem(28);
+    // @include px-dpr(padding-left, 30px);
+    // @include px-dpr(padding-right, 28px);
     img {
       transition:0.8s ease;
-      @include px-dpr(width, 250px);
+      width: px2rem(250);
+      //@include px-dpr(width, 250px);
       height: px2rem(150);
       //@include px-dpr(height, 150px);
-      @include px-dpr(border-radius, 6px);
+      border-radius: px2rem(6);
+      //@include px-dpr(border-radius, 6px);
     }
     .word {
       transition:0.8s ease;
       position: absolute;
       top: 0px;
-      @include px-dpr(left, 309px);
-      @include px-dpr(margin-right, 28px);
+      left: px2rem(309);
+      margin-right: px2rem(28);
+      // @include px-dpr(left, 309px);
+      // @include px-dpr(margin-right, 28px);
       .word_p1 {
         @include px-dpr(height, 25px);
         margin-top: px2rem(45);
@@ -379,7 +365,7 @@ ul {
         @include px-dpr(line-height, 19px);
       }
       .word_people {
-        @include px-dpr(right, 0px);
+        right: 0px;
       }
     }
     .price {
@@ -387,7 +373,8 @@ ul {
       position: absolute;
       top: px2rem(171);
       //@include px-dpr(top, 171px);
-      @include px-dpr(left, 305px);
+      left: px2rem(305);
+      //@include px-dpr(left, 305px);
       display: -webkit-inline-box;
       @include font-dpr(28px);
       @include font-fw;
@@ -409,7 +396,8 @@ ul {
       position: absolute;
       top: px2rem(175);
       //@include px-dpr(top, 175px);
-      @include px-dpr(right, 30px);
+      right: px2rem(30);
+      //@include px-dpr(right, 30px);
       @include font-dpr(20px);
       @include font-fw;
       color:rgba(36,101,255,1);
@@ -418,28 +406,29 @@ ul {
   }
   .list-f {
     float: left;
-    @include px-dpr(padding-right, 14px);
-    @include px-dpr(padding-bottom, 121px);
+    padding-right: px2rem(14);
+    padding-bottom: px2rem(121);
     img {
-      @include px-dpr(width, 323px);
-      @include px-dpr(height, 183px);
+      width: px2rem(323);
+      height: px2rem(183);
     }
     .word {
-      @include px-dpr(top, 198px);
-      @include px-dpr(left, 31px);
+      top: px2rem(198);
+      left: px2rem(31);
     }
     .price {
-      @include px-dpr(top, 331px);
-      @include px-dpr(left, 24px);
+      top: px2rem(331);
+      left: px2rem(24);
     }
     .word_a {
-      @include px-dpr(top, 332px);
+      top: px2rem(332);
     }
   }
 }
 .footer {
   position: fixed;
-  @include px-dpr(right, 30px);
+  right: px2rem(30);
+  //@include px-dpr(right, 30px);
   bottom: px2rem(200);
   //@include px-dpr(bottom, 200px);
   display: grid;
@@ -455,14 +444,15 @@ ul {
     border-radius: 50%;
   }
   .footer-img-1 {
-    @include px-dpr(margin-bottom, 27px);
+    margin-bottom: px2rem(27);
     display: none;
   }
   .num-3 {
     position: absolute;
     bottom: px2rem(45);
     //@include px-dpr(bottom, 45px);
-    @include px-dpr(right, 5px);
+    right: px2rem(5);
+    //@include px-dpr(right, 5px);
     //@include px-dpr(width, 28px);
     width: px2rem(28);
     height: px2rem(28);

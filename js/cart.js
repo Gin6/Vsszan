@@ -52,12 +52,9 @@ var ww = $(window).width();
 var wh = $(window).height();
 
 (function() {
-    var hh = $(".header").height();
-    var fh = $(".footer").height();
     var mp = $(".main").outerWidth();
     var mw = ww-mp;
-    var mh = wh-hh-fh-mp-2;
-    $(".main").css({width: mw +'px',height: mh +'px',});
+    $(".main").css({width: mw,});
 })(document, window);
 
 function choose(e) {

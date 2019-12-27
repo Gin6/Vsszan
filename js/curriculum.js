@@ -1,8 +1,8 @@
 var wh = $(window).height();
 var ww = $(window).width();
 var dpr = window.devicePixelRatio;
-var headerHeight = $('.header').height();
-var navHeight = $('.nav').height();
+var headerHeight = $('.header').outerHeight(true);
+var navHeight = $('.nav').outerHeight(true);
 var smlHeight = $('.subMenu-left').height();
 // var smrHeight = $('.subMenu-right').height();
 var exaHeight = $('.example').outerHeight();
