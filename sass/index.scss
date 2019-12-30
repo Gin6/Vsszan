@@ -346,7 +346,8 @@ a, div {
           overflow: hidden;
           height: px2rem(25);
           //@include px-dpr(height, 25px);
-          @include px-dpr(line-height, 25px);
+          line-height: px2rem(25);
+          //@include px-dpr(line-height, 35px);
         }
         .price {
           position: relative;
@@ -356,15 +357,15 @@ a, div {
           //@include px-dpr(margin-top, 26px);
           display: flex;
           p {
-            @include font-dpr(30px);
+            @include font-dpr(28px);
             @include font-fw;
             color:rgba(232,49,4,1);
             @include px-dpr(line-height, 23px);
           }
           .p5 {
-            @include font-dpr(26px);
+            @include font-dpr(24px);
             @include px-dpr(margin-left, 6px);
-            @include px-dpr(line-height, 20px);
+            @include px-dpr(line-height, 23px);
           }
         }
       }

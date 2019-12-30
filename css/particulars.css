@@ -36,17 +36,17 @@ textarea { border: solid 0px; outline: none; }
 .video-box { position: relative; text-align: center; margin-top: 2.75rem; height: 14.0625rem; }
 .video-box .video-img { position: fixed; width: 100%; top: 8.4375rem; z-index: 3; }
 .video-box .video-img img { position: relative; width: 2.71875rem; height: 2.6875rem; }
-.video-box .video-buy { position: fixed; top: 8.125rem; width: 100%; z-index: 3; text-align: center; display: none; }
-.video-box .video-buy p { height: 0.90625rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: white; line-height: 1.125rem; margin-bottom: 0.9375rem; }
-[data-dpr="2"] .video-box .video-buy p { font-size: 28px; }
-[data-dpr="2.625"] .video-box .video-buy p { font-size: 36.75px; }
-[data-dpr="3"] .video-box .video-buy p { font-size: 46.1538461538px; }
-[data-dpr="3.5"] .video-box .video-buy p { font-size: 49px; }
-.video-box .video-buy button { width: 4.75rem; height: 1.5625rem; background: white; border-radius: 0.1875rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.125rem; border: 0.03125rem solid white; }
-[data-dpr="2"] .video-box .video-buy button { font-size: 28px; }
-[data-dpr="2.625"] .video-box .video-buy button { font-size: 36.75px; }
-[data-dpr="3"] .video-box .video-buy button { font-size: 46.1538461538px; }
-[data-dpr="3.5"] .video-box .video-buy button { font-size: 49px; }
+.video-box .bv { position: fixed; top: 8.125rem; width: 100%; z-index: 3; text-align: center; display: none; }
+.video-box .bv p { height: 0.90625rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: white; line-height: 1.125rem; margin-bottom: 0.9375rem; }
+[data-dpr="2"] .video-box .bv p { font-size: 28px; }
+[data-dpr="2.625"] .video-box .bv p { font-size: 36.75px; }
+[data-dpr="3"] .video-box .bv p { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .video-box .bv p { font-size: 49px; }
+.video-box .bv button { width: 4.75rem; height: 1.5625rem; background: white; border-radius: 0.1875rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.125rem; border: 0.03125rem solid white; }
+[data-dpr="2"] .video-box .bv button { font-size: 28px; }
+[data-dpr="2.625"] .video-box .bv button { font-size: 36.75px; }
+[data-dpr="3"] .video-box .bv button { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .video-box .bv button { font-size: 49px; }
 .video-box .video-study { position: fixed; top: 8.125rem; width: 100%; z-index: 3; text-align: center; display: none; }
 .video-box .video-study p { height: 1.125rem; display: -webkit-inline-box; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: white; line-height: 1.125rem; margin-bottom: 0.6875rem; }
 [data-dpr="2"] .video-box .video-study p { font-size: 28px; }
@@ -83,8 +83,83 @@ textarea { border: solid 0px; outline: none; }
 .main .nav .list-2 { text-align: center; }
 .main .nav .list-3 p { float: right; }
 .main .nav .bar { position: absolute; left: 0.96875rem; bottom: 0px; height: 0.125rem; width: 2.0625rem; background: #2465ff; }
+.main .content-1 { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #f6f6f6; padding-top: 2.625rem; }
+.main .content-1 .content-1-title { position: absolute; top: 0.9375rem; left: 0.9375rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 0.8125rem; }
+[data-dpr="2"] .main .content-1 .content-1-title { font-size: 28px; }
+[data-dpr="2.625"] .main .content-1 .content-1-title { font-size: 36.75px; }
+[data-dpr="3"] .main .content-1 .content-1-title { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .main .content-1 .content-1-title { font-size: 49px; }
+.main .content-1 .content-1-header { position: relative; padding: 0.75rem 0.9375rem 0.9375rem; height: 6.84375rem; background: white; margin-bottom: 0.9375rem; }
+.main .content-1 .content-1-header .className p { font-size: 15px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 1.3125rem; }
+[data-dpr="2"] .main .content-1 .content-1-header .className p { font-size: 30px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .className p { font-size: 39.375px; }
+[data-dpr="3"] .main .content-1 .content-1-header .className p { font-size: 49.4505494505px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .className p { font-size: 52.5px; }
+.main .content-1 .content-1-header .className span { position: absolute; top: 2.46875rem; right: 1.0625rem; font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.65625rem; }
+[data-dpr="2"] .main .content-1 .content-1-header .className span { font-size: 22px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .className span { font-size: 28.875px; }
+[data-dpr="3"] .main .content-1 .content-1-header .className span { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .className span { font-size: 38.5px; }
+.main .content-1 .content-1-header .priceFree { position: absolute; top: 4.0625rem; left: 0.71875rem; display: none; }
+.main .content-1 .content-1-header .priceFree .free { font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; font-weight: 500; color: #27c056; line-height: 0.84375rem; }
+[data-dpr="2"] .main .content-1 .content-1-header .priceFree .free { font-size: 28px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .priceFree .free { font-size: 36.75px; }
+[data-dpr="3"] .main .content-1 .content-1-header .priceFree .free { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .priceFree .free { font-size: 49px; }
+.main .content-1 .content-1-header .priceFree .originPrice { position: absolute; bottom: 0rem; left: 1.96875rem; font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.53125rem; text-decoration: line-through; }
+[data-dpr="2"] .main .content-1 .content-1-header .priceFree .originPrice { font-size: 22px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .priceFree .originPrice { font-size: 28.875px; }
+[data-dpr="3"] .main .content-1 .content-1-header .priceFree .originPrice { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .priceFree .originPrice { font-size: 38.5px; }
+.main .content-1 .content-1-header .price { position: absolute; top: 4.15625rem; left: 0.71875rem; display: -webkit-inline-box; }
+.main .content-1 .content-1-header .price .p1 { font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; font-weight: 500; color: #e83104; line-height: 0.71875rem; }
+[data-dpr="2"] .main .content-1 .content-1-header .price .p1 { font-size: 28px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .price .p1 { font-size: 36.75px; }
+[data-dpr="3"] .main .content-1 .content-1-header .price .p1 { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .price .p1 { font-size: 49px; }
+.main .content-1 .content-1-header .price .p2 { font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; font-weight: 500; color: #e83104; line-height: 0.71875rem; }
+[data-dpr="2"] .main .content-1 .content-1-header .price .p2 { font-size: 24px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .price .p2 { font-size: 31.5px; }
+[data-dpr="3"] .main .content-1 .content-1-header .price .p2 { font-size: 39.5604395604px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .price .p2 { font-size: 42px; }
+.main .content-1 .content-1-header .price .originPrice { font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.875rem; text-decoration: line-through; }
+[data-dpr="2"] .main .content-1 .content-1-header .price .originPrice { font-size: 22px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .price .originPrice { font-size: 28.875px; }
+[data-dpr="3"] .main .content-1 .content-1-header .price .originPrice { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .price .originPrice { font-size: 38.5px; }
+.main .content-1 .content-1-header .vip { position: absolute; bottom: 0.9375rem; width: 21.5625rem; height: 1.6875rem; background: linear-gradient(90deg, #ffe0b2, #ffeac9, #ffca7b); border-radius: 0.1875rem; }
+.main .content-1 .content-1-header .vip img { position: absolute; top: 0.4375rem; left: 0.46875rem; width: 0.9375rem; height: 0.875rem; }
+.main .content-1 .content-1-header .vip p { position: absolute; left: 1.90625rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.6875rem; }
+[data-dpr="2"] .main .content-1 .content-1-header .vip p { font-size: 24px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .vip p { font-size: 31.5px; }
+[data-dpr="3"] .main .content-1 .content-1-header .vip p { font-size: 39.5604395604px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .vip p { font-size: 42px; }
+.main .content-1 .content-1-header .vip button { position: absolute; top: 0.28125rem; right: 0.4375rem; width: 3.875rem; height: 1.125rem; background: linear-gradient(90deg, #ffca7b, #f36543, #f84a29); border-radius: 0.5625rem; font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: white; line-height: 1.125rem; border: none; }
+[data-dpr="2"] .main .content-1 .content-1-header .vip button { font-size: 22px; }
+[data-dpr="2.625"] .main .content-1 .content-1-header .vip button { font-size: 28.875px; }
+[data-dpr="3"] .main .content-1 .content-1-header .vip button { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .main .content-1 .content-1-header .vip button { font-size: 38.5px; }
+.main .content-1 .content-1-header-free { height: 4.21875rem; }
+.main .content-1 .content-1-main { position: relative; width: 100%; height: 32.4375rem; background: white; margin-bottom: 0.9375rem; }
+.main .content-1 .content-1-main img { width: 21.5625rem; height: 28.8125rem; padding: 2.6875rem 0.9375rem 0.9375rem; }
+.main .content-1 .content-1-footer { position: relative; width: 100%; height: 20.1875rem; background: white; margin-bottom: 6.4375rem; }
+.main .content-1 .content-1-footer .change { position: absolute; top: 0.90625rem; right: 1.84375rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.71875rem; }
+[data-dpr="2"] .main .content-1 .content-1-footer .change { font-size: 24px; }
+[data-dpr="2.625"] .main .content-1 .content-1-footer .change { font-size: 31.5px; }
+[data-dpr="3"] .main .content-1 .content-1-footer .change { font-size: 39.5604395604px; }
+[data-dpr="3.5"] .main .content-1 .content-1-footer .change { font-size: 42px; }
+.main .content-1 .content-1-footer .change-img { position: absolute; top: 0.875rem; right: 0.90625rem; width: 0.71875rem; height: 0.78125rem; }
+.main .content-1 .content-1-footer .container { padding-top: 2.6875rem; padding-left: 0.9375rem; }
+.main .content-1 .content-1-footer .container .content { width: 10.3125rem; height: 8.75rem; margin-right: 0.9375rem; float: left; }
+.main .content-1 .content-1-footer .container .content img { width: 100%; height: 6.1875rem; border-radius: 0.1875rem; }
+.main .content-1 .content-1-footer .container .content p { height: 0.78125rem; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 0.78125rem; margin: 0.5625rem 0; overflow-y: hidden; }
+[data-dpr="2"] .main .content-1 .content-1-footer .container .content p { font-size: 26px; }
+[data-dpr="2.625"] .main .content-1 .content-1-footer .container .content p { font-size: 34.125px; }
+[data-dpr="3"] .main .content-1 .content-1-footer .container .content p { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .main .content-1 .content-1-footer .container .content p { font-size: 45.5px; }
 .main .content-2 { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #f6f6f6; padding-top: 2.625rem; }
-.main .content-2 .list { width: 100%; background: #fff; }
+.main .content-2 .list { width: 100%; background: #fff; padding-bottom: 2.8125rem; }
+.main .content-2 .list ul { padding-bottom: 2.8125rem; background: #f6f6f6; }
 .main .content-2 .list ul li { position: relative; width: 100%; -webkit-transition: .3s ease; -moz-transition: .3s ease; -o-transition: .3s ease; transition: .3s ease; }
 .main .content-2 .list ul li .title { background: #f6f6f6; height: 2.625rem; padding-left: 15.5px; padding-right: 15px; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 2.625rem; padding: 0; border: none; position: relative; }
 [data-dpr="2"] .main .content-2 .list ul li .title { padding-left: 31px; }
@@ -146,19 +221,48 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="3"] .main .content-2 .list-se li .li-p2 { line-height: 138.4615384615px; }
 [data-dpr="3.5"] .main .content-2 .list-se li .li-p2 { line-height: 147px; }
 .main .content-2 .list-se li .live-p { right: 1.0625rem; }
-.main .content-2 .content-2-footer { width: 100%; height: 2.78125rem; position: fixed; bottom: 0px; background: #fff; display: none; z-index: 3; border-top: 0.03125rem solid #dddddd; }
-.main .content-2 .content-2-footer img { position: absolute; top: 0.40625rem; left: 0.9375rem; width: 2rem; height: 2rem; border-radius: 50%; }
-.main .content-2 .content-2-footer p { position: absolute; bottom: 1rem; left: 3.5625rem; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 0.78125rem; }
-[data-dpr="2"] .main .content-2 .content-2-footer p { font-size: 26px; }
-[data-dpr="2.625"] .main .content-2 .content-2-footer p { font-size: 34.125px; }
-[data-dpr="3"] .main .content-2 .content-2-footer p { font-size: 42.8571428571px; }
-[data-dpr="3.5"] .main .content-2 .content-2-footer p { font-size: 45.5px; }
-.main .content-2 .content-2-footer button { position: absolute; top: 0.46875rem; width: 5.0625rem; height: 1.8125rem; border-radius: 0.1875rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 1.125rem; }
-[data-dpr="2"] .main .content-2 .content-2-footer button { font-size: 28px; }
-[data-dpr="2.625"] .main .content-2 .content-2-footer button { font-size: 36.75px; }
-[data-dpr="3"] .main .content-2 .content-2-footer button { font-size: 46.1538461538px; }
-[data-dpr="3.5"] .main .content-2 .content-2-footer button { font-size: 49px; }
-.main .content-2 .content-2-footer .content-2-b1 { right: 6.6875rem; color: #2465ff; border: 0.03125rem solid #2465ff; background: #fff; }
-.main .content-2 .content-2-footer .content-2-b2 { right: 0.9375rem; color: white; border: 0.03125rem solid #eeeeee; background: linear-gradient(122deg, #6692fa, #3873ff); }
+.main .content-3 { overflow-y: scroll; -webkit-overflow-scrolling: touch; padding-top: 2.625rem; background: #f6f6f6; }
+.main .content-3 .content-3-title { position: absolute; top: 0.96875rem; left: 0.9375rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 0.8125rem; }
+[data-dpr="2"] .main .content-3 .content-3-title { font-size: 28px; }
+[data-dpr="2.625"] .main .content-3 .content-3-title { font-size: 36.75px; }
+[data-dpr="3"] .main .content-3 .content-3-title { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .main .content-3 .content-3-title { font-size: 49px; }
+.main .content-3 .content-3-header { position: relative; width: 100%; height: 8.125rem; background: white; margin-bottom: 0.9375rem; }
+.main .content-3 .content-3-header .comment { text-align: center; padding: 2.25rem 0 0.9375rem; }
+.main .content-3 .content-3-header .comment .starability-grow { margin: auto; }
+.main .content-3 .content-3-header .comment p { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 2.28125rem; }
+[data-dpr="2"] .main .content-3 .content-3-header .comment p { font-size: 26px; }
+[data-dpr="2.625"] .main .content-3 .content-3-header .comment p { font-size: 34.125px; }
+[data-dpr="3"] .main .content-3 .content-3-header .comment p { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .main .content-3 .content-3-header .comment p { font-size: 45.5px; }
+.main .content-3 .content-3-header .comment button { width: 3.9375rem; height: 1.4375rem; border: none; background: linear-gradient(122deg, #6692fa, #3873ff); border-radius: 0.1875rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: white; line-height: 1.125rem; }
+[data-dpr="2"] .main .content-3 .content-3-header .comment button { font-size: 24px; }
+[data-dpr="2.625"] .main .content-3 .content-3-header .comment button { font-size: 31.5px; }
+[data-dpr="3"] .main .content-3 .content-3-header .comment button { font-size: 39.5604395604px; }
+[data-dpr="3.5"] .main .content-3 .content-3-header .comment button { font-size: 42px; }
+.main .content-3 .content-3-main { position: relative; width: 100%; min-height: 20.96875rem; background: white; margin-bottom: 5.5rem; }
+.main .content-3 .content-3-main .allComment { padding-top: 5.25rem; text-align: center; }
+.main .content-3 .content-3-main .allComment img { width: 7.34375rem; height: 5.25rem; }
+.main .content-3 .content-3-main .allComment p { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.78125rem; margin-top: 0.8125rem; }
+[data-dpr="2"] .main .content-3 .content-3-main .allComment p { font-size: 26px; }
+[data-dpr="2.625"] .main .content-3 .content-3-main .allComment p { font-size: 34.125px; }
+[data-dpr="3"] .main .content-3 .content-3-main .allComment p { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .main .content-3 .content-3-main .allComment p { font-size: 45.5px; }
+.main .content-footer { width: 100%; height: 2.78125rem; position: fixed; bottom: 0px; background: #fff; z-index: 3; border-top: 0.03125rem solid #dddddd; }
+.main .content-footer img { position: absolute; top: 0.40625rem; left: 0.9375rem; width: 2rem; height: 2rem; border-radius: 50%; }
+.main .content-footer p { position: absolute; bottom: 1rem; left: 3.5625rem; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 0.78125rem; }
+[data-dpr="2"] .main .content-footer p { font-size: 26px; }
+[data-dpr="2.625"] .main .content-footer p { font-size: 34.125px; }
+[data-dpr="3"] .main .content-footer p { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .main .content-footer p { font-size: 45.5px; }
+.main .content-footer button { position: absolute; top: 0.46875rem; width: 5.0625rem; height: 1.8125rem; border-radius: 0.1875rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 1.125rem; }
+[data-dpr="2"] .main .content-footer button { font-size: 28px; }
+[data-dpr="2.625"] .main .content-footer button { font-size: 36.75px; }
+[data-dpr="3"] .main .content-footer button { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .main .content-footer button { font-size: 49px; }
+.main .content-footer .content-b1 { right: 6.6875rem; color: #2465ff; border: 0.03125rem solid #2465ff; background: #fff; }
+.main .content-footer .content-b2 { right: 0.9375rem; color: white; border: 0.03125rem solid #eeeeee; background: linear-gradient(122deg, #6692fa, #3873ff); }
+.main .content-footer .content-b34 { display: none; border: none; width: 8.09375rem; height: 1.875rem; right: 0.9375rem; color: white; background: linear-gradient(122deg, #1bb54a, #19ac46); }
+.main .content-footer .content-b5 { background: linear-gradient(122deg, #6692fa, #3873ff); }
 
 /*# sourceMappingURL=particulars.css.map */

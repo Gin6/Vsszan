@@ -103,38 +103,34 @@ a, div { text-decoration: none; -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 [data-dpr="2.625"] .main .recommend .rec-content .content-0 .hour p { line-height: 39.375px; }
 [data-dpr="3"] .main .recommend .rec-content .content-0 .hour p { line-height: 49.4505494505px; }
 [data-dpr="3.5"] .main .recommend .rec-content .content-0 .hour p { line-height: 52.5px; }
-.main .recommend .rec-content .content-0 .title { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; overflow: hidden; height: 0.78125rem; line-height: 12.5px; }
+.main .recommend .rec-content .content-0 .title { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; overflow: hidden; height: 0.78125rem; line-height: 0.78125rem; }
 [data-dpr="2"] .main .recommend .rec-content .content-0 .title { font-size: 26px; }
 [data-dpr="2.625"] .main .recommend .rec-content .content-0 .title { font-size: 34.125px; }
 [data-dpr="3"] .main .recommend .rec-content .content-0 .title { font-size: 42.8571428571px; }
 [data-dpr="3.5"] .main .recommend .rec-content .content-0 .title { font-size: 45.5px; }
-[data-dpr="2"] .main .recommend .rec-content .content-0 .title { line-height: 25px; }
-[data-dpr="2.625"] .main .recommend .rec-content .content-0 .title { line-height: 32.8125px; }
-[data-dpr="3"] .main .recommend .rec-content .content-0 .title { line-height: 41.2087912088px; }
-[data-dpr="3.5"] .main .recommend .rec-content .content-0 .title { line-height: 43.75px; }
 .main .recommend .rec-content .content-0 .price { position: relative; left: -0.15625rem; margin-top: 0.8125rem; display: flex; }
-.main .recommend .rec-content .content-0 .price p { font-size: 15px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #e83104; line-height: 11.5px; }
-[data-dpr="2"] .main .recommend .rec-content .content-0 .price p { font-size: 30px; }
-[data-dpr="2.625"] .main .recommend .rec-content .content-0 .price p { font-size: 39.375px; }
-[data-dpr="3"] .main .recommend .rec-content .content-0 .price p { font-size: 49.4505494505px; }
-[data-dpr="3.5"] .main .recommend .rec-content .content-0 .price p { font-size: 52.5px; }
+.main .recommend .rec-content .content-0 .price p { font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #e83104; line-height: 11.5px; }
+[data-dpr="2"] .main .recommend .rec-content .content-0 .price p { font-size: 28px; }
+[data-dpr="2.625"] .main .recommend .rec-content .content-0 .price p { font-size: 36.75px; }
+[data-dpr="3"] .main .recommend .rec-content .content-0 .price p { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .main .recommend .rec-content .content-0 .price p { font-size: 49px; }
 [data-dpr="2"] .main .recommend .rec-content .content-0 .price p { line-height: 23px; }
 [data-dpr="2.625"] .main .recommend .rec-content .content-0 .price p { line-height: 30.1875px; }
 [data-dpr="3"] .main .recommend .rec-content .content-0 .price p { line-height: 37.9120879121px; }
 [data-dpr="3.5"] .main .recommend .rec-content .content-0 .price p { line-height: 40.25px; }
-.main .recommend .rec-content .content-0 .price .p5 { font-size: 13px; margin-left: 3px; line-height: 10px; }
-[data-dpr="2"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 26px; }
-[data-dpr="2.625"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 34.125px; }
-[data-dpr="3"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 42.8571428571px; }
-[data-dpr="3.5"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 45.5px; }
+.main .recommend .rec-content .content-0 .price .p5 { font-size: 12px; margin-left: 3px; line-height: 11.5px; }
+[data-dpr="2"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 24px; }
+[data-dpr="2.625"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 31.5px; }
+[data-dpr="3"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 39.5604395604px; }
+[data-dpr="3.5"] .main .recommend .rec-content .content-0 .price .p5 { font-size: 42px; }
 [data-dpr="2"] .main .recommend .rec-content .content-0 .price .p5 { margin-left: 6px; }
 [data-dpr="2.625"] .main .recommend .rec-content .content-0 .price .p5 { margin-left: 7.875px; }
 [data-dpr="3"] .main .recommend .rec-content .content-0 .price .p5 { margin-left: 9.8901098901px; }
 [data-dpr="3.5"] .main .recommend .rec-content .content-0 .price .p5 { margin-left: 10.5px; }
-[data-dpr="2"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 20px; }
-[data-dpr="2.625"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 26.25px; }
-[data-dpr="3"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 32.967032967px; }
-[data-dpr="3.5"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 35px; }
+[data-dpr="2"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 23px; }
+[data-dpr="2.625"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 30.1875px; }
+[data-dpr="3"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 37.9120879121px; }
+[data-dpr="3.5"] .main .recommend .rec-content .content-0 .price .p5 { line-height: 40.25px; }
 .main .teacher-box { background: #f6f6f6; padding-top: 0.4375rem; padding-bottom: 0.4375rem; }
 .main .teacher-box .teacher { background: #fff; padding-top: 1.375rem; padding-bottom: 1.15625rem; padding-right: 0.15625rem; }
 .main .teacher-box .teacher .t-title { font-size: 19px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; font-weight: 500; color: black; line-height: 18px; padding-left: 0.96875rem; }

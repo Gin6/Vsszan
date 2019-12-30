@@ -150,7 +150,7 @@ textarea {
       height: px2rem(86);
     }
   }
-  .video-buy {
+  .bv {
     position: fixed;
     top: px2rem(260);
     width: 100%;
@@ -266,6 +266,194 @@ textarea {
       background:rgba(36,101,255,1);
     }
   }
+  .content-1 {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(246,246,246,1);
+    padding-top: px2rem(84);
+    .content-1-title {
+      position: absolute;
+      top: px2rem(30);
+      left: px2rem(30);
+      @include font-dpr(28px);
+      @include font-fw;
+      color:rgba(51,51,51,1);
+      line-height: px2rem(26);
+    }
+    .content-1-header {
+      position: relative;
+      padding: px2rem(24) px2rem(30) px2rem(30);
+      height: px2rem(219);
+      background:rgba(255,255,255,1);
+      margin-bottom: px2rem(30);
+      .className {
+        p {
+          @include font-dpr(30px);
+          @include font-fw;
+          color:rgba(0,0,0,1);
+          line-height: px2rem(42);
+        }
+        span {
+          position: absolute;
+          top: px2rem(79);
+          right: px2rem(34);
+          @include font-dpr(22px);
+          @include font-fw;
+          color:rgba(153,153,153,1);
+          line-height: px2rem(21);
+        }
+      }
+      .priceFree {
+        position: absolute;
+        top: px2rem(130);
+        left: px2rem(23);
+        display: none;
+        .free {
+          @include font-dpr(28px);
+          @include font-fw;
+          font-weight: 500;
+          color:rgba(39,192,86,1);
+          line-height: px2rem(27);
+        }
+        .originPrice {
+          position: absolute;
+          bottom: px2rem(0);
+          left: px2rem(63);
+          @include font-dpr(22px);
+          @include font-fw;
+          color:rgba(153,153,153,1);
+          line-height: px2rem(17);
+          text-decoration: line-through;
+        }
+      }
+      .price {
+        position: absolute;
+        top: px2rem(133);
+        left: px2rem(23);
+        display: -webkit-inline-box;
+        .p1 {
+          @include font-dpr(28px);
+          @include font-fw;
+          font-weight: 500;
+          color:rgba(232,49,4,1);
+          line-height: px2rem(23);
+        }
+        .p2 {
+          @include font-dpr(24px);
+          @include font-fw;
+          font-weight: 500;
+          color:rgba(232,49,4,1);
+          line-height: px2rem(23);
+        }
+        .originPrice {
+          @include font-dpr(22px);
+          @include font-fw;
+          color:rgba(153,153,153,1);
+          line-height: px2rem(28);
+          text-decoration: line-through;
+        }
+      }
+      .vip{
+        position: absolute;
+        bottom: px2rem(30);
+        width: px2rem(690);
+        height: px2rem(54);
+        background:linear-gradient(90deg,rgba(255,224,178,1),rgba(255,234,201,1),rgba(255,202,123,1));
+        border-radius: px2rem(6);
+        img {
+          position: absolute;
+          top: px2rem(14);
+          left: px2rem(15);
+          width: px2rem(30);
+          height: px2rem(28);
+        }
+        p {
+          position: absolute;
+          left: px2rem(61);
+          @include font-dpr(24px);
+          @include font-fw;
+          color:rgba(51,51,51,1);
+          line-height: px2rem(54);
+        }
+        button {
+          position: absolute;
+          top: px2rem(9);
+          right: px2rem(14);
+          width: px2rem(124);
+          height: px2rem(36);
+          background:linear-gradient(90deg,rgba(255,202,123,1),rgba(243,101,67,1),rgba(248,74,41,1));
+          border-radius: px2rem(18);
+          @include font-dpr(22px);
+          @include font-fw;
+          color:rgba(255,255,255,1);
+          line-height: px2rem(36);
+          border: none;
+        }
+      }
+    }
+    .content-1-header-free {
+      height: px2rem(135);
+    }
+    .content-1-main {
+      position: relative;
+      width: 100%;
+      height: px2rem(1038);
+      background:rgba(255,255,255,1);
+      margin-bottom: px2rem(30);
+      img {
+        width: px2rem(690);
+        height: px2rem(922);
+        padding: px2rem(86) px2rem(30) px2rem(30);
+      }
+    }
+    .content-1-footer {
+      position: relative;
+      width: 100%;
+      height: px2rem(646);
+      background:rgba(255,255,255,1);
+      margin-bottom: px2rem(206);
+      .change {
+        position: absolute;
+        top: px2rem(29);
+        right: px2rem(59);
+        @include font-dpr(24px);
+        @include font-fw;
+        color:rgba(153,153,153,1);
+        line-height: px2rem(23);
+      }
+      .change-img {
+        position: absolute;
+        top: px2rem(28);
+        right: px2rem(29);
+        width: px2rem(23);
+        height: px2rem(25);
+      }
+      .container {
+        padding-top: px2rem(86);
+        padding-left: px2rem(30);
+        .content {
+          width: px2rem(330);
+          height: px2rem(280);
+          margin-right: px2rem(30);
+          float: left;
+          img {
+            width: 100%;
+            height: px2rem(198);
+            border-radius: px2rem(6);
+          }
+          p {
+            height: px2rem(25);
+            @include font-dpr(26px);
+            @include font-fw;
+            color:rgba(0,0,0,1);
+            line-height: px2rem(25);
+            margin: px2rem(18) 0;
+            overflow-y: hidden;
+          }
+        }
+      }
+    }
+  }
   .content-2 {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -274,7 +462,10 @@ textarea {
     .list{
       width: 100%;
       background: #fff;
+      padding-bottom: px2rem(90);
       ul {
+        padding-bottom: px2rem(90);
+        background:rgba(246,246,246,1);
         li {
           position: relative;
           width: 100%;
@@ -367,54 +558,133 @@ textarea {
         .live-p {right: px2rem(34);}
       }
     }
-    .content-2-footer {
+  }
+  .content-3 {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-top: px2rem(84);
+    background:rgba(246,246,246,1);
+    .content-3-title {
+      position: absolute;
+      top: px2rem(31);
+      left: px2rem(30);
+      @include font-dpr(28px);
+      @include font-fw;
+      color:rgba(51,51,51,1);
+      line-height: px2rem(26);
+    }
+    .content-3-header {
+      position: relative;
       width: 100%;
-      height: px2rem(89);
-      position: fixed;
-      bottom: 0px;
+      height: px2rem(260);
+      background:rgba(255,255,255,1);
+      margin-bottom: px2rem(30);
+      .comment {
+        text-align: center;
+        padding: px2rem(72) 0 px2rem(30);
+        .starability-grow {
+          margin: auto;
+        }
+        p {
+          @include font-dpr(26px);
+          @include font-fw;
+          color:rgba(153,153,153,1);
+          line-height: px2rem(73);
+        }
+        button {
+          width: px2rem(126);
+          height: px2rem(46);
+          border: none;
+          background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
+          border-radius: px2rem(6);
+          @include font-dpr(24px);
+          @include font-fw;
+          color:rgba(255,255,255,1);
+          line-height: px2rem(36);
+        }
+      }
+    }
+    .content-3-main {
+      position: relative;
+      width: 100%;
+      min-height: px2rem(671);
+      background:rgba(255,255,255,1);
+      margin-bottom: px2rem(176);
+      .allComment {
+        padding-top: px2rem(168);
+        text-align: center;
+        img {
+          width: px2rem(235);
+          height: px2rem(168);
+        }
+        p {
+          @include font-dpr(26px);
+          @include font-fw;
+          color:rgba(153,153,153,1);
+          line-height: px2rem(25);
+          margin-top: px2rem(26);
+        }
+      }
+    }
+  }
+  .content-footer {
+    width: 100%;
+    height: px2rem(89);
+    position: fixed;
+    bottom: 0px;
+    background: #fff;
+    z-index: 3;
+    border-top: px2rem(1) solid rgba(221,221,221,1);
+    img {
+      position: absolute;
+      top: px2rem(13);
+      left: px2rem(30);
+      width: px2rem(64);
+      height: px2rem(64);
+      border-radius: 50%;
+    }
+    p {
+      position: absolute;
+      bottom: px2rem(32);
+      left: px2rem(114);
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(0,0,0,1);
+      line-height: px2rem(25);
+    }
+    button {
+      position: absolute;
+      top: px2rem(15);
+      width: px2rem(162);
+      height: px2rem(58);
+      border-radius: px2rem(6);
+      @include font-dpr(28px);
+      @include font-fw;
+      line-height: px2rem(36);
+    }
+    .content-b1 {
+      right: px2rem(214);
+      color:rgba(36,101,255,1);
+      border: px2rem(1) solid rgba(36,101,255,1);
       background: #fff;
+    }
+    .content-b2 {
+      right: px2rem(30);
+      color:rgba(255,255,255,1);
+      border: px2rem(1) solid rgba(238,238,238,1);
+      background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
+    }
+    .content-b34 {
       display: none;
-      z-index: 3;
-      border-top: px2rem(1) solid rgba(221,221,221,1);
-      img {
-        position: absolute;
-        top: px2rem(13);
-        left: px2rem(30);
-        width: px2rem(64);
-        height: px2rem(64);
-        border-radius: 50%;
-      }
-      p {
-        position: absolute;
-        bottom: px2rem(32);
-        left: px2rem(114);
-        @include font-dpr(26px);
-        @include font-fw;
-        color:rgba(0,0,0,1);
-        line-height: px2rem(25);
-      }
-      button {
-        position: absolute;
-        top: px2rem(15);
-        width: px2rem(162);
-        height: px2rem(58);
-        border-radius: px2rem(6);
-        @include font-dpr(28px);
-        @include font-fw;
-        line-height: px2rem(36);
-      }
-      .content-2-b1 {
-        right: px2rem(214);
-        color:rgba(36,101,255,1);
-        border: px2rem(1) solid rgba(36,101,255,1);
-        background: #fff;
-      }
-      .content-2-b2 {
-        right: px2rem(30);
-        color:rgba(255,255,255,1);
-        border: px2rem(1) solid rgba(238,238,238,1);
-        background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
-      }
+      border: none;
+      width: px2rem(259);
+      height: px2rem(60);
+      right: px2rem(30);
+      color:rgba(255,255,255,1);
+      background:linear-gradient(122deg,rgba(27,181,74,1),rgba(25,172,70,1));
+    }
+    .content-b5 {
+      background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
     }
   }
 }

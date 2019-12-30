@@ -29,6 +29,7 @@ $('.list-1').click(function() {
 	$('.bar').css({left: padding,});
 	$('.video-buy').css({display: 'none',});
 	$('.video-study').css({display: 'none',});
+	$('.video-vip').css({display: 'none'});
 	$('.video-img').css({display: 'block',});
 });
 
@@ -36,16 +37,16 @@ $('.list-2').click(function() {
 	$('.bar').css({left: navNewWidthAll/2-barWidth/2,});
 	$('.video-img').css({display: 'none',});
 	$('.video-study').css({display: 'none',});
+	$('.video-vip').css({display: 'none'});
 	$('.video-buy').css({display: 'block',});
-	$('.content-2-footer').css({display: 'block',});
 });
 
 $('.list-3').click(function() {
 	$('.video-img').css({display: 'none',});
 	$('.video-buy').css({display: 'none',});
+	$('.video-vip').css({display: 'none'});
 	$('.video-study').css({display: 'block',});
 	$('.bar').css({left: navNewWidth-barWidth+padding});
-	//$('.content-3-footer').css({display: 'block',});
 })
 
 //手风琴折叠板
@@ -101,4 +102,42 @@ $('.list-se li').click(function() {
 		$(this).siblings('.live').children('.vl-img').attr('src','image/video/live-notcheck.png');
 		$(this).children('.vl-img').attr('src','image/video/video-on.png');
 	}
+});
+
+$(function(){
+	WhetherFree();
+});
+function WhetherFree(){
+	console.log('123');
+	if ($('.price').css("display") == "none") {
+		$('.content-1-header').addClass('content-1-header-free');
+		$('.vip').css({display: 'none'});
+	}
+	else
+		$('.content-1-header').removeClass('content-1-header-free');
+};
+
+//调试页面样式
+$('.content-b2').click(function() {
+	$('.content-b1').css({display: 'none'});
+	$(this).css({display: 'none'});
+	$('.content-b5').css({display: 'block'});
+	$('.video-img').css({display: 'none',});
+	$('.video-vip').css({display: 'block'});
+});
+
+$('.content-b5').click(function() {
+	$(this).css({display: 'none'});
+	$('.content-b3').css({display: 'block'});
+	$('.content-1-header').addClass('content-1-header-free');
+	$('.vip').css({display: 'none'});
+	$('.video-vip').css({display: 'none'});
+});
+
+$('.content-b3').click(function() {
+	$(this).css({display: 'none'});
+	$('.content-b4').css({display: 'block'});
+	$('.price').css({display: 'none'});
+	$('.priceFree').css({display: '-webkit-inline-box'});
+	WhetherFree();
 });

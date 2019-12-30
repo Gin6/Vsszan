@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>视频详情</title>
 	<link rel="shortcut icon" href="image/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/starability-all.min.css"/>
 	<link rel="stylesheet" href="css/particulars.css">
 </head>
 <body>
@@ -21,13 +22,21 @@
 	</div>
 	<div class="video-box" >
 		<video src="image/video/video-2.mp4" poster="image/video/video-bg.png"></video>
+		<!-- 播放 -->
 		<div class="video-img">
 			<img src="image/video/play.png" alt="play" class="video-play">
 		</div>
-		<div class="video-buy">
+		<!-- 立即购买 -->
+		<div class="video-buy bv">
 			<p>当前课程暂未购买，无法学习</p>
 			<button>立即购买</button>
 		</div>
+		<!-- vip马上学习 -->
+		<div class="video-vip bv">
+			<p>您为VIP会员，当前课程可免费观看</p>
+			<button>马上学习</button>
+		</div>
+		<!-- 马上学习 -->
 		<div class="video-study">
 			<p class="video-study-p1">最近学到：</p>
 			<p class="video-study-title">1.1标题名字的该的护肤丰厚的...</p>
@@ -45,7 +54,60 @@
 		<div class="mt-tabpage-count">
 			<ul class="mt-tabpage-cont__wrap">
 				<li class="mt-tabpage-item">
-					<div class="content-1"></div>
+					<div class="content-1">
+						<div class="content-1-header">
+							<div class="className">
+								<p>课程名称和地价是皇帝阿帅哈的的合肥科技撒谎的功夫与事故的关键公分的想...</p>
+								<span>已有1216人学习</span>
+							</div>
+							<!-- 免费课程 -->
+							<div class="priceFree">
+								<p class="free">免费</p>
+								<p class="originPrice">￥100.00</p>
+							</div>
+							<!-- 付费课程 -->
+							<div class="price">
+								<p class="p1">￥</p>
+								<p class="p1">50.00</p>
+								<p class="p2">+</p>
+								<p class="p2">100</p>
+								<p class="p2">赞币</p>
+								<p class="originPrice">￥100.00</p>
+							</div>
+							<div class="vip">
+								<img src="image/video/VIP.gif" alt="gif">
+								<p>成为VIP会员，可免费观看</p>
+								<button>立即开通</button>
+							</div>
+						</div>
+						<div class="content-1-main">
+							<p class="content-1-title">课程详情</p>
+							<img src="image/video/wolp.jpg" alt="img">
+						</div>
+						<div class="content-1-footer">
+							<p class="content-1-title">相关课程</p>
+							<p class="change">换一批</p>
+							<img src="image/video/20191230141701.png" alt="img" class="change-img">
+							<div class="container">
+								<div class="content">
+									<img src="image/curriculum/1576656251.png" alt="img">
+									<p>标题富华大厦的是可敬看...</p>
+								</div>
+								<div class="content">
+									<img src="image/curriculum/1576656251.png" alt="img">
+									<p>标题富华大厦的是可敬看...</p>
+								</div>
+								<div class="content">
+									<img src="image/curriculum/1576656251.png" alt="img">
+									<p>标题富华大厦的是可敬看...</p>
+								</div>
+								<div class="content">
+									<img src="image/curriculum/1576656251.png" alt="img">
+									<p>标题富华大厦的是可敬看...</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
 				<li class="mt-tabpage-item">
 					<div class="content-2">
@@ -145,18 +207,54 @@
 								<li><p class="title">章节11</p><p class="title-2">名称哈的精神科的哈斯的必杀技好</p></li>
 							</ul>
 						</div>
-						<div class="content-2-footer">
-							<img src="image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg" alt="img">
-							<p>咨询</p>
-							<button type="button" class="content-2-b1">加入购物车</button>
-							<button type="button" class="content-2-b2">立即购买</button>
-						</div>
 					</div>
 				</li>
 				<li class="mt-tabpage-item">
-					<div class="content-3"></div>
+					<div class="content-3">
+						<div class="content-3-header">
+							<p class="content-3-title">我的评论</p>
+							<div class="comment">
+								<form>
+								<fieldset class="starability-grow"> 
+									<input type="radio" id="rate5-3" name="rating" value="5" />
+									<label for="rate5-3" title="Amazing">5 stars</label>
+
+									<input type="radio" id="rate4-3" name="rating" value="4" />
+									<label for="rate4-3" title="Very good">4 stars</label>
+
+									<input type="radio" id="rate3-3" name="rating" value="3" />
+									<label for="rate3-3" title="Average">3 stars</label>
+
+									<input type="radio" id="rate2-3" name="rating" value="2" />
+									<label for="rate2-3" title="Not good">2 stars</label>
+
+									<input type="radio" id="rate1-3" name="rating" value="1" />
+									<label for="rate1-3" title="Terrible">1 star</label>
+								</fieldset>
+								</form>
+								<p>您的宝贵评价，对我们非常重要~</p>
+								<button>写评论</button>
+							</div>
+						</div>
+						<div class="content-3-main">
+							<p class="content-3-title">全部评论</p>
+							<div class="allComment">
+								<img src="image/video/default-1.png" alt="img">
+								<p>暂无课程评价</p>
+							</div>
+						</div>
+					</div>
 				</li>
 			</ul>
+		</div>
+		<div class="content-footer">
+			<img src="image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg" alt="img">
+			<p>咨询</p>
+			<button type="button" class="content-b1">加入购物车</button>
+			<button type="button" class="content-b2">立即购买</button>
+			<button type="button" class="content-b3 content-b34">已购课程 马上学习</button>
+			<button type="button" class="content-b4 content-b34">免费课程 马上学习</button>
+			<button type="button" class="content-b5 content-b34">VIP免费 马上学习</button>
 		</div>
 	</div>
 	
