@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>视频详情</title>
 	<link rel="shortcut icon" href="image/favicon.png">
-	<link rel="stylesheet" type="text/css" href="css/starability-all.min.css"/>
+	<link rel="stylesheet" href="css/starability-all.min.css"/>
 	<link rel="stylesheet" href="css/particulars.css">
 </head>
 <body>
@@ -43,6 +43,49 @@
 			<button>马上学习</button>
 		</div>
 		<div class="video-curtain"></div>
+	</div>
+	<!-- 弹窗 -->
+	<div class="curtain">
+		<div class="popup-sorry">
+			<p>抱歉，您需学满3天才能进行评价！</p>
+			<button>确定</button>
+		</div>
+		<div class="popup-comment">
+			<form action="">
+				<div class="popup-comment-header">
+					<fieldset class="starability-grow"> 
+						<input type="radio" id="rate5-3" name="rating" value="5" />
+						<label for="rate5-3" title="Amazing">5 stars</label>
+
+						<input type="radio" id="rate4-3" name="rating" value="4" />
+						<label for="rate4-3" title="Very good">4 stars</label>
+
+						<input type="radio" id="rate3-3" name="rating" value="3" />
+						<label for="rate3-3" title="Average">3 stars</label>
+
+						<input type="radio" id="rate2-3" name="rating" value="2" />
+						<label for="rate2-3" title="Not good">2 stars</label>
+
+						<input type="radio" id="rate1-3" name="rating" value="1" />
+						<label for="rate1-3" title="Terrible">1 star</label>
+					</fieldset>
+					<div class="difficult">
+						<input name="dif" value="1" type="radio" lab="太简单" />
+						<input name="dif" value="2" type="radio" lab="简单" />
+						<input name="dif" value="3" type="radio" lab="适中" />
+						<input name="dif" value="4" type="radio" lab="有点难" />
+						<input name="dif" value="5" type="radio" lab="太难了" />
+					</div>
+				</div>
+				<div class="popup-comment-main">
+					<textarea maxlength="200" placeholder="请发表您对该课程的评价，200字以内"></textarea>
+				</div>
+				<div class="popup-comment-footer">
+					<button>取消</button>
+					<input type="submit" value="确定" />
+				</div>
+			</form>
+		</div>
 	</div>
 	<div class="main mt-tabpage" js-tab="2">
 		<div class="nav mt-tabpage-title">
@@ -214,33 +257,60 @@
 						<div class="content-3-header">
 							<p class="content-3-title">我的评论</p>
 							<div class="comment">
-								<form>
 								<fieldset class="starability-grow"> 
-									<input type="radio" id="rate5-3" name="rating" value="5" />
+									<!-- <input type="radio" id="rate5-3" name="rating" value="5" /> -->
 									<label for="rate5-3" title="Amazing">5 stars</label>
 
-									<input type="radio" id="rate4-3" name="rating" value="4" />
+									<!-- <input type="radio" id="rate4-3" name="rating" value="4" /> -->
 									<label for="rate4-3" title="Very good">4 stars</label>
 
-									<input type="radio" id="rate3-3" name="rating" value="3" />
+									<!-- <input type="radio" id="rate3-3" name="rating" value="3" /> -->
 									<label for="rate3-3" title="Average">3 stars</label>
 
-									<input type="radio" id="rate2-3" name="rating" value="2" />
+									<!-- <input type="radio" id="rate2-3" name="rating" value="2" /> -->
 									<label for="rate2-3" title="Not good">2 stars</label>
 
-									<input type="radio" id="rate1-3" name="rating" value="1" />
+									<!-- <input type="radio" id="rate1-3" name="rating" value="1" /> -->
 									<label for="rate1-3" title="Terrible">1 star</label>
 								</fieldset>
-								</form>
 								<p>您的宝贵评价，对我们非常重要~</p>
-								<button>写评论</button>
+								<button class="writeComment">写评论</button>
 							</div>
 						</div>
 						<div class="content-3-main">
 							<p class="content-3-title">全部评论</p>
-							<div class="allComment">
+							<div class="notComment">
 								<img src="image/video/default-1.png" alt="img">
 								<p>暂无课程评价</p>
+							</div>
+							<div class="allComment">
+								<div class="allComment-header">
+									<div id="startone"  class="block clearfix" >
+										<span class="fenshu"></span>
+										<p class="p-star">星</p>
+							          	<div class="star_score"></div>
+							          	<div class="num">
+							          		<p>(</p><p>1234</p><p>)</p>
+							          	</div>
+							          	<p class="p-dif">难度</p>
+							          	<div class="div_dif">适中</div>
+								    </div>
+								</div>
+								<div class="allComment-main">
+									<div class="main-comment_1">
+										<div class="comhead">
+											<img src="image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg" alt="img">
+											<p class="username">用户名</p>
+											<div class="star_score"></div>
+											<p class="time">2019-10-15</p>
+										</div>
+										<p class="tex">最多200字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑</p>
+										<div class="praise">
+											<img src="image/video/praise-notcheck.png" alt="img">
+											<p>12</p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -259,15 +329,18 @@
 	</div>
 	
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.richUI.min.js"></script>
+	<script type="text/javascript" src="js/jquery.browser.min.js"></script>
 	<script type="text/javascript" src="js/fastclick.js"></script>
 	<script type="text/javascript" src="js/mt-tabpage.js"></script>
 	<script type="text/javascript" src="js/viewport.js"></script>
+	<script type="text/javascript" src="js/starScore.js"></script>
 	<script type="text/javascript" src="js/particulars.js"></script>
 	<script type="text/javascript">
+	scoreFun($("#startone"))		
 	$(function () {
 		FastClick.attach(document.body);
-	});
-	$(function () {
+		$("input[name='dif']").richradio();
 		$('[js-tab=2]').tab({
 			mouse: 'click',   //切换方式：over，click
 			autoPlay: false,  //播放方式：false，true

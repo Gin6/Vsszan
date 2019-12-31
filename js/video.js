@@ -155,7 +155,7 @@ $('.button-1').click(function() {
 	document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
 });
 
-
+//iphone输入弹窗回调
 $("input,textarea").blur(() => {
     setTimeout(() => {
         let ua = navigator.userAgent.toLowerCase()

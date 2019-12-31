@@ -107,8 +107,13 @@ $('.list-se li').click(function() {
 $(function(){
 	WhetherFree();
 });
+
+function bodyScroll(event){
+    event.preventDefault();
+};
+
 function WhetherFree(){
-	console.log('123');
+	// console.log('123');
 	if ($('.price').css("display") == "none") {
 		$('.content-1-header').addClass('content-1-header-free');
 		$('.vip').css({display: 'none'});
@@ -116,6 +121,12 @@ function WhetherFree(){
 	else
 		$('.content-1-header').removeClass('content-1-header-free');
 };
+
+$('.writeComment').click(function() {
+	$('.curtain').css({display: 'block'});
+	$('.popup-comment').css({display: 'block'});
+	document.body.addEventListener('touchmove',bodyScroll, { passive: false });
+});
 
 //调试页面样式
 $('.content-b2').click(function() {
@@ -140,4 +151,41 @@ $('.content-b3').click(function() {
 	$('.price').css({display: 'none'});
 	$('.priceFree').css({display: '-webkit-inline-box'});
 	WhetherFree();
+});
+
+//iphone输入弹窗回调
+$("input,textarea").blur(() => {
+    setTimeout(() => {
+        let ua = navigator.userAgent.toLowerCase()
+        let u = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+        if (ua.match(/MicroMessenger/i) == 'micromessenger' && !!u) {
+          //在iphone 微信中
+          let currentPosition, timer
+          let speed = 1 //页面滚动距离
+          timer = setInterval(function() {
+            currentPosition =
+              document.documentElement.scrollTop || document.body.scrollTop
+            currentPosition -= speed
+            window.scrollTo(0, 0) //页面向上滚动
+            clearInterval(timer)
+          }, 1)
+        }
+    }, 200)  
+});
+
+//难易程度
+$('.difficult').children('input').click(function(event) {
+	var i = $(this).attr("value");
+	$(this).parent().siblings().css({background: 'rgba(255,255,255,1)', borderColor: 'rgba(221,221,221,1)'});
+	// console.log(i);
+	if (i == 1)
+		$(this).parent().css({background: 'rgba(210,233,243,1)', borderColor: 'rgba(210,233,243,1)'});
+	if (i == 2)
+		$(this).parent().css({background: 'rgba(189,221,242,1)', borderColor: 'rgba(189,221,242,1)'});
+	if (i == 3)
+		$(this).parent().css({background: 'rgba(178,214,245,1)', borderColor: 'rgba(178,214,245,1)'});
+	if (i == 4)
+		$(this).parent().css({background: 'rgba(187,211,255,1)', borderColor: 'rgba(187,211,255,1)'});
+	if (i == 5)
+		$(this).parent().css({background: 'rgba(188,198,250,1)', borderColor: 'rgba(188,198,250,1)'});
 });

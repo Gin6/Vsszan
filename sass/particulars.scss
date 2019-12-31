@@ -222,6 +222,129 @@ textarea {
     z-index: 2;
   }
 }
+.curtain {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background:rgba(0, 0, 0, 0.5);
+  display: none;
+  .popup-sorry {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: px2rem(490);
+    height: px2rem(232);
+    background:rgba(255,255,255,1);
+    border-radius: px2rem(10);
+    margin: auto;
+    display: none;
+    p {
+      padding: px2rem(33) px2rem(64) 0px px2rem(63);
+      @include font-dpr(30px);
+      @include font-fw;
+      color:rgba(51,51,51,1);
+      line-height: px2rem(46);
+    }
+    button {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: px2rem(80);
+      border: none;
+      border-top: px2rem(1) solid rgba(221,221,221,1);
+      @include font-dpr(28px);
+      @include font-fw;
+      color:rgba(36,101,255,1);
+      line-height: px2rem(36);
+      background:rgba(255,255,255,1);
+      border-bottom-right-radius: px2rem(10);
+      border-bottom-left-radius: px2rem(10);
+    }
+  }
+  .popup-comment {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: px2rem(556);
+    height: px2rem(612);
+    background:rgba(255,255,255,1);
+    border-radius: px2rem(10);
+    margin: auto;
+    display: none;
+    .popup-comment-header {
+      position: relative;
+      width: 100%;
+      height: px2rem(105);
+      padding: px2rem(30) 0px;
+      text-align: center;
+      .starability-grow {
+        margin: auto;
+      }
+      .difficult {
+        position: absolute;
+        bottom: px2rem(30);
+        width: 100%;
+        margin-top: px2rem(40);
+      }
+    }
+    .popup-comment-main {
+      background: rgba(246,246,246,1);
+      padding: px2rem(12) px2rem(24);
+      textarea {
+        width: 100%;
+        height: px2rem(334);
+        border: 0px;
+        background: rgba(246,246,246,1);
+        @include font-dpr(26px);
+        @include font-fw;
+        color:rgba(153,153,153,1);
+        @include px-dpr(line-height, 38px);
+      }
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+        @include font-dpr(26px);
+        @include font-fw;
+        color:rgba(153,153,153,1);
+        @include px-dpr(line-height, 38px);
+      }
+    }
+    .popup-comment-footer {
+      position: absolute;
+      width: 100%;
+      height: px2rem(80);
+      bottom: 0px;
+      border-top: px2rem(1) solid rgba(221,221,221,1);
+      button {
+        width: 50%;
+        height: 100%;
+        border: none;
+        @include font-dpr(28px);
+        @include font-fw;
+        color:rgba(51,51,51,1);
+        line-height: px2rem(36);
+        background: rgba(255,255,255,1);
+        border-right: px2rem(1) solid rgba(221,221,221,1);
+        border-bottom-left-radius: px2rem(10);
+      }
+      input {
+        position: absolute;
+        right: 0px;
+        width: 50%;
+        height: 100%;
+        border: none;
+        -webkit-appearance:none;
+        outline:none;
+        @include font-dpr(28px);
+        @include font-fw;
+        color:rgba(36,101,255,1);
+        line-height: px2rem(36);
+        background: rgba(255,255,255,1);
+        border-bottom-right-radius: px2rem(10);
+      }
+    }
+  }
+}
 .mt-tabpage-count {
   position: relative;
   width: 100%;
@@ -610,9 +733,10 @@ textarea {
       min-height: px2rem(671);
       background:rgba(255,255,255,1);
       margin-bottom: px2rem(176);
-      .allComment {
+      .notComment {
         padding-top: px2rem(168);
         text-align: center;
+        display: none;
         img {
           width: px2rem(235);
           height: px2rem(168);
@@ -623,6 +747,87 @@ textarea {
           color:rgba(153,153,153,1);
           line-height: px2rem(25);
           margin-top: px2rem(26);
+        }
+      }
+      .allComment {
+        // display: none;
+        position: absolute;
+        width: 100%;
+        top: px2rem(110);
+        height: px2rem(200);
+        .allComment-main {
+          .main-comment_1 {
+            position: relative;
+            margin: 0 px2rem(30);
+            padding: px2rem(30) 0;
+            border-bottom: px2rem(1) solid rgba(221,221,221,1);
+            .comhead {
+              img {
+                width: px2rem(62px);
+                height: px2rem(62px);
+                border-radius:50%;
+              }
+              .username {
+                @include font-dpr(24px);
+                @include font-fw;
+                color:rgba(51,51,51,1);
+                line-height: px2rem(24);
+              }
+              .star_score { 
+                // position: absolute;
+                bottom: px2rem(5);
+                left: px2rem(160);
+                background:url(../image/video/starky-2.png); 
+                background-size: px2rem(32) px2rem(25);
+                width: px2rem(160);
+                height: px2rem(25);  
+              }
+              .star_score a{ 
+                height: px2rem(25); 
+                display:block; 
+                text-indent:-999em; 
+                position:absolute;
+                left:0;
+              }
+              .star_score a:hover{ 
+                background:url(../image/video/starsy-2.png);
+                background-size: px2rem(32) px2rem(25);
+                left:0;
+              }
+              .star_score a.clibg{ 
+                background:url(../image/video/starsy-2.png);
+                background-size: px2rem(32) px2rem(25);
+                left:0;
+              }
+              .time {
+                @include font-dpr(22px);
+                @include font-fw;
+                color:rgba(153,153,153,1);
+                line-height: px2rem(22);
+              }
+            }
+            .tex {
+              @include font-dpr(26px);
+              @include font-fw;
+              color:rgba(51,51,51,1);
+              line-height: px2rem(36);
+            }
+            .praise {
+              position: absolute;
+              bottom: px2rem(30);
+              right: 0px;
+              display: flex;
+              img {
+                width: px2rem(26);
+                height: px2rem(26);
+              }
+              p {
+                @include font-dpr(22px);
+                @include font-fw;
+                color:rgba(153,153,153,1);
+              }
+            }
+          }
         }
       }
     }
@@ -687,4 +892,134 @@ textarea {
       background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
     }
   }
+}
+
+// richUI
+.richradio,
+.richcheckbox {
+    border:px2rem(1) solid rgba(221,221,221,1);
+    color:rgba(51,51,51,1);
+    display: inline-block;
+    width: px2rem(90);
+    height: px2rem(34);
+    @include font-dpr(22px);
+    @include font-fw;
+    color:rgba(51,51,51,1);
+    line-height: px2rem(36);
+    text-align: center;
+    margin: 0px px2rem(2.5);
+    transition: .5s ease;
+}
+.richradio:hover,
+.richcheckbox:hover {
+    cursor: pointer;
+}
+.lowIE {
+    position: absolute\9;
+    top: -999px\9;
+    left: -999px\9;
+}
+.otherBrowser {
+    display: none;
+}
+.IEChecked {
+    background: url(../image/other/checked.png) no-repeat right bottom;
+    background-size: auto auto;
+    border: 1px solid #00a4ff;
+    background-size: 21px 21px;
+    color: #00a4ff;
+}
+.otherBrowserChecked {
+    background:rgba(178,214,245,1);
+    border: 1px solid rgba(178,214,245,1);
+}
+
+//starUI
+.block{ 
+  position: relative;
+  width:100%; 
+  height: px2rem(53);
+  line-height:21px;
+  .fenshu {
+    position: absolute;
+    bottom: px2rem(6);
+    left: px2rem(31);
+    @include font-dpr(56px);
+    @include font-fw;
+    font-weight: 500;
+    color:rgba(255,120,0,1);
+    line-height: px2rem(41);
+  }
+  .p-star {
+    position: absolute;
+    bottom: px2rem(6);
+    left: px2rem(128);
+    @include font-dpr(28px);
+    @include font-fw;
+    color:rgba(51,51,51,1);
+    line-height: px2rem(24);
+  }
+  .num {
+    position: absolute;
+    bottom: px2rem(5);
+    left: px2rem(391);
+    display: -webkit-inline-box;
+    p {
+      @include font-dpr(22px);
+      @include font-fw;
+      color:rgba(51,51,51,1);
+      line-height: px2rem(22);
+    }
+  }
+  .p-dif {
+    position: absolute;
+    bottom: px2rem(5);
+    right: px2rem(135);
+    @include font-dpr(28px);
+    @include font-fw;
+    color:rgba(51,51,51,1);
+    line-height: px2rem(28);
+  }
+  .div_dif {
+    position: absolute;
+    bottom: px2rem(0);
+    right: px2rem(30);
+    width: px2rem(90);
+    height: px2rem(36);
+    background:rgba(178,214,245,1);
+    text-align: center;
+    @include font-dpr(22px);
+    @include font-fw;
+    color:rgba(51,51,51,1);
+    line-height: px2rem(36);
+  }
+  .star_score { 
+    position: absolute;
+    bottom: px2rem(5);
+    left: px2rem(160);
+    background:url(../image/video/starky.png); 
+    background-size: px2rem(44) px2rem(32);
+    width: px2rem(220);
+    height: px2rem(32);  
+  }
+  .star_score a{ 
+    height: px2rem(32); 
+    display:block; 
+    text-indent:-999em; 
+    position:absolute;
+    left:0;
+  }
+  .star_score a:hover{ 
+    background:url(../image/video/starsy.png);
+    background-size: px2rem(44) px2rem(32);
+    left:0;
+  }
+  .star_score a.clibg{ 
+    background:url(../image/video/starsy.png);
+    background-size: px2rem(44) px2rem(32);
+    left:0;
+  }
+}
+.block .star_score{ 
+  float:left;
 }
