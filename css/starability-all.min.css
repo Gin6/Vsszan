@@ -115,7 +115,7 @@ screen and (-webkit-min-device-pixel-ratio:2) {
 .starability-grow {
     display: block;
     position: relative;
-    width: 195px;
+    /*width: 195px;*/
     min-height: 39px;
     padding: 0;
     border: none

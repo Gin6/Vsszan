@@ -339,12 +339,9 @@ textarea {
   .nav {
     position: fixed;
     z-index: 2;
-    padding-left: px2rem(31);
-    padding-right: px2rem(30);
-    height: px2rem(82);
-    // @include px-dpr(padding-left, 31px);
-    // @include px-dpr(padding-right, 30px);
-    // @include px-dpr(height, 82px);
+    padding-left: px2rem(30);
+    padding-right: px2rem(31);
+    height: px2rem(92);
     background:rgba(255,255,255,1);
     border: px2rem(1) solid rgba(221,221,221,1);
     .nav-list {
@@ -354,7 +351,7 @@ textarea {
         @include font-dpr(32px);
         @include font-fw;
         color: rgba(0,0,0,1);
-        @include px-dpr(line-height, 82px);
+        line-height: px2rem(92);
       }
     }
     .list-1 {p {color:rgba(36,101,255,1); float: left;}}
@@ -375,12 +372,14 @@ textarea {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     background: rgba(246,246,246,1);
-    padding-top: px2rem(84);
+    padding-top: px2rem(94);
     //@include px-dpr(padding-top, 84px);
     .list{
       width: 100%;
       background: #fff;
+      padding-bottom: px2rem(90);
       ul {
+        background:rgba(255,255,255,1);
         li {
           position: relative;
           width: 100%;
@@ -390,25 +389,19 @@ textarea {
           transition: .3s ease;
           .title {
             background : rgba(246,246,246,1);
-            height: px2rem(84);
-            //@include px-dpr(height, 84px);
-            @include px-dpr(padding-left, 31px);
-            @include px-dpr(padding-right, 30px);
+            height: px2rem(88);
+            border-bottom: px2rem(1) solid rgba(221,221,221,1);
+            padding-left: px2rem(31);
+            padding-right: px2rem(30);
             @include font-dpr(28px);
             @include font-fw;
             color: rgba(0,0,0,1);
-            line-height: px2rem(84);
-            padding    : 0;
-            border     : none;
+            line-height: px2rem(88);
             position   : relative;
-            span {
-              position: absolute;
-              @include px-dpr(right, 30px);
-            }
             img {
               position: absolute;
-              @include px-dpr(top, 35px);
-              @include px-dpr(right, 30px);
+              top: px2rem(35);
+              right: px2rem(30);
             }
           }
           .title-2 {
@@ -418,8 +411,8 @@ textarea {
             @include font-fw;
             color: rgba(0,0,0,1);
             background:rgba(246,246,246,1) !important;
-            @include px-dpr(left, 143px);
-            line-height: px2rem(84);
+            left: px2rem(143);
+            line-height: px2rem(88);
           }
         }
       }
@@ -427,15 +420,15 @@ textarea {
     .list-se {
       overflow: hidden;
       display: none;
-      padding-bottom: px2rem(8);
-      //@include px-dpr(padding-bottom, 8px);
+      padding-bottom: px2rem(25);
+      border-bottom: px2rem(1) solid rgba(221,221,221,1);
       p {
         background: rgba(255,255,255,1) !important;
         color: rgba(0,0,0,1);
       }
       .title {
         background:rgba(246,246,246,1) !important;
-        margin-bottom: px2rem(8);
+        margin-bottom: px2rem(25);
         //@include px-dpr(margin-bottom, 8px);
       }
       li {
@@ -447,7 +440,7 @@ textarea {
         transition        : right .5s;
         img {
           position: absolute;
-          top: px2rem(33);
+          top: px2rem(25);
           left: px2rem(53);
           width: px2rem(30);
           height: px2rem(24);
@@ -459,13 +452,10 @@ textarea {
         .li-p1 {
           padding-left: px2rem(95);
           padding-right: px2rem(147);
-          // @include px-dpr(padding-left, 95px);
-          // @include px-dpr(padding-right, 147px);
-          @include font-dpr(24px);
+          @include font-dpr(26px);
           @include font-fw;
-          @include px-dpr(line-height, 84px);
-          height: px2rem(84);
-          //@include px-dpr(height, 84px);
+          @include px-dpr(line-height, 75px);
+          height: px2rem(75);
           -webkit-transition   : border .5s; 
                transition  : border .5s;
           -webkit-transition   : background .3s;
@@ -475,11 +465,10 @@ textarea {
           position: absolute;
           top: 0px;
           right: px2rem(28);
-          //@include px-dpr(right, 28px);
-          @include font-dpr(24px);
+          @include font-dpr(22px);
           @include font-fw;
           color:rgba(153,153,153,1) !important;
-          @include px-dpr(line-height, 84px);
+          @include px-dpr(line-height, 75px);
         }
         .live-p {right: px2rem(34);}
       }
@@ -491,7 +480,7 @@ textarea {
     -webkit-overflow-scrolling: touch;
     .content-2-header {
       position: absolute;
-      top: px2rem(84);
+      top: px2rem(94);
       //@include px-dpr(top, 84px);
       width: 100%;
       height: px2rem(100);
@@ -544,7 +533,7 @@ textarea {
     }
     .content-2-main {
       position: absolute;
-      top: px2rem(184);
+      top: px2rem(194);
       //@include px-dpr(top, 184px);
       padding-bottom: px2rem(90);
       //@include px-dpr(padding-bottom, 90px);
@@ -681,7 +670,7 @@ textarea {
     background: #fff;
     .content-3-main {
       position: absolute;
-      top: px2rem(84);
+      top: px2rem(94);
       padding-bottom: px2rem(90);
       // @include px-dpr(top, 84px);
       // @include px-dpr(padding-bottom, 90px);
@@ -863,6 +852,62 @@ textarea {
         color: rgba(255,255,255,1);
         @include px-dpr(line-height, 36px);
       }
+    }
+  }
+}
+.pop-upWindows {
+  .dr {
+    display: none;
+    position: fixed;
+    bottom: px2rem(-210);
+    width: 100%;
+    z-index: 5;
+    background:rgba(221,221,221,1);
+    transition: bottom 0.3s ease;
+    button {
+      width: 100%;
+      height: px2rem(100);
+      background:rgba(255,255,255,1);
+      border: none;
+      @include font-dpr(30px);
+      @include font-fw;
+      color:rgba(0,0,0,1);
+    }
+    .delete-btn {
+      color:rgba(232,49,4,1);
+      margin-bottom: px2rem(10);
+      border-top: px2rem(1) solid rgba(238,238,238,1);
+    }
+  }
+  .hint {
+    display: none;
+    position: fixed;
+    bottom: px2rem(-310);
+    width: 100%;
+    z-index: 5;
+    background:rgba(221,221,221,1);
+    transition: bottom 0.3s ease;
+    text-align: center;
+    p {
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(136,136,136,1);
+      line-height: px2rem(100);
+      background:rgba(255,255,255,1);
+    }
+    button {
+      width: 100%;
+      height: px2rem(100); 
+      background:rgba(255,255,255,1);
+      border: none;
+      @include font-dpr(30px);
+      @include font-fw;
+      color:rgba(0,0,0,1);
+    }
+    .confirm {
+      color:rgba(232,49,4,1);
+      margin-bottom: px2rem(10);
+      border-top: px2rem(1) solid rgba(238,238,238,1);
     }
   }
 }

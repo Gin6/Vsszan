@@ -45,13 +45,14 @@
 		<div class="video-curtain"></div>
 	</div>
 	<!-- 弹窗 -->
+	<div class="curtain_2"></div>
 	<div class="curtain">
 		<div class="popup-sorry">
 			<p>抱歉，您需学满3天才能进行评价！</p>
 			<button>确定</button>
 		</div>
 		<div class="popup-comment">
-			<form action="">
+			<form action="" οnsubmit="return">
 				<div class="popup-comment-header">
 					<fieldset class="starability-grow"> 
 						<input type="radio" id="rate5-3" name="rating" value="5" />
@@ -81,10 +82,18 @@
 					<textarea maxlength="200" placeholder="请发表您对该课程的评价，200字以内"></textarea>
 				</div>
 				<div class="popup-comment-footer">
-					<button>取消</button>
+					<button type="button" class="cancel">取消</button>
 					<input type="submit" value="确定" />
 				</div>
 			</form>
+		</div>
+		<div class="reply-box">
+			<p>回复</p>
+			<div class="reply-main"><textarea maxlength="200" placeholder="请发表您对该用户的回复，200字以内" autofocus></textarea></div>
+			<div class="reply-footer">
+				<button type="button" class="button-1 cancel">取消</button>
+				<button type="button" class="button-2">确定</button>
+			</div>
 		</div>
 	</div>
 	<div class="main mt-tabpage" js-tab="2">
@@ -297,14 +306,89 @@
 								    </div>
 								</div>
 								<div class="allComment-main">
-									<div class="main-comment_1">
+									<div class="main-comment lecturer">
 										<div class="comhead">
 											<img src="image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg" alt="img">
 											<p class="username">用户名</p>
 											<div class="star_score"></div>
 											<p class="time">2019-10-15</p>
 										</div>
-										<p class="tex">最多200字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑</p>
+										<div class="commain">
+											<p class="tex">最多200字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑</p>
+											<textarea id="target"></textarea>
+										</div>
+										<div class="praise">
+											<img src="image/video/praise-notcheck.png" alt="img">
+											<p>12</p>
+										</div>
+									</div>
+									<div class="main-comment">
+										<div class="comhead">
+											<img src="image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg" alt="img">
+											<p class="username">用户名</p>
+											<div class="star_score"></div>
+											<p class="time">2019-10-15</p>
+
+											<!-- 我的评价 -->
+											<p class="evaluate">（我评价的）</p>
+
+										</div>
+										<div class="commain">
+											<p class="tex">最多200字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑</p>
+										</div>
+										<div class="praise">
+											<img src="image/video/praise-notcheck.png" alt="img">
+											<p>12</p>
+										</div>
+									</div>
+									<div class="main-comment">
+										<div class="comhead">
+											<img src="image/chathead/ae4780b848dddeb76e6e332f6af978db.jpg" alt="img">
+											<p class="username">用户名</p>
+											<div class="star_score"></div>
+											<p class="time">2019-10-15</p>											
+										</div>
+										<div class="commain">
+											<p class="tex">最多200字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑</p>
+											<div class="lecturerReply lec-my">
+												<p style="position: absolute;color: #2465FF;">讲师回复：</p>
+												<p style="text-indent:5.2em;color: #333333;">最多字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑很懂事即可和课程撒的科技风阿卡的举案说法声卡回复就打瞌睡副驾驶的咖啡的境况萨菲肯德基暗示法肯德基萨菲打卡发卡机的福克斯的骄傲疯狂的叫撒发</p>
+											</div>
+										</div>
+										<div class="praise">
+											<img src="image/video/praise-notcheck.png" alt="img">
+											<p>12</p>
+										</div>
+									</div>
+									<div class="main-comment lecturer">
+										<div class="comhead">
+											<img src="image/chathead/cf70845a61eb4833030bf05ae32736db.jpeg" alt="img">
+											<p class="username">用户名</p>
+											<div class="star_score"></div>
+											<p class="time">2019-10-15</p>
+										</div>
+										<div class="commain">
+											<p class="tex">最多200字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑</p>
+											<div class="myReply lec-my">
+												<p style="position: absolute;color: #2465FF;">我的回复：</p>
+												<p style="text-indent:5.2em;color: #333333;">最多字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑很懂事即可和课程撒的科技风阿卡的举案说法声卡回复就打瞌睡副驾驶的咖啡的境况萨菲肯德基暗示法肯德基萨菲打卡发卡机的福克斯的骄傲疯狂的叫撒发</p>
+											</div>
+										</div>
+										<div class="praise">
+											<img src="image/video/praise-notcheck.png" alt="img">
+											<p>12</p>
+										</div>
+									</div>
+									<div class="main-comment">
+										<div class="comhead">
+											<img src="image/chathead/5c2b1aaddd50e78217eebf91089cd4d5.jpeg" alt="img">
+											<p class="username">用户名</p>
+											<div class="star_score"></div>
+											<p class="time">2019-10-15</p>
+										</div>
+										<div class="commain">
+											<p class="tex">最多200字是还房贷风华绝代的科技的事的覅阿花谷雨是东风路热塑日破放佛频道上供货加分的换个地方摔死邝白个很费劲的换算好风景既定的顶顶顶顶顶的事实上是是是将将长富宫风格色认同和规范化热熔噶房地产的氛围技的事的覅阿花谷雨是东风路热塑日破放佛频道上供货加分的换个地方摔死邝白个很费劲的换算好风景既定的顶顶顶顶顶的事实上是是是将将长富宫风格色认同和规范化热熔噶房地产的氛围</p>
+										</div>
 										<div class="praise">
 											<img src="image/video/praise-notcheck.png" alt="img">
 											<p>12</p>
@@ -326,11 +410,30 @@
 			<button type="button" class="content-b4 content-b34">免费课程 马上学习</button>
 			<button type="button" class="content-b5 content-b34">VIP免费 马上学习</button>
 		</div>
+		<div class="pop-upWindows">
+			<div class="dr">
+				<button type="button" class="copy-btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">复制</button>
+				<button type="button" class="cancel">取消</button>
+			</div>
+			<div class="toReport">
+				<p>举报评论</p>
+				<form action="">
+					<div class="options">
+						<input name="dif" value="1" type="radio" lab="涉黄信息" />
+						<input name="dif" value="2" type="radio" lab="违法信息" />
+						<input name="dif" value="3" type="radio" lab="有害信息" />
+						<input name="dif" value="4" type="radio" lab="垃圾营销" />
+					</div>
+					<input type="submit" value="提交" />
+				</form>
+			</div>
+		</div>
 	</div>
 	
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.richUI.min.js"></script>
 	<script type="text/javascript" src="js/jquery.browser.min.js"></script>
+	<script type="text/javascript" src="js/clipboard.min.js"></script>
 	<script type="text/javascript" src="js/fastclick.js"></script>
 	<script type="text/javascript" src="js/mt-tabpage.js"></script>
 	<script type="text/javascript" src="js/viewport.js"></script>

@@ -41,6 +41,8 @@ $('.list-2').click(function() {
 $('.list-3').click(function() {
 	$('.bar').css({left: navNewWidth-barWidth+padding});
 	$('.content-3-footer').css({display: 'block',});
+	$('.dr').css({display: 'block',});
+	$('.hint').css({display: 'block',});
 })
 
 function bodyScroll(event){
@@ -48,6 +50,7 @@ function bodyScroll(event){
 }
 $('.curtain').css({height: wh,});
 $('.curtain').click(function () {
+	closeWindows();
 	if ($('.content-3-reply').css("display")=="none") {
 		$(this).css({display: 'none',});
 		document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
@@ -140,15 +143,15 @@ $(function(){
 		$('.content-2-header').children('.omit').css({display: 'none'});
 });
 
-$('.lecturer-reply').parent().addClass('lec');
-$('.lecturer-delete').click(function() {
-	$(this).parents('.lecturer').slideUp(300, function(){ $(this).parents('.lecturer').remove() });
-});
-$('.lecturer-reply').click(function() {
-	document.body.addEventListener('touchmove',bodyScroll, { passive: false });
-	$('.curtain').css({display: 'block', zIndex: '4',});
-	$('.content-3-reply').css({display: 'block',});
-});
+// $('.lecturer-reply').parent().addClass('lec');
+// $('.lecturer-delete').click(function() {
+// 	$(this).parents('.lecturer').slideUp(300, function(){ $(this).parents('.lecturer').remove() });
+// });
+// $('.lecturer-reply').click(function() {
+// 	document.body.addEventListener('touchmove',bodyScroll, { passive: false });
+// 	$('.curtain').css({display: 'block', zIndex: '4',});
+// 	$('.content-3-reply').css({display: 'block',});
+// });
 $('.button-1').click(function() {
 	$('.content-3-reply').css({display: 'none',});
 	$('.curtain').css({display: 'none',});
@@ -173,4 +176,51 @@ $("input,textarea").blur(() => {
           }, 1)
         }
     }, 200)  
+});
+
+//弹窗
+var drHeight = $('.dr').height();
+var hintHeight = $('.hint').height();
+function closeWindows() {
+	$('.curtain').css({display: 'none', zIndex: '3',});
+	$('.dr').css({bottom: '-'+drHeight+'px'});
+	$('.hint').css({bottom: '-'+hintHeight+'px'});
+	$('.drr').remove();
+	document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
+};
+
+$('.comment').click(function() {
+	var parentNode = $(this);
+	if ($(this).hasClass('lecturer')) {
+		var btag = $('<button>');
+		btag.html('回复');
+		btag.attr({
+			type: 'button',
+			class: 'reply-btn drr'
+		});
+		$('.delete-btn').before(btag);
+		$('.reply-btn').click(function() {
+			closeWindows();
+			$('.curtain').css({display: 'block', zIndex: '4',});
+			document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
+			$('.content-3-reply').css({display: 'block',});
+			$('.content-3-reply-box').find('textarea').focus();
+		});
+	}
+
+	$('.confirm').click(function() {
+		closeWindows();
+		parentNode.slideUp(300, function(){ parentNode.remove() });
+	});
+	$('.curtain').css({display: 'block', zIndex: '4',});
+	$('.dr').css({bottom: '0'});
+	document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
+});
+
+$('.cancel').click(function() {
+	closeWindows();
+});
+
+$('.delete-btn').click(function() {
+	$('.hint').css({bottom: '0'});
 });

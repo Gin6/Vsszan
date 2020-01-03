@@ -39,8 +39,9 @@ function scoreFun(object,opts){
 		}                                    //  把a放到类名为“star_score”的div里
 	  startParent.find("a").each(          // each（）方法
 	  	function(index,element){
+	  		now_cli=index;                   // 当前a的索引值
+	  		show(index,$(this)) 
 		  	$(this).click(function(){        // 点击事件
-		  	now_cli=index;                   // 当前a的索引值
 		  	show(index,$(this))             //  调用show方法
 		  });
 		  $(this).mouseenter(function(){    /* mouseenter事件(与 mouseover 事件不同，只有在鼠标指针穿过被选元素时，
@@ -60,7 +61,7 @@ function scoreFun(object,opts){
 		  	}else{
 		  		startParent.find("a").removeClass("clibg");
 		  		if(countScore){
-		  			countScore.text("")
+		  			countScore.text()
 		  		}
 		  	}
 		  })
@@ -72,11 +73,19 @@ function scoreFun(object,opts){
 		  	var lefta=num*fen_d;
 		  	var ww=fen_d*n;
 		  	var scor=preA*n;                        // 评分
+		  	hasDot(scor);
 		  	(len>5)?atu=options.types[parseInt(num)]:atu=options.types[parseInt(num)+10];       // 用户态度
 		  	object.find("a").removeClass("clibg");  // 清除所有a的“clibg”类
 		  	obj.addClass("clibg");                  // 给当前a添加“clibg”类
 		  	obj.css({"width":ww,"left":"0"});       // 给当前a添加宽度“ww”和left值
-		  	countScore.text(scor);                  // 显示评分
+		  	countScore.text(hasDot(scor));                  // 显示评分
 		  	atti.text(atu);                        // 显示用户态度
 		  }
+
+		//判断是否含有小数点
+		function hasDot(num){
+	        if(!isNaN(num)){
+	            return ( (num + '').indexOf('.') != -1 ) ? num: num.toFixed(1);   
+	        }
+		}
 		};

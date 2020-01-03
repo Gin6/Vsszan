@@ -1,6 +1,8 @@
 var ww = $(window).width();
 var wh = $(window).height();
 var navWidth = $('.nav').width();
+var drHeight = $('.dr').height();
+var toReportHeight = $('.toReport').height();
 var navWidthAll = $('.nav').outerWidth();
 var videoHeight = $('.video-box').outerHeight(true);
 var padding = (navWidthAll-navWidth)/2;
@@ -8,6 +10,11 @@ var padding = (navWidthAll-navWidth)/2;
 $('.content-1,.content-2,.content-3,.mt-tabpage-count').css({height: wh-videoHeight,});
 
 $('.nav').css({width: ww-padding*2,});
+
+$('.cancel').click(function() {
+	$('.curtain').css({display: 'none'});
+	$('.curtain').children().css({display: 'none'});
+});
 
 $(".video-img").click(function() {
 	$(this).hide();
@@ -46,6 +53,8 @@ $('.list-3').click(function() {
 	$('.video-buy').css({display: 'none',});
 	$('.video-vip').css({display: 'none'});
 	$('.video-study').css({display: 'block',});
+	$('.dr').css({display: 'block',});
+	$('.toReport').css({display: 'block',});
 	$('.bar').css({left: navNewWidth-barWidth+padding});
 })
 
@@ -188,4 +197,107 @@ $('.difficult').children('input').click(function(event) {
 		$(this).parent().css({background: 'rgba(187,211,255,1)', borderColor: 'rgba(187,211,255,1)'});
 	if (i == 5)
 		$(this).parent().css({background: 'rgba(188,198,250,1)', borderColor: 'rgba(188,198,250,1)'});
+});
+
+//弹窗
+function closeWindows() {
+	$('.curtain_2').css({display: 'none'});
+	$('.dr').css({bottom: '-'+drHeight+'px'});
+	$('.toReport').css({bottom: '-'+toReportHeight+'px'});
+	$('.drr').remove();
+	document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
+};
+
+$('.main-comment').click(function() {
+	var parentNode = $(this);
+	if ($(this).hasClass('lecturer')) {
+		var btag = $('<button>');
+		btag.html('举报');
+		btag.attr({
+			type: 'button',
+			class: 'der repbut drr'
+		});
+		if ($(this).has('.myReply').length) {	
+			var btag2 = $('<button>');	
+			btag2.html('删除回复');	
+			btag2.attr({
+				type: 'button',
+				class: 'delreply drr'
+			});
+			$('.cancel').before(btag2,btag);
+			$('.delreply').click(function() {
+				closeWindows();
+				parentNode.find('.myReply').slideUp(300, function(){ parentNode.find('.myReply').remove() });
+			});
+		}else {
+			var btag3 = $('<button>');
+			btag3.html('回复');
+			btag3.attr({
+				type: 'button',
+				class: 'reply drr'
+			});
+			$('.cancel').before(btag3,btag);
+			$('.reply').click(function() {
+				closeWindows();
+				document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
+				$('.curtain').css({display: 'block'});
+				$('.reply-box').css({display: 'block'});
+				$('.reply-box').find('textarea').focus();
+			});
+		}
+	}else {
+		if ($(this).has('.evaluate').length) {	
+			var btag = $('<button>');
+			btag.html('删除');
+			btag.attr({
+				type: 'button',
+				class: 'der delbut drr'
+			});
+			$('.cancel').before(btag);
+			$('.delbut').click(function() {
+				parentNode.slideUp(300, function(){ parentNode.remove() });
+				closeWindows();
+			});
+		}else {
+			var btag = $('<button>');
+			btag.html('举报');
+			btag.attr({
+				type: 'button',
+				class: 'der repbut drr'
+			});
+			$('.cancel').before(btag);
+		}
+	}
+
+	$('.copy-btn').click(function(){
+		var e = parentNode.find(".tex").text();
+		var t = parentNode.find("textarea");
+		t.text(e);
+		//实例化clipboard
+		var clipboard = new ClipboardJS('#copy-btn');
+		clipboard.on("success", function(e){
+			console.log('success');
+			e.clearSelection();
+		});
+		clipboard.on("error", function(e){
+			console.log('error');
+		});
+	});
+
+	$('.repbut').click(function() {
+		$('.dr').css({bottom: '-'+drHeight+'px'});
+		$('.toReport').css({display: 'block', bottom: '0'});
+	});
+
+	$('.curtain_2').css({display: 'block'});
+	$('.dr').css({display: 'block', bottom: '0'});
+	document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
+});
+
+$('.cancel').click(function() {
+	closeWindows();
+});
+
+$('.curtain_2').click(function() {
+	closeWindows();
 });

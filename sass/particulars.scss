@@ -222,6 +222,15 @@ textarea {
     z-index: 2;
   }
 }
+.curtain_2 {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background:rgba(0, 0, 0, 0.4);
+  display: none;
+}
 .curtain {
   position: absolute;
   top: 0px;
@@ -287,6 +296,44 @@ textarea {
         bottom: px2rem(30);
         width: 100%;
         margin-top: px2rem(40);
+        // richUI
+        .richradio,
+        .richcheckbox {
+            border:px2rem(1) solid rgba(221,221,221,1);
+            color:rgba(51,51,51,1);
+            display: inline-block;
+            width: px2rem(90);
+            height: px2rem(34);
+            @include font-dpr(22px);
+            @include font-fw;
+            line-height: px2rem(36);
+            text-align: center;
+            margin: 0px px2rem(2.5);
+            transition: .5s ease;
+        }
+        .richradio:hover,
+        .richcheckbox:hover {
+            cursor: pointer;
+        }
+        .lowIE {
+            position: absolute\9;
+            top: -999px\9;
+            left: -999px\9;
+        }
+        .otherBrowser {
+            display: none;
+        }
+        .IEChecked {
+            background: url(../image/other/checked.png) no-repeat right bottom;
+            background-size: auto auto;
+            border: 1px solid #00a4ff;
+            background-size: 21px 21px;
+            color: #00a4ff;
+        }
+        .otherBrowserChecked {
+            background:rgba(178,214,245,1);
+            border: 1px solid rgba(178,214,245,1);
+        }
       }
     }
     .popup-comment-main {
@@ -344,6 +391,70 @@ textarea {
       }
     }
   }
+  .reply-box {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: px2rem(556);
+    height: px2rem(527);
+    background:rgba(255,255,255,1);
+    border-radius: px2rem(10);
+    margin: auto;
+    display: none;
+    text-align: center;
+    p {
+      @include font-dpr(28px);
+      @include font-fw;
+      color: rgba(0,0,0,1);
+      line-height: px2rem(80);
+    }
+    textarea {
+      border: 0px;
+      width: 100%;
+      height: px2rem(330);
+      background: rgba(246,246,246,1);
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(0,0,0,1);
+      line-height: px2rem(38);
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+      @include font-dpr(26px);
+      @include font-fw;
+      color:rgba(153,153,153,1);
+      line-height: px2rem(38);
+    }
+    .reply-main {
+      background: rgba(246,246,246,1);
+      padding: px2rem(18) px2rem(24);
+    }
+    .reply-footer {
+      position: absolute;
+      width: 100%;
+      height: px2rem(80);
+      bottom: 0px;
+      display: flex;
+      border-top: px2rem(1) solid #ddd;
+      button {
+        width: 50%;
+        height: 100%;
+        border: 0px;
+        background:rgba(255,255,255,1);
+        @include font-dpr(28px);
+        @include font-fw;
+        line-height: px2rem(36);
+      }
+      .button-1 {
+        color:rgba(51,51,51,1);
+        border-bottom-left-radius: px2rem(10);
+      }
+      .button-2 {
+        color:rgba(36,101,255,1);
+        border-bottom-right-radius: px2rem(10);
+        border-left: px2rem(1) solid #ddd;
+      }
+    }
+  }
 }
 .mt-tabpage-count {
   position: relative;
@@ -364,7 +475,7 @@ textarea {
     z-index: 2;
     padding-left: px2rem(30);
     padding-right: px2rem(31);
-    height: px2rem(82);
+    height: px2rem(92);
     background:rgba(255,255,255,1);
     border: px2rem(1) solid rgba(221,221,221,1);
     .nav-list {
@@ -374,7 +485,7 @@ textarea {
         @include font-dpr(32px);
         @include font-fw;
         color: rgba(0,0,0,1);
-        @include px-dpr(line-height, 82px);
+        line-height: px2rem(92);
       }
     }
     .list-1 {p {color:rgba(36,101,255,1); float: left;}}
@@ -393,7 +504,7 @@ textarea {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     background: rgba(246,246,246,1);
-    padding-top: px2rem(84);
+    padding-top: px2rem(94);
     .content-1-title {
       position: absolute;
       top: px2rem(30);
@@ -485,10 +596,10 @@ textarea {
         border-radius: px2rem(6);
         img {
           position: absolute;
-          top: px2rem(14);
+          top: px2rem(12);
           left: px2rem(15);
-          width: px2rem(30);
-          height: px2rem(28);
+          width: px2rem(35);
+          // height: px2rem(28);
         }
         p {
           position: absolute;
@@ -581,14 +692,13 @@ textarea {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     background: rgba(246,246,246,1);
-    padding-top: px2rem(84);
+    padding-top: px2rem(94);
     .list{
       width: 100%;
       background: #fff;
       padding-bottom: px2rem(90);
       ul {
-        padding-bottom: px2rem(90);
-        background:rgba(246,246,246,1);
+        background:rgba(255,255,255,1);
         li {
           position: relative;
           width: 100%;
@@ -598,24 +708,19 @@ textarea {
           transition: .3s ease;
           .title {
             background : rgba(246,246,246,1);
-            height: px2rem(84);
-            @include px-dpr(padding-left, 31px);
-            @include px-dpr(padding-right, 30px);
+            height: px2rem(88);
+            border-bottom: px2rem(1) solid rgba(221,221,221,1);
+            padding-left: px2rem(31);
+            padding-right: px2rem(30);
             @include font-dpr(28px);
             @include font-fw;
             color: rgba(0,0,0,1);
-            line-height: px2rem(84);
-            padding    : 0;
-            border     : none;
+            line-height: px2rem(88);
             position   : relative;
-            span {
-              position: absolute;
-              @include px-dpr(right, 30px);
-            }
             img {
               position: absolute;
-              @include px-dpr(top, 35px);
-              @include px-dpr(right, 30px);
+              top: px2rem(35);
+              right: px2rem(30);
             }
           }
           .title-2 {
@@ -625,8 +730,8 @@ textarea {
             @include font-fw;
             color: rgba(0,0,0,1);
             background:rgba(246,246,246,1) !important;
-            @include px-dpr(left, 143px);
-            line-height: px2rem(84);
+            left: px2rem(143);
+            line-height: px2rem(88);
           }
         }
       }
@@ -634,14 +739,15 @@ textarea {
     .list-se {
       overflow: hidden;
       display: none;
-      padding-bottom: px2rem(8);
+      padding-bottom: px2rem(25);
+      border-bottom: px2rem(1) solid rgba(221,221,221,1);
       p {
         background: rgba(255,255,255,1) !important;
         color: rgba(0,0,0,1);
       }
       .title {
+        margin-bottom: px2rem(25);
         background:rgba(246,246,246,1) !important;
-        margin-bottom: px2rem(8);
       }
       li {
         position: relative;
@@ -652,7 +758,7 @@ textarea {
         transition        : right .5s;
         img {
           position: absolute;
-          top: px2rem(33);
+          top: px2rem(25);
           left: px2rem(53);
           width: px2rem(30);
           height: px2rem(24);
@@ -660,10 +766,10 @@ textarea {
         .li-p1 {
           padding-left: px2rem(95);
           padding-right: px2rem(147);
-          @include font-dpr(24px);
+          @include font-dpr(26px);
           @include font-fw;
-          @include px-dpr(line-height, 84px);
-          height: px2rem(84);
+          @include px-dpr(line-height, 75px);
+          height: px2rem(75);
           -webkit-transition   : border .5s; 
                transition  : border .5s;
           -webkit-transition   : background .3s;
@@ -673,10 +779,10 @@ textarea {
           position: absolute;
           top: 0px;
           right: px2rem(28);
-          @include font-dpr(24px);
+          @include font-dpr(22px);
           @include font-fw;
           color:rgba(153,153,153,1) !important;
-          @include px-dpr(line-height, 84px);
+          @include px-dpr(line-height, 75px);
         }
         .live-p {right: px2rem(34);}
       }
@@ -685,8 +791,8 @@ textarea {
   .content-3 {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    padding-top: px2rem(84);
-    background:rgba(246,246,246,1);
+    padding-top: px2rem(94);
+    background:rgba(255,255,255,1);
     .content-3-title {
       position: absolute;
       top: px2rem(31);
@@ -699,12 +805,13 @@ textarea {
     .content-3-header {
       position: relative;
       width: 100%;
-      height: px2rem(260);
-      background:rgba(255,255,255,1);
-      margin-bottom: px2rem(30);
+      height: px2rem(290);
+      background:rgba(246,246,246,1);
+      // margin-bottom: px2rem(30);
       .comment {
         text-align: center;
         padding: px2rem(72) 0 px2rem(30);
+        background:rgba(255,255,255,1);
         .starability-grow {
           margin: auto;
         }
@@ -712,7 +819,7 @@ textarea {
           @include font-dpr(26px);
           @include font-fw;
           color:rgba(153,153,153,1);
-          line-height: px2rem(73);
+          line-height: px2rem(71);
         }
         button {
           width: px2rem(126);
@@ -730,9 +837,8 @@ textarea {
     .content-3-main {
       position: relative;
       width: 100%;
-      min-height: px2rem(671);
+      min-height: px2rem(793);
       background:rgba(255,255,255,1);
-      margin-bottom: px2rem(176);
       .notComment {
         padding-top: px2rem(168);
         text-align: center;
@@ -754,32 +860,40 @@ textarea {
         position: absolute;
         width: 100%;
         top: px2rem(110);
-        height: px2rem(200);
+        background:rgba(255,255,255,1);
         .allComment-main {
-          .main-comment_1 {
+          margin-bottom: px2rem(173);
+          .main-comment {
             position: relative;
             margin: 0 px2rem(30);
             padding: px2rem(30) 0;
             border-bottom: px2rem(1) solid rgba(221,221,221,1);
             .comhead {
+              position: relative;
+              height: px2rem(62);
+              margin-bottom: px2rem(17);
               img {
+                position: absolute;
                 width: px2rem(62px);
                 height: px2rem(62px);
                 border-radius:50%;
               }
               .username {
+                position: absolute;
+                top: px2rem(19);
+                left: px2rem(84);
                 @include font-dpr(24px);
                 @include font-fw;
                 color:rgba(51,51,51,1);
                 line-height: px2rem(24);
               }
               .star_score { 
-                // position: absolute;
-                bottom: px2rem(5);
-                left: px2rem(160);
+                position: absolute;
+                top: px2rem(17);
+                left: px2rem(170);
                 background:url(../image/video/starky-2.png); 
-                background-size: px2rem(32) px2rem(25);
-                width: px2rem(160);
+                background-size: px2rem(37) px2rem(25);
+                width: px2rem(185);
                 height: px2rem(25);  
               }
               .star_score a{ 
@@ -791,26 +905,57 @@ textarea {
               }
               .star_score a:hover{ 
                 background:url(../image/video/starsy-2.png);
-                background-size: px2rem(32) px2rem(25);
+                background-size: px2rem(37) px2rem(25);
                 left:0;
               }
               .star_score a.clibg{ 
                 background:url(../image/video/starsy-2.png);
-                background-size: px2rem(32) px2rem(25);
+                background-size: px2rem(37) px2rem(25);
                 left:0;
               }
               .time {
+                position: absolute;
+                top: px2rem(25);
+                right: px2rem(0);
                 @include font-dpr(22px);
                 @include font-fw;
                 color:rgba(153,153,153,1);
                 line-height: px2rem(22);
               }
+              .evaluate {
+                position: absolute;
+                top: px2rem(18);
+                left: px2rem(348.5);
+                @include font-dpr(24px);
+                @include font-fw;
+                color:rgba(36,101,255,1);
+                line-height: px2rem(24);
+              }
             }
-            .tex {
-              @include font-dpr(26px);
-              @include font-fw;
-              color:rgba(51,51,51,1);
-              line-height: px2rem(36);
+            .commain {
+              margin-bottom: px2rem(37);
+              textarea {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+              }
+              .tex {
+                @include font-dpr(26px);
+                @include font-fw;
+                color:rgba(51,51,51,1);
+                line-height: px2rem(36);
+              }
+              .lec-my {
+                width: px2rem(640);
+                padding: px2rem(14) px2rem(24) px2rem(16);
+                margin: px2rem(18) px2rem(1) px2rem(49);
+                background:rgba(246,246,246,1);
+                p {
+                  @include font-dpr(26px);
+                  @include font-fw;
+                  line-height: px2rem(36);
+                }
+              }
             }
             .praise {
               position: absolute;
@@ -825,6 +970,7 @@ textarea {
                 @include font-dpr(22px);
                 @include font-fw;
                 color:rgba(153,153,153,1);
+                margin-left: px2rem(10);
               }
             }
           }
@@ -892,46 +1038,106 @@ textarea {
       background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
     }
   }
-}
-
-// richUI
-.richradio,
-.richcheckbox {
-    border:px2rem(1) solid rgba(221,221,221,1);
-    color:rgba(51,51,51,1);
-    display: inline-block;
-    width: px2rem(90);
-    height: px2rem(34);
-    @include font-dpr(22px);
-    @include font-fw;
-    color:rgba(51,51,51,1);
-    line-height: px2rem(36);
-    text-align: center;
-    margin: 0px px2rem(2.5);
-    transition: .5s ease;
-}
-.richradio:hover,
-.richcheckbox:hover {
-    cursor: pointer;
-}
-.lowIE {
-    position: absolute\9;
-    top: -999px\9;
-    left: -999px\9;
-}
-.otherBrowser {
-    display: none;
-}
-.IEChecked {
-    background: url(../image/other/checked.png) no-repeat right bottom;
-    background-size: auto auto;
-    border: 1px solid #00a4ff;
-    background-size: 21px 21px;
-    color: #00a4ff;
-}
-.otherBrowserChecked {
-    background:rgba(178,214,245,1);
-    border: 1px solid rgba(178,214,245,1);
+  .pop-upWindows {
+    .dr {
+      display: none;
+      position: fixed;
+      bottom: px2rem(-210);
+      width: 100%;
+      z-index: 5;
+      background:rgba(221,221,221,1);
+      transition: bottom 0.3s ease;
+      button {
+        width: 100%;
+        height: px2rem(100);
+        background:rgba(255,255,255,1);
+        border: none;
+        @include font-dpr(30px);
+        @include font-fw;
+        color:rgba(0,0,0,1);
+      }
+      .drr {
+        border-top: px2rem(1) solid rgba(238,238,238,1);
+      }
+      .der {
+        color:rgba(232,49,4,1);
+        margin-bottom: px2rem(10);
+      }
+    }
+    .toReport {
+      display: none;
+      position: fixed;
+      bottom: px2rem(-365);
+      width: 100%;
+      z-index: 5;
+      background:rgba(221,221,221,1);
+      transition: bottom 0.3s ease;
+      .options {
+        background:rgba(255,255,255,1);
+        margin-bottom: px2rem(10);
+        border-top: px2rem(1) solid rgba(238,238,238,1);
+        padding: px2rem(48) px2rem(30) px2rem(47) px2rem(31);
+        // richUI
+        .richradio,
+        .richcheckbox {
+            border:px2rem(1) solid rgba(221,221,221,1);
+            color:rgba(51,51,51,1);
+            display: inline-block;
+            width: px2rem(154);
+            height: px2rem(57);
+            @include font-dpr(30px);
+            @include font-fw;
+            line-height: px2rem(57);
+            text-align: center;
+            margin: 0px px2rem(4.5);
+            border-radius: px2rem(6);
+            transition: .3s ease;
+        }
+        .richradio:hover,
+        .richcheckbox:hover {
+            cursor: pointer;
+        }
+        .lowIE {
+            position: absolute\9;
+            top: -999px\9;
+            left: -999px\9;
+        }
+        .otherBrowser {
+            display: none;
+        }
+        .IEChecked {
+            background: url(../image/other/checked.png) no-repeat right bottom;
+            background-size: auto auto;
+            border: 1px solid #00a4ff;
+            background-size: 21px 21px;
+            color: #00a4ff;
+        }
+        .otherBrowserChecked {
+            color:rgba(232,49,4,1);
+            border:px2rem(1) solid rgba(232,49,4,1);
+        }
+      }
+      p {
+        text-align: center;
+        @include font-dpr(30px);
+        @include font-fw;
+        color:rgba(0,0,0,1);
+        line-height: px2rem(100);
+        background:rgba(255,255,255,1);
+      }
+      input {
+        width: 100%;
+        height: px2rem(100);
+        border: none;
+        -webkit-appearance:none;
+        outline:none;
+        @include font-dpr(30px);
+        @include font-fw;
+        color:rgba(0,0,0,1);
+        background: rgba(255,255,255,1);
+      }
+    }
+  }
 }
 
 //starUI
@@ -940,6 +1146,7 @@ textarea {
   width:100%; 
   height: px2rem(53);
   line-height:21px;
+  margin-bottom: px2rem(18);
   .fenshu {
     position: absolute;
     bottom: px2rem(6);
@@ -1022,4 +1229,13 @@ textarea {
 }
 .block .star_score{ 
   float:left;
+}
+
+.starability-grow {
+  width: px2rem(270);
+}
+.starability-grow>label {
+  width: px2rem(39);
+  height: px2rem(39);
+  margin: 0 px2rem(7.5);
 }

@@ -61,6 +61,8 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="3.5"] .video-box .video-study button { font-size: 49px; }
 .video-box .video-curtain { position: fixed; width: 100%; background: black; opacity: 0.5; height: 14.0625rem; z-index: 2; }
 
+.curtain_2 { position: absolute; top: 0px; width: 100%; height: 100%; z-index: 4; background: rgba(0, 0, 0, 0.4); display: none; }
+
 .curtain { position: absolute; top: 0px; width: 100%; height: 100%; z-index: 4; background: rgba(0, 0, 0, 0.5); display: none; }
 .curtain .popup-sorry { position: relative; top: 50%; transform: translateY(-50%); width: 15.3125rem; height: 7.25rem; background: white; border-radius: 0.3125rem; margin: auto; display: none; }
 .curtain .popup-sorry p { padding: 1.03125rem 2rem 0px 1.96875rem; font-size: 15px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.4375rem; }
@@ -77,6 +79,16 @@ textarea { border: solid 0px; outline: none; }
 .curtain .popup-comment .popup-comment-header { position: relative; width: 100%; height: 3.28125rem; padding: 0.9375rem 0px; text-align: center; }
 .curtain .popup-comment .popup-comment-header .starability-grow { margin: auto; }
 .curtain .popup-comment .popup-comment-header .difficult { position: absolute; bottom: 0.9375rem; width: 100%; margin-top: 1.25rem; }
+.curtain .popup-comment .popup-comment-header .difficult .richradio, .curtain .popup-comment .popup-comment-header .difficult .richcheckbox { border: 0.03125rem solid #dddddd; color: #333333; display: inline-block; width: 2.8125rem; height: 1.0625rem; font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 1.125rem; text-align: center; margin: 0px 0.078125rem; transition: .5s ease; }
+[data-dpr="2"] .curtain .popup-comment .popup-comment-header .difficult .richradio, [data-dpr="2"] .curtain .popup-comment .popup-comment-header .difficult .richcheckbox { font-size: 22px; }
+[data-dpr="2.625"] .curtain .popup-comment .popup-comment-header .difficult .richradio, [data-dpr="2.625"] .curtain .popup-comment .popup-comment-header .difficult .richcheckbox { font-size: 28.875px; }
+[data-dpr="3"] .curtain .popup-comment .popup-comment-header .difficult .richradio, [data-dpr="3"] .curtain .popup-comment .popup-comment-header .difficult .richcheckbox { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .curtain .popup-comment .popup-comment-header .difficult .richradio, [data-dpr="3.5"] .curtain .popup-comment .popup-comment-header .difficult .richcheckbox { font-size: 38.5px; }
+.curtain .popup-comment .popup-comment-header .difficult .richradio:hover, .curtain .popup-comment .popup-comment-header .difficult .richcheckbox:hover { cursor: pointer; }
+.curtain .popup-comment .popup-comment-header .difficult .lowIE { position: absolute\9; top: -999px\9; left: -999px\9; }
+.curtain .popup-comment .popup-comment-header .difficult .otherBrowser { display: none; }
+.curtain .popup-comment .popup-comment-header .difficult .IEChecked { background: url(../image/other/checked.png) no-repeat right bottom; background-size: auto auto; border: 1px solid #00a4ff; background-size: 21px 21px; color: #00a4ff; }
+.curtain .popup-comment .popup-comment-header .difficult .otherBrowserChecked { background: #b2d6f5; border: 1px solid #b2d6f5; }
 .curtain .popup-comment .popup-comment-main { background: #f6f6f6; padding: 0.375rem 0.75rem; }
 .curtain .popup-comment .popup-comment-main textarea { width: 100%; height: 10.4375rem; border: 0px; background: #f6f6f6; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 19px; }
 [data-dpr="2"] .curtain .popup-comment .popup-comment-main textarea { font-size: 26px; }
@@ -107,6 +119,31 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="2.625"] .curtain .popup-comment .popup-comment-footer input { font-size: 36.75px; }
 [data-dpr="3"] .curtain .popup-comment .popup-comment-footer input { font-size: 46.1538461538px; }
 [data-dpr="3.5"] .curtain .popup-comment .popup-comment-footer input { font-size: 49px; }
+.curtain .reply-box { position: relative; top: 50%; transform: translateY(-50%); width: 17.375rem; height: 16.46875rem; background: white; border-radius: 0.3125rem; margin: auto; display: none; text-align: center; }
+.curtain .reply-box p { font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 2.5rem; }
+[data-dpr="2"] .curtain .reply-box p { font-size: 28px; }
+[data-dpr="2.625"] .curtain .reply-box p { font-size: 36.75px; }
+[data-dpr="3"] .curtain .reply-box p { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .curtain .reply-box p { font-size: 49px; }
+.curtain .reply-box textarea { border: 0px; width: 100%; height: 10.3125rem; background: #f6f6f6; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 1.1875rem; }
+[data-dpr="2"] .curtain .reply-box textarea { font-size: 26px; }
+[data-dpr="2.625"] .curtain .reply-box textarea { font-size: 34.125px; }
+[data-dpr="3"] .curtain .reply-box textarea { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .curtain .reply-box textarea { font-size: 45.5px; }
+.curtain .reply-box ::-webkit-input-placeholder { /* Chrome/Opera/Safari */ font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 1.1875rem; }
+[data-dpr="2"] .curtain .reply-box ::-webkit-input-placeholder { font-size: 26px; }
+[data-dpr="2.625"] .curtain .reply-box ::-webkit-input-placeholder { font-size: 34.125px; }
+[data-dpr="3"] .curtain .reply-box ::-webkit-input-placeholder { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .curtain .reply-box ::-webkit-input-placeholder { font-size: 45.5px; }
+.curtain .reply-box .reply-main { background: #f6f6f6; padding: 0.5625rem 0.75rem; }
+.curtain .reply-box .reply-footer { position: absolute; width: 100%; height: 2.5rem; bottom: 0px; display: flex; border-top: 0.03125rem solid #ddd; }
+.curtain .reply-box .reply-footer button { width: 50%; height: 100%; border: 0px; background: white; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 1.125rem; }
+[data-dpr="2"] .curtain .reply-box .reply-footer button { font-size: 28px; }
+[data-dpr="2.625"] .curtain .reply-box .reply-footer button { font-size: 36.75px; }
+[data-dpr="3"] .curtain .reply-box .reply-footer button { font-size: 46.1538461538px; }
+[data-dpr="3.5"] .curtain .reply-box .reply-footer button { font-size: 49px; }
+.curtain .reply-box .reply-footer .button-1 { color: #333333; border-bottom-left-radius: 0.3125rem; }
+.curtain .reply-box .reply-footer .button-2 { color: #2465ff; border-bottom-right-radius: 0.3125rem; border-left: 0.03125rem solid #ddd; }
 
 .mt-tabpage-count { position: relative; width: 100%; overflow: hidden; }
 
@@ -115,22 +152,18 @@ textarea { border: solid 0px; outline: none; }
 .mt-tabpage-count .mt-tabpage-item { width: 33.3333333%; }
 
 .main { background: #f6f6f6; }
-.main .nav { position: fixed; z-index: 2; padding-left: 0.9375rem; padding-right: 0.96875rem; height: 2.5625rem; background: white; border: 0.03125rem solid #dddddd; }
+.main .nav { position: fixed; z-index: 2; padding-left: 0.9375rem; padding-right: 0.96875rem; height: 2.875rem; background: white; border: 0.03125rem solid #dddddd; }
 .main .nav .nav-list { width: 33.333333%; float: left; }
-.main .nav .nav-list p { font-size: 16px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 41px; }
+.main .nav .nav-list p { font-size: 16px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 2.875rem; }
 [data-dpr="2"] .main .nav .nav-list p { font-size: 32px; }
 [data-dpr="2.625"] .main .nav .nav-list p { font-size: 42px; }
 [data-dpr="3"] .main .nav .nav-list p { font-size: 52.7472527473px; }
 [data-dpr="3.5"] .main .nav .nav-list p { font-size: 56px; }
-[data-dpr="2"] .main .nav .nav-list p { line-height: 82px; }
-[data-dpr="2.625"] .main .nav .nav-list p { line-height: 107.625px; }
-[data-dpr="3"] .main .nav .nav-list p { line-height: 135.1648351648px; }
-[data-dpr="3.5"] .main .nav .nav-list p { line-height: 143.5px; }
 .main .nav .list-1 p { color: #2465ff; float: left; }
 .main .nav .list-2 { text-align: center; }
 .main .nav .list-3 p { float: right; }
 .main .nav .bar { position: absolute; left: 0.96875rem; bottom: 0px; height: 0.125rem; width: 2.0625rem; background: #2465ff; }
-.main .content-1 { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #f6f6f6; padding-top: 2.625rem; }
+.main .content-1 { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #f6f6f6; padding-top: 2.9375rem; }
 .main .content-1 .content-1-title { position: absolute; top: 0.9375rem; left: 0.9375rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 0.8125rem; }
 [data-dpr="2"] .main .content-1 .content-1-title { font-size: 28px; }
 [data-dpr="2.625"] .main .content-1 .content-1-title { font-size: 36.75px; }
@@ -175,7 +208,7 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="3"] .main .content-1 .content-1-header .price .originPrice { font-size: 36.2637362637px; }
 [data-dpr="3.5"] .main .content-1 .content-1-header .price .originPrice { font-size: 38.5px; }
 .main .content-1 .content-1-header .vip { position: absolute; bottom: 0.9375rem; width: 21.5625rem; height: 1.6875rem; background: linear-gradient(90deg, #ffe0b2, #ffeac9, #ffca7b); border-radius: 0.1875rem; }
-.main .content-1 .content-1-header .vip img { position: absolute; top: 0.4375rem; left: 0.46875rem; width: 0.9375rem; height: 0.875rem; }
+.main .content-1 .content-1-header .vip img { position: absolute; top: 0.375rem; left: 0.46875rem; width: 1.09375rem; }
 .main .content-1 .content-1-header .vip p { position: absolute; left: 1.90625rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.6875rem; }
 [data-dpr="2"] .main .content-1 .content-1-header .vip p { font-size: 24px; }
 [data-dpr="2.625"] .main .content-1 .content-1-header .vip p { font-size: 31.5px; }
@@ -204,80 +237,55 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="2.625"] .main .content-1 .content-1-footer .container .content p { font-size: 34.125px; }
 [data-dpr="3"] .main .content-1 .content-1-footer .container .content p { font-size: 42.8571428571px; }
 [data-dpr="3.5"] .main .content-1 .content-1-footer .container .content p { font-size: 45.5px; }
-.main .content-2 { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #f6f6f6; padding-top: 2.625rem; }
+.main .content-2 { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #f6f6f6; padding-top: 2.9375rem; }
 .main .content-2 .list { width: 100%; background: #fff; padding-bottom: 2.8125rem; }
-.main .content-2 .list ul { padding-bottom: 2.8125rem; background: #f6f6f6; }
+.main .content-2 .list ul { background: white; }
 .main .content-2 .list ul li { position: relative; width: 100%; -webkit-transition: .3s ease; -moz-transition: .3s ease; -o-transition: .3s ease; transition: .3s ease; }
-.main .content-2 .list ul li .title { background: #f6f6f6; height: 2.625rem; padding-left: 15.5px; padding-right: 15px; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 2.625rem; padding: 0; border: none; position: relative; }
-[data-dpr="2"] .main .content-2 .list ul li .title { padding-left: 31px; }
-[data-dpr="2.625"] .main .content-2 .list ul li .title { padding-left: 40.6875px; }
-[data-dpr="3"] .main .content-2 .list ul li .title { padding-left: 51.0989010989px; }
-[data-dpr="3.5"] .main .content-2 .list ul li .title { padding-left: 54.25px; }
-[data-dpr="2"] .main .content-2 .list ul li .title { padding-right: 30px; }
-[data-dpr="2.625"] .main .content-2 .list ul li .title { padding-right: 39.375px; }
-[data-dpr="3"] .main .content-2 .list ul li .title { padding-right: 49.4505494505px; }
-[data-dpr="3.5"] .main .content-2 .list ul li .title { padding-right: 52.5px; }
+.main .content-2 .list ul li .title { background: #f6f6f6; height: 2.75rem; border-bottom: 0.03125rem solid #dddddd; padding-left: 0.96875rem; padding-right: 0.9375rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 2.75rem; position: relative; }
 [data-dpr="2"] .main .content-2 .list ul li .title { font-size: 28px; }
 [data-dpr="2.625"] .main .content-2 .list ul li .title { font-size: 36.75px; }
 [data-dpr="3"] .main .content-2 .list ul li .title { font-size: 46.1538461538px; }
 [data-dpr="3.5"] .main .content-2 .list ul li .title { font-size: 49px; }
-.main .content-2 .list ul li .title span { position: absolute; right: 15px; }
-[data-dpr="2"] .main .content-2 .list ul li .title span { right: 30px; }
-[data-dpr="2.625"] .main .content-2 .list ul li .title span { right: 39.375px; }
-[data-dpr="3"] .main .content-2 .list ul li .title span { right: 49.4505494505px; }
-[data-dpr="3.5"] .main .content-2 .list ul li .title span { right: 52.5px; }
-.main .content-2 .list ul li .title img { position: absolute; top: 17.5px; right: 15px; }
-[data-dpr="2"] .main .content-2 .list ul li .title img { top: 35px; }
-[data-dpr="2.625"] .main .content-2 .list ul li .title img { top: 45.9375px; }
-[data-dpr="3"] .main .content-2 .list ul li .title img { top: 57.6923076923px; }
-[data-dpr="3.5"] .main .content-2 .list ul li .title img { top: 61.25px; }
-[data-dpr="2"] .main .content-2 .list ul li .title img { right: 30px; }
-[data-dpr="2.625"] .main .content-2 .list ul li .title img { right: 39.375px; }
-[data-dpr="3"] .main .content-2 .list ul li .title img { right: 49.4505494505px; }
-[data-dpr="3.5"] .main .content-2 .list ul li .title img { right: 52.5px; }
-.main .content-2 .list ul li .title-2 { position: absolute; top: 0px; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; background: #f6f6f6 !important; left: 71.5px; line-height: 2.625rem; }
+.main .content-2 .list ul li .title img { position: absolute; top: 1.09375rem; right: 0.9375rem; }
+.main .content-2 .list ul li .title-2 { position: absolute; top: 0px; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; background: #f6f6f6 !important; left: 4.46875rem; line-height: 2.75rem; }
 [data-dpr="2"] .main .content-2 .list ul li .title-2 { font-size: 28px; }
 [data-dpr="2.625"] .main .content-2 .list ul li .title-2 { font-size: 36.75px; }
 [data-dpr="3"] .main .content-2 .list ul li .title-2 { font-size: 46.1538461538px; }
 [data-dpr="3.5"] .main .content-2 .list ul li .title-2 { font-size: 49px; }
-[data-dpr="2"] .main .content-2 .list ul li .title-2 { left: 143px; }
-[data-dpr="2.625"] .main .content-2 .list ul li .title-2 { left: 187.6875px; }
-[data-dpr="3"] .main .content-2 .list ul li .title-2 { left: 235.7142857143px; }
-[data-dpr="3.5"] .main .content-2 .list ul li .title-2 { left: 250.25px; }
-.main .content-2 .list-se { overflow: hidden; display: none; padding-bottom: 0.25rem; }
+.main .content-2 .list-se { overflow: hidden; display: none; padding-bottom: 0.78125rem; border-bottom: 0.03125rem solid #dddddd; }
 .main .content-2 .list-se p { background: white !important; color: black; }
-.main .content-2 .list-se .title { background: #f6f6f6 !important; margin-bottom: 0.25rem; }
+.main .content-2 .list-se .title { margin-bottom: 0.78125rem; background: #f6f6f6 !important; }
 .main .content-2 .list-se li { position: relative; right: -100%; -webkit-transition: right .5s; -moz-transition: right .5s; -o-transition: right .5s; transition: right .5s; }
-.main .content-2 .list-se li img { position: absolute; top: 1.03125rem; left: 1.65625rem; width: 0.9375rem; height: 0.75rem; }
-.main .content-2 .list-se li .li-p1 { padding-left: 2.96875rem; padding-right: 4.59375rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 42px; height: 2.625rem; -webkit-transition: border .5s; transition: border .5s; -webkit-transition: background .3s; transition: background .3s; }
-[data-dpr="2"] .main .content-2 .list-se li .li-p1 { font-size: 24px; }
-[data-dpr="2.625"] .main .content-2 .list-se li .li-p1 { font-size: 31.5px; }
-[data-dpr="3"] .main .content-2 .list-se li .li-p1 { font-size: 39.5604395604px; }
-[data-dpr="3.5"] .main .content-2 .list-se li .li-p1 { font-size: 42px; }
-[data-dpr="2"] .main .content-2 .list-se li .li-p1 { line-height: 84px; }
-[data-dpr="2.625"] .main .content-2 .list-se li .li-p1 { line-height: 110.25px; }
-[data-dpr="3"] .main .content-2 .list-se li .li-p1 { line-height: 138.4615384615px; }
-[data-dpr="3.5"] .main .content-2 .list-se li .li-p1 { line-height: 147px; }
-.main .content-2 .list-se li .li-p2 { position: absolute; top: 0px; right: 0.875rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999 !important; line-height: 42px; }
-[data-dpr="2"] .main .content-2 .list-se li .li-p2 { font-size: 24px; }
-[data-dpr="2.625"] .main .content-2 .list-se li .li-p2 { font-size: 31.5px; }
-[data-dpr="3"] .main .content-2 .list-se li .li-p2 { font-size: 39.5604395604px; }
-[data-dpr="3.5"] .main .content-2 .list-se li .li-p2 { font-size: 42px; }
-[data-dpr="2"] .main .content-2 .list-se li .li-p2 { line-height: 84px; }
-[data-dpr="2.625"] .main .content-2 .list-se li .li-p2 { line-height: 110.25px; }
-[data-dpr="3"] .main .content-2 .list-se li .li-p2 { line-height: 138.4615384615px; }
-[data-dpr="3.5"] .main .content-2 .list-se li .li-p2 { line-height: 147px; }
+.main .content-2 .list-se li img { position: absolute; top: 0.78125rem; left: 1.65625rem; width: 0.9375rem; height: 0.75rem; }
+.main .content-2 .list-se li .li-p1 { padding-left: 2.96875rem; padding-right: 4.59375rem; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 37.5px; height: 2.34375rem; -webkit-transition: border .5s; transition: border .5s; -webkit-transition: background .3s; transition: background .3s; }
+[data-dpr="2"] .main .content-2 .list-se li .li-p1 { font-size: 26px; }
+[data-dpr="2.625"] .main .content-2 .list-se li .li-p1 { font-size: 34.125px; }
+[data-dpr="3"] .main .content-2 .list-se li .li-p1 { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .main .content-2 .list-se li .li-p1 { font-size: 45.5px; }
+[data-dpr="2"] .main .content-2 .list-se li .li-p1 { line-height: 75px; }
+[data-dpr="2.625"] .main .content-2 .list-se li .li-p1 { line-height: 98.4375px; }
+[data-dpr="3"] .main .content-2 .list-se li .li-p1 { line-height: 123.6263736264px; }
+[data-dpr="3.5"] .main .content-2 .list-se li .li-p1 { line-height: 131.25px; }
+.main .content-2 .list-se li .li-p2 { position: absolute; top: 0px; right: 0.875rem; font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999 !important; line-height: 37.5px; }
+[data-dpr="2"] .main .content-2 .list-se li .li-p2 { font-size: 22px; }
+[data-dpr="2.625"] .main .content-2 .list-se li .li-p2 { font-size: 28.875px; }
+[data-dpr="3"] .main .content-2 .list-se li .li-p2 { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .main .content-2 .list-se li .li-p2 { font-size: 38.5px; }
+[data-dpr="2"] .main .content-2 .list-se li .li-p2 { line-height: 75px; }
+[data-dpr="2.625"] .main .content-2 .list-se li .li-p2 { line-height: 98.4375px; }
+[data-dpr="3"] .main .content-2 .list-se li .li-p2 { line-height: 123.6263736264px; }
+[data-dpr="3.5"] .main .content-2 .list-se li .li-p2 { line-height: 131.25px; }
 .main .content-2 .list-se li .live-p { right: 1.0625rem; }
-.main .content-3 { overflow-y: scroll; -webkit-overflow-scrolling: touch; padding-top: 2.625rem; background: #f6f6f6; }
+.main .content-3 { overflow-y: scroll; -webkit-overflow-scrolling: touch; padding-top: 2.9375rem; background: white; }
 .main .content-3 .content-3-title { position: absolute; top: 0.96875rem; left: 0.9375rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 0.8125rem; }
 [data-dpr="2"] .main .content-3 .content-3-title { font-size: 28px; }
 [data-dpr="2.625"] .main .content-3 .content-3-title { font-size: 36.75px; }
 [data-dpr="3"] .main .content-3 .content-3-title { font-size: 46.1538461538px; }
 [data-dpr="3.5"] .main .content-3 .content-3-title { font-size: 49px; }
-.main .content-3 .content-3-header { position: relative; width: 100%; height: 8.125rem; background: white; margin-bottom: 0.9375rem; }
-.main .content-3 .content-3-header .comment { text-align: center; padding: 2.25rem 0 0.9375rem; }
+.main .content-3 .content-3-header { position: relative; width: 100%; height: 9.0625rem; background: #f6f6f6; }
+.main .content-3 .content-3-header .comment { text-align: center; padding: 2.25rem 0 0.9375rem; background: white; }
 .main .content-3 .content-3-header .comment .starability-grow { margin: auto; }
-.main .content-3 .content-3-header .comment p { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 2.28125rem; }
+.main .content-3 .content-3-header .comment p { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 2.21875rem; }
 [data-dpr="2"] .main .content-3 .content-3-header .comment p { font-size: 26px; }
 [data-dpr="2.625"] .main .content-3 .content-3-header .comment p { font-size: 34.125px; }
 [data-dpr="3"] .main .content-3 .content-3-header .comment p { font-size: 42.8571428571px; }
@@ -287,7 +295,7 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="2.625"] .main .content-3 .content-3-header .comment button { font-size: 31.5px; }
 [data-dpr="3"] .main .content-3 .content-3-header .comment button { font-size: 39.5604395604px; }
 [data-dpr="3.5"] .main .content-3 .content-3-header .comment button { font-size: 42px; }
-.main .content-3 .content-3-main { position: relative; width: 100%; min-height: 20.96875rem; background: white; margin-bottom: 5.5rem; }
+.main .content-3 .content-3-main { position: relative; width: 100%; min-height: 24.78125rem; background: white; }
 .main .content-3 .content-3-main .notComment { padding-top: 5.25rem; text-align: center; display: none; }
 .main .content-3 .content-3-main .notComment img { width: 7.34375rem; height: 5.25rem; }
 .main .content-3 .content-3-main .notComment p { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.78125rem; margin-top: 0.8125rem; }
@@ -295,35 +303,50 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="2.625"] .main .content-3 .content-3-main .notComment p { font-size: 34.125px; }
 [data-dpr="3"] .main .content-3 .content-3-main .notComment p { font-size: 42.8571428571px; }
 [data-dpr="3.5"] .main .content-3 .content-3-main .notComment p { font-size: 45.5px; }
-.main .content-3 .content-3-main .allComment { position: absolute; width: 100%; top: 3.4375rem; height: 6.25rem; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 { position: relative; margin: 0 0.9375rem; padding: 0.9375rem 0; border-bottom: 0.03125rem solid #dddddd; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead img { width: 1.9375rem; height: 1.9375rem; border-radius: 50%; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .username { font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 0.75rem; }
-[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .username { font-size: 24px; }
-[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .username { font-size: 31.5px; }
-[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .username { font-size: 39.5604395604px; }
-[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .username { font-size: 42px; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .star_score { bottom: 0.15625rem; left: 5rem; background: url(../image/video/starky-2.png); background-size: 1rem 0.78125rem; width: 5rem; height: 0.78125rem; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .star_score a { height: 0.78125rem; display: block; text-indent: -999em; position: absolute; left: 0; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .star_score a:hover { background: url(../image/video/starsy-2.png); background-size: 1rem 0.78125rem; left: 0; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .star_score a.clibg { background: url(../image/video/starsy-2.png); background-size: 1rem 0.78125rem; left: 0; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .time { font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.6875rem; }
-[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .time { font-size: 22px; }
-[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .time { font-size: 28.875px; }
-[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .time { font-size: 36.2637362637px; }
-[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .comhead .time { font-size: 38.5px; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .tex { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.125rem; }
-[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .tex { font-size: 26px; }
-[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .tex { font-size: 34.125px; }
-[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .tex { font-size: 42.8571428571px; }
-[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .tex { font-size: 45.5px; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .praise { position: absolute; bottom: 0.9375rem; right: 0px; display: flex; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .praise img { width: 0.8125rem; height: 0.8125rem; }
-.main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .praise p { font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; }
-[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .praise p { font-size: 22px; }
-[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .praise p { font-size: 28.875px; }
-[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .praise p { font-size: 36.2637362637px; }
-[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment_1 .praise p { font-size: 38.5px; }
+.main .content-3 .content-3-main .allComment { position: absolute; width: 100%; top: 3.4375rem; background: white; }
+.main .content-3 .content-3-main .allComment .allComment-main { margin-bottom: 5.40625rem; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment { position: relative; margin: 0 0.9375rem; padding: 0.9375rem 0; border-bottom: 0.03125rem solid #dddddd; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead { position: relative; height: 1.9375rem; margin-bottom: 0.53125rem; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead img { position: absolute; width: 1.9375rem; height: 1.9375rem; border-radius: 50%; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .username { position: absolute; top: 0.59375rem; left: 2.625rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 0.75rem; }
+[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .username { font-size: 24px; }
+[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .username { font-size: 31.5px; }
+[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .username { font-size: 39.5604395604px; }
+[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .username { font-size: 42px; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .star_score { position: absolute; top: 0.53125rem; left: 5.3125rem; background: url(../image/video/starky-2.png); background-size: 1.15625rem 0.78125rem; width: 5.78125rem; height: 0.78125rem; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .star_score a { height: 0.78125rem; display: block; text-indent: -999em; position: absolute; left: 0; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .star_score a:hover { background: url(../image/video/starsy-2.png); background-size: 1.15625rem 0.78125rem; left: 0; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .star_score a.clibg { background: url(../image/video/starsy-2.png); background-size: 1.15625rem 0.78125rem; left: 0; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .time { position: absolute; top: 0.78125rem; right: 0rem; font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 0.6875rem; }
+[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .time { font-size: 22px; }
+[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .time { font-size: 28.875px; }
+[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .time { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .time { font-size: 38.5px; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .evaluate { position: absolute; top: 0.5625rem; left: 10.890625rem; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #2465ff; line-height: 0.75rem; }
+[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .evaluate { font-size: 24px; }
+[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .evaluate { font-size: 31.5px; }
+[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .evaluate { font-size: 39.5604395604px; }
+[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .comhead .evaluate { font-size: 42px; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain { margin-bottom: 1.15625rem; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain textarea { position: absolute; opacity: 0; z-index: -1; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .tex { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.125rem; }
+[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .tex { font-size: 26px; }
+[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .tex { font-size: 34.125px; }
+[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .tex { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .tex { font-size: 45.5px; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .lec-my { width: 20rem; padding: 0.4375rem 0.75rem 0.5rem; margin: 0.5625rem 0.03125rem 1.53125rem; background: #f6f6f6; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .lec-my p { font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 1.125rem; }
+[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .lec-my p { font-size: 26px; }
+[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .lec-my p { font-size: 34.125px; }
+[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .lec-my p { font-size: 42.8571428571px; }
+[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .commain .lec-my p { font-size: 45.5px; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .praise { position: absolute; bottom: 0.9375rem; right: 0px; display: flex; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .praise img { width: 0.8125rem; height: 0.8125rem; }
+.main .content-3 .content-3-main .allComment .allComment-main .main-comment .praise p { font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; margin-left: 0.3125rem; }
+[data-dpr="2"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .praise p { font-size: 22px; }
+[data-dpr="2.625"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .praise p { font-size: 28.875px; }
+[data-dpr="3"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .praise p { font-size: 36.2637362637px; }
+[data-dpr="3.5"] .main .content-3 .content-3-main .allComment .allComment-main .main-comment .praise p { font-size: 38.5px; }
 .main .content-footer { width: 100%; height: 2.78125rem; position: fixed; bottom: 0px; background: #fff; z-index: 3; border-top: 0.03125rem solid #dddddd; }
 .main .content-footer img { position: absolute; top: 0.40625rem; left: 0.9375rem; width: 2rem; height: 2rem; border-radius: 50%; }
 .main .content-footer p { position: absolute; bottom: 1rem; left: 3.5625rem; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 0.78125rem; }
@@ -340,24 +363,38 @@ textarea { border: solid 0px; outline: none; }
 .main .content-footer .content-b2 { right: 0.9375rem; color: white; border: 0.03125rem solid #eeeeee; background: linear-gradient(122deg, #6692fa, #3873ff); }
 .main .content-footer .content-b34 { display: none; border: none; width: 8.09375rem; height: 1.875rem; right: 0.9375rem; color: white; background: linear-gradient(122deg, #1bb54a, #19ac46); }
 .main .content-footer .content-b5 { background: linear-gradient(122deg, #6692fa, #3873ff); }
+.main .pop-upWindows .dr { display: none; position: fixed; bottom: -6.5625rem; width: 100%; z-index: 5; background: #dddddd; transition: bottom 0.3s ease; }
+.main .pop-upWindows .dr button { width: 100%; height: 3.125rem; background: white; border: none; font-size: 15px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; }
+[data-dpr="2"] .main .pop-upWindows .dr button { font-size: 30px; }
+[data-dpr="2.625"] .main .pop-upWindows .dr button { font-size: 39.375px; }
+[data-dpr="3"] .main .pop-upWindows .dr button { font-size: 49.4505494505px; }
+[data-dpr="3.5"] .main .pop-upWindows .dr button { font-size: 52.5px; }
+.main .pop-upWindows .dr .drr { border-top: 0.03125rem solid #eeeeee; }
+.main .pop-upWindows .dr .der { color: #e83104; margin-bottom: 0.3125rem; }
+.main .pop-upWindows .toReport { display: none; position: fixed; bottom: -11.40625rem; width: 100%; z-index: 5; background: #dddddd; transition: bottom 0.3s ease; }
+.main .pop-upWindows .toReport .options { background: white; margin-bottom: 0.3125rem; border-top: 0.03125rem solid #eeeeee; padding: 1.5rem 0.9375rem 1.46875rem 0.96875rem; }
+.main .pop-upWindows .toReport .options .richradio, .main .pop-upWindows .toReport .options .richcheckbox { border: 0.03125rem solid #dddddd; color: #333333; display: inline-block; width: 4.8125rem; height: 1.78125rem; font-size: 15px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; line-height: 1.78125rem; text-align: center; margin: 0px 0.140625rem; border-radius: 0.1875rem; transition: .3s ease; }
+[data-dpr="2"] .main .pop-upWindows .toReport .options .richradio, [data-dpr="2"] .main .pop-upWindows .toReport .options .richcheckbox { font-size: 30px; }
+[data-dpr="2.625"] .main .pop-upWindows .toReport .options .richradio, [data-dpr="2.625"] .main .pop-upWindows .toReport .options .richcheckbox { font-size: 39.375px; }
+[data-dpr="3"] .main .pop-upWindows .toReport .options .richradio, [data-dpr="3"] .main .pop-upWindows .toReport .options .richcheckbox { font-size: 49.4505494505px; }
+[data-dpr="3.5"] .main .pop-upWindows .toReport .options .richradio, [data-dpr="3.5"] .main .pop-upWindows .toReport .options .richcheckbox { font-size: 52.5px; }
+.main .pop-upWindows .toReport .options .richradio:hover, .main .pop-upWindows .toReport .options .richcheckbox:hover { cursor: pointer; }
+.main .pop-upWindows .toReport .options .lowIE { position: absolute\9; top: -999px\9; left: -999px\9; }
+.main .pop-upWindows .toReport .options .otherBrowser { display: none; }
+.main .pop-upWindows .toReport .options .IEChecked { background: url(../image/other/checked.png) no-repeat right bottom; background-size: auto auto; border: 1px solid #00a4ff; background-size: 21px 21px; color: #00a4ff; }
+.main .pop-upWindows .toReport .options .otherBrowserChecked { color: #e83104; border: 0.03125rem solid #e83104; }
+.main .pop-upWindows .toReport p { text-align: center; font-size: 15px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 3.125rem; background: white; }
+[data-dpr="2"] .main .pop-upWindows .toReport p { font-size: 30px; }
+[data-dpr="2.625"] .main .pop-upWindows .toReport p { font-size: 39.375px; }
+[data-dpr="3"] .main .pop-upWindows .toReport p { font-size: 49.4505494505px; }
+[data-dpr="3.5"] .main .pop-upWindows .toReport p { font-size: 52.5px; }
+.main .pop-upWindows .toReport input { width: 100%; height: 3.125rem; border: none; -webkit-appearance: none; outline: none; font-size: 15px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; background: white; }
+[data-dpr="2"] .main .pop-upWindows .toReport input { font-size: 30px; }
+[data-dpr="2.625"] .main .pop-upWindows .toReport input { font-size: 39.375px; }
+[data-dpr="3"] .main .pop-upWindows .toReport input { font-size: 49.4505494505px; }
+[data-dpr="3.5"] .main .pop-upWindows .toReport input { font-size: 52.5px; }
 
-.richradio, .richcheckbox { border: 0.03125rem solid #dddddd; color: #333333; display: inline-block; width: 2.8125rem; height: 1.0625rem; font-size: 11px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #333333; line-height: 1.125rem; text-align: center; margin: 0px 0.078125rem; transition: .5s ease; }
-[data-dpr="2"] .richradio, [data-dpr="2"] .richcheckbox { font-size: 22px; }
-[data-dpr="2.625"] .richradio, [data-dpr="2.625"] .richcheckbox { font-size: 28.875px; }
-[data-dpr="3"] .richradio, [data-dpr="3"] .richcheckbox { font-size: 36.2637362637px; }
-[data-dpr="3.5"] .richradio, [data-dpr="3.5"] .richcheckbox { font-size: 38.5px; }
-
-.richradio:hover, .richcheckbox:hover { cursor: pointer; }
-
-.lowIE { position: absolute\9; top: -999px\9; left: -999px\9; }
-
-.otherBrowser { display: none; }
-
-.IEChecked { background: url(../image/other/checked.png) no-repeat right bottom; background-size: auto auto; border: 1px solid #00a4ff; background-size: 21px 21px; color: #00a4ff; }
-
-.otherBrowserChecked { background: #b2d6f5; border: 1px solid #b2d6f5; }
-
-.block { position: relative; width: 100%; height: 1.65625rem; line-height: 21px; }
+.block { position: relative; width: 100%; height: 1.65625rem; line-height: 21px; margin-bottom: 0.5625rem; }
 .block .fenshu { position: absolute; bottom: 0.1875rem; left: 0.96875rem; font-size: 28px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; font-weight: 500; color: #ff7800; line-height: 1.28125rem; }
 [data-dpr="2"] .block .fenshu { font-size: 56px; }
 [data-dpr="2.625"] .block .fenshu { font-size: 73.5px; }
@@ -390,5 +427,9 @@ textarea { border: solid 0px; outline: none; }
 .block .star_score a.clibg { background: url(../image/video/starsy.png); background-size: 1.375rem 1rem; left: 0; }
 
 .block .star_score { float: left; }
+
+.starability-grow { width: 8.4375rem; }
+
+.starability-grow > label { width: 1.21875rem; height: 1.21875rem; margin: 0 0.234375rem; }
 
 /*# sourceMappingURL=particulars.css.map */
