@@ -142,7 +142,6 @@ $(function(){
 	if (i < 10)
 		$('.content-2-header').children('.omit').css({display: 'none'});
 });
-
 // $('.lecturer-reply').parent().addClass('lec');
 // $('.lecturer-delete').click(function() {
 // 	$(this).parents('.lecturer').slideUp(300, function(){ $(this).parents('.lecturer').remove() });

@@ -66,7 +66,7 @@ a, div {
 }
 ul, li { list-style: none; }
 video {
-  position: fixed;
+  position: inherit;
   left: 0px;
   object-fit: fill;
   z-index: 2;
@@ -76,6 +76,16 @@ video {
 textarea {
   border: solid 0px;
   outline:none;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.maxbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: px2rem(88);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .header {
   position: fixed;
@@ -137,12 +147,11 @@ textarea {
 .video-box {
   position: relative;
   text-align: center;
-  margin-top: px2rem(88);
   height: px2rem(450);
   .video-img {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    top: px2rem(270);
+    top: px2rem(182);
     z-index: 3;
     img {
       position: relative;
@@ -151,8 +160,8 @@ textarea {
     }
   }
   .bv {
-    position: fixed;
-    top: px2rem(260);
+    position: absolute;
+    top: px2rem(171);
     width: 100%;
     z-index: 3;
     text-align: center;
@@ -178,8 +187,8 @@ textarea {
     }
   }
   .video-study {
-    position: fixed;
-    top: px2rem(260);
+    position: absolute;
+    top: px2rem(171);
     width: 100%;
     z-index: 3;
     text-align: center;
@@ -214,7 +223,8 @@ textarea {
     }
   }
   .video-curtain {
-    position: fixed;
+    position: absolute;
+    top: 0px;
     width: 100%;
     background: rgba(0,0,0,1);
     opacity: 0.5;
@@ -223,20 +233,20 @@ textarea {
   }
 }
 .curtain_2 {
-  position: absolute;
+  position: fixed;
   top: 0px;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  z-index: 7;
   background:rgba(0, 0, 0, 0.4);
   display: none;
 }
 .curtain {
-  position: absolute;
+  position: fixed;
   top: 0px;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  z-index: 7;
   background:rgba(0, 0, 0, 0.5);
   display: none;
   .popup-sorry {
@@ -459,6 +469,8 @@ textarea {
 .mt-tabpage-count {
   position: relative;
   width: 100%;
+  height: 100%;
+  z-index: 5;
   overflow: hidden;
 }
 .mt-tabpage-cont__wrap {
@@ -469,10 +481,15 @@ textarea {
   width: 33.3333333%;
 }
 .main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // overflow-y: scroll;
+  // -webkit-overflow-scrolling: touch;
   background:rgba(246,246,246,1);
   .nav {
-    position: fixed;
-    z-index: 2;
+    position: absolute;
+    z-index: 6;
     padding-left: px2rem(30);
     padding-right: px2rem(31);
     height: px2rem(92);
@@ -645,7 +662,7 @@ textarea {
       width: 100%;
       height: px2rem(646);
       background:rgba(255,255,255,1);
-      margin-bottom: px2rem(206);
+      margin-bottom: px2rem(30);
       .change {
         position: absolute;
         top: px2rem(29);
@@ -695,8 +712,8 @@ textarea {
     padding-top: px2rem(94);
     .list{
       width: 100%;
-      background: #fff;
-      padding-bottom: px2rem(90);
+      background: #f6f6f6;
+      // padding-bottom: px2rem(90);
       ul {
         background:rgba(255,255,255,1);
         li {
@@ -862,7 +879,7 @@ textarea {
         top: px2rem(110);
         background:rgba(255,255,255,1);
         .allComment-main {
-          margin-bottom: px2rem(173);
+          // margin-bottom: px2rem(173);
           .main-comment {
             position: relative;
             margin: 0 px2rem(30);
@@ -978,73 +995,13 @@ textarea {
       }
     }
   }
-  .content-footer {
-    width: 100%;
-    height: px2rem(89);
-    position: fixed;
-    bottom: 0px;
-    background: #fff;
-    z-index: 3;
-    border-top: px2rem(1) solid rgba(221,221,221,1);
-    img {
-      position: absolute;
-      top: px2rem(13);
-      left: px2rem(30);
-      width: px2rem(64);
-      height: px2rem(64);
-      border-radius: 50%;
-    }
-    p {
-      position: absolute;
-      bottom: px2rem(32);
-      left: px2rem(114);
-      @include font-dpr(26px);
-      @include font-fw;
-      color:rgba(0,0,0,1);
-      line-height: px2rem(25);
-    }
-    button {
-      position: absolute;
-      top: px2rem(15);
-      width: px2rem(162);
-      height: px2rem(58);
-      border-radius: px2rem(6);
-      @include font-dpr(28px);
-      @include font-fw;
-      line-height: px2rem(36);
-    }
-    .content-b1 {
-      right: px2rem(214);
-      color:rgba(36,101,255,1);
-      border: px2rem(1) solid rgba(36,101,255,1);
-      background: #fff;
-    }
-    .content-b2 {
-      right: px2rem(30);
-      color:rgba(255,255,255,1);
-      border: px2rem(1) solid rgba(238,238,238,1);
-      background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
-    }
-    .content-b34 {
-      display: none;
-      border: none;
-      width: px2rem(259);
-      height: px2rem(60);
-      right: px2rem(30);
-      color:rgba(255,255,255,1);
-      background:linear-gradient(122deg,rgba(27,181,74,1),rgba(25,172,70,1));
-    }
-    .content-b5 {
-      background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
-    }
-  }
   .pop-upWindows {
     .dr {
       display: none;
       position: fixed;
       bottom: px2rem(-210);
       width: 100%;
-      z-index: 5;
+      z-index: 8;
       background:rgba(221,221,221,1);
       transition: bottom 0.3s ease;
       button {
@@ -1069,7 +1026,7 @@ textarea {
       position: fixed;
       bottom: px2rem(-365);
       width: 100%;
-      z-index: 5;
+      z-index: 8;
       background:rgba(221,221,221,1);
       transition: bottom 0.3s ease;
       .options {
@@ -1137,6 +1094,66 @@ textarea {
         background: rgba(255,255,255,1);
       }
     }
+  }
+}
+.content-footer {
+  width: 100%;
+  height: px2rem(89);
+  position: fixed;
+  bottom: 0px;
+  background: #fff;
+  z-index: 6;
+  border-top: px2rem(1) solid rgba(221,221,221,1);
+  img {
+    position: absolute;
+    top: px2rem(13);
+    left: px2rem(30);
+    width: px2rem(64);
+    height: px2rem(64);
+    border-radius: 50%;
+  }
+  p {
+    position: absolute;
+    bottom: px2rem(32);
+    left: px2rem(114);
+    @include font-dpr(26px);
+    @include font-fw;
+    color:rgba(0,0,0,1);
+    line-height: px2rem(25);
+  }
+  button {
+    position: absolute;
+    top: px2rem(15);
+    width: px2rem(162);
+    height: px2rem(58);
+    border-radius: px2rem(6);
+    @include font-dpr(28px);
+    @include font-fw;
+    line-height: px2rem(36);
+  }
+  .content-b1 {
+    right: px2rem(214);
+    color:rgba(36,101,255,1);
+    border: px2rem(1) solid rgba(36,101,255,1);
+    background: #fff;
+  }
+  .content-b2 {
+    right: px2rem(30);
+    color:rgba(255,255,255,1);
+    border: px2rem(1) solid rgba(238,238,238,1);
+    background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
+  }
+  .content-b34 {
+    display: none;
+    border: none;
+    width: px2rem(259);
+    height: px2rem(60);
+    right: px2rem(30);
+    color:rgba(255,255,255,1);
+    background:linear-gradient(122deg,rgba(27,181,74,1),rgba(25,172,70,1));
+  }
+  .content-b5 {
+    background:linear-gradient(122deg,rgba(102,146,250,1),rgba(56,115,255,1));
   }
 }
 
@@ -1231,6 +1248,11 @@ textarea {
   float:left;
 }
 
+.starability-grow>input:checked~label,
+.starability-grow>input:focus~label,
+.starability-grow>input:hover~label {
+    background-position: 0 px2rem(-39)
+}
 .starability-grow {
   width: px2rem(270);
 }
@@ -1238,4 +1260,23 @@ textarea {
   width: px2rem(39);
   height: px2rem(39);
   margin: 0 px2rem(7.5);
+}
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+    .starability-grow>label {
+        background-size: px2rem(39) auto;
+    }
+}
+.starability-grow>label:before {
+    width: px2rem(39);
+    height: px2rem(39);
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+    .starability-grow>label:before {
+        background-size: px2rem(39) auto;
+    }
 }

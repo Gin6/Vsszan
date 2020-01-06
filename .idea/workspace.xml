@@ -3,19 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="b181fc13-f525-4040-80f9-d6164197c458" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/index.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/particulars.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/particulars.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/video.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c38e88a318f97185c287fb7012633c3d667bd484/video.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/particulars.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/particulars.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/particulars.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/particulars.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/starability-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/starability-all.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/video.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/video.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/video.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/video/starky-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/video/starky-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/video/starsy-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/video/starsy-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/particulars.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/particulars.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/starScore.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/starScore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/video.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/particulars.html" beforeDir="false" afterPath="$PROJECT_DIR$/particulars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/particulars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/particulars.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/video.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/video.html" afterDir="false" />
@@ -108,6 +111,7 @@
       <workItem from="1577947768118" duration="2540000" />
       <workItem from="1578013677847" duration="1529000" />
       <workItem from="1578021764558" duration="6379000" />
+      <workItem from="1578272486925" duration="4794000" />
     </task>
     <servers />
   </component>

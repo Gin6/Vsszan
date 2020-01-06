@@ -1,16 +1,23 @@
 var ww = $(window).width();
 var wh = $(window).height();
+var headHeight = $('.header').outerHeight(true);
+var confteHeight = $('.content-footer').outerHeight(true);
 var navWidth = $('.nav').width();
 var drHeight = $('.dr').height();
 var toReportHeight = $('.toReport').height();
-var navWidthAll = $('.nav').outerWidth();
+var navWidthAll = $('.nav').outerWidth(true);
+var navHeightAll = $('.nav').outerHeight(true);
 var videoHeight = $('.video-box').outerHeight(true);
 var padding = (navWidthAll-navWidth)/2;
 
-$('.content-1,.content-2,.content-3,.mt-tabpage-count').css({height: wh-videoHeight,});
+$('.maxbox').css({height: wh-headHeight,});
+$('.content-1,.content-2,.content-3').css({height: wh-headHeight-navHeightAll-confteHeight,});
 
 $('.nav').css({width: ww-padding*2,});
 
+$('textarea').click(function() {
+	$(this).focus();
+});
 $('.cancel').click(function() {
 	$('.curtain').css({display: 'none'});
 	$('.curtain').children().css({display: 'none'});
@@ -134,7 +141,7 @@ function WhetherFree(){
 $('.writeComment').click(function() {
 	$('.curtain').css({display: 'block'});
 	$('.popup-comment').css({display: 'block'});
-	document.body.addEventListener('touchmove',bodyScroll, { passive: false });
+	// document.body.addEventListener('touchmove',bodyScroll, { passive: false });
 });
 
 //调试页面样式

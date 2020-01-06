@@ -133,7 +133,7 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="3"] .main .nav .bar { width: 214.2857142857px; }
 [data-dpr="3.5"] .main .nav .bar { width: 227.5px; }
 .main .content { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #f6f6f6; padding-top: 2.9375rem; }
-.main .content .list { width: 100%; background: #fff; padding-bottom: 2.8125rem; }
+.main .content .list { width: 100%; background: #f6f6f6; padding-bottom: 2.8125rem; }
 .main .content .list ul { background: white; }
 .main .content .list ul li { position: relative; width: 100%; -webkit-transition: .3s ease; -moz-transition: .3s ease; -o-transition: .3s ease; transition: .3s ease; }
 .main .content .list ul li .title { background: #f6f6f6; height: 2.75rem; border-bottom: 0.03125rem solid #dddddd; padding-left: 0.96875rem; padding-right: 0.9375rem; font-size: 14px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 2.75rem; position: relative; }
@@ -171,7 +171,7 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="3"] .main .content .list-se li .li-p2 { line-height: 123.6263736264px; }
 [data-dpr="3.5"] .main .content .list-se li .li-p2 { line-height: 131.25px; }
 .main .content .list-se li .live-p { right: 1.0625rem; }
-.main .content-2 { position: relative; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+.main .content-2 { position: relative; overflow-y: scroll; background: #fff; -webkit-overflow-scrolling: touch; }
 .main .content-2 .content-2-header { position: absolute; top: 2.9375rem; width: 100%; height: 3.125rem; background: #f6f6f6; }
 .main .content-2 .content-2-header .avatar-list { position: relative; overflow: hidden; height: 1.9375rem; padding-top: 0.59375rem; margin-bottom: 0.59375rem; padding-left: 0.9375rem; margin-right: 4.875rem; }
 .main .content-2 .content-2-header .avatar { width: 1.9375rem; height: 1.9375rem; display: inline-block; border-radius: 50%; margin-right: -0.625rem; box-shadow: -0.0625rem 0.03125rem 0.125rem 0px rgba(0, 0, 0, 0.16); }
@@ -265,7 +265,7 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="2.625"] .main .content-3 .content-3-main .comment .question { line-height: 49.875px; }
 [data-dpr="3"] .main .content-3 .content-3-main .comment .question { line-height: 62.6373626374px; }
 [data-dpr="3.5"] .main .content-3 .content-3-main .comment .question { line-height: 66.5px; }
-.main .content-3 .content-3-main .comment .reply { position: relative; margin-bottom: 1.25rem; padding-left: 2.25rem; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 18px; }
+.main .content-3 .content-3-main .comment .reply { position: relative; margin-bottom: 0.4375rem; padding-left: 2.25rem; font-size: 13px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: black; line-height: 18px; }
 [data-dpr="2"] .main .content-3 .content-3-main .comment .reply { font-size: 26px; }
 [data-dpr="2.625"] .main .content-3 .content-3-main .comment .reply { font-size: 34.125px; }
 [data-dpr="3"] .main .content-3 .content-3-main .comment .reply { font-size: 42.8571428571px; }
@@ -275,6 +275,7 @@ textarea { border: solid 0px; outline: none; }
 [data-dpr="3"] .main .content-3 .content-3-main .comment .reply { line-height: 59.3406593407px; }
 [data-dpr="3.5"] .main .content-3 .content-3-main .comment .reply { line-height: 63px; }
 .main .content-3 .content-3-main .comment .rd { position: relative; top: -0.96875rem; }
+.main .content-3 .content-3-main .comment .notReply { height: 1.5625rem; }
 .main .content-3 .content-3-main .comment .nt { position: absolute; font-size: 12px; font-family: PingFang SC; font-weight: 400; letter-spacing: 0.03125rem; color: #999999; line-height: 11.5px; }
 [data-dpr="2"] .main .content-3 .content-3-main .comment .nt { font-size: 24px; }
 [data-dpr="2.625"] .main .content-3 .content-3-main .comment .nt { font-size: 31.5px; }

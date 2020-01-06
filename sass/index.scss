@@ -295,13 +295,14 @@ a, div {
       }
     }
     .rec-content {
-      width: 50%;
+      width: 100%;
       padding-top: px2rem(1);
       //@include px-dpr(padding-top, 1px);
       .content-0 {
         position: relative;
-        width: 88%;
+        width: px2rem(330);
         margin-top: px2rem(39);
+        display: -webkit-inline-box;
         //@include px-dpr(margin-top, 39px);
         img {
           width: 100%;
@@ -456,6 +457,7 @@ a, div {
         // @include px-dpr(margin-left, 30px);
         // @include px-dpr(margin-right, 30px);
         .shop-left {
+          position: absolute;
           width: 50%;
         }
         .shop-right {

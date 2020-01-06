@@ -376,7 +376,7 @@ textarea {
     //@include px-dpr(padding-top, 84px);
     .list{
       width: 100%;
-      background: #fff;
+      background: #f6f6f6;
       padding-bottom: px2rem(90);
       ul {
         background:rgba(255,255,255,1);
@@ -477,6 +477,7 @@ textarea {
   .content-2 {
     position: relative;
     overflow-y: scroll;
+    background: #fff;
     -webkit-overflow-scrolling: touch;
     .content-2-header {
       position: absolute;
@@ -718,7 +719,7 @@ textarea {
         }
         .reply {
           position: relative;
-          margin-bottom: px2rem(40);
+          margin-bottom: px2rem(14);
           padding-left: px2rem(72);
           // @include px-dpr(margin-bottom, 10px);
           // @include px-dpr(padding-left, 72px);
@@ -731,6 +732,9 @@ textarea {
           position: relative;
           top: px2rem(-31);
           //@include px-dpr(top, -31px);
+        }
+        .notReply {
+          height: px2rem(50);
         }
         .nt {
           position: absolute;

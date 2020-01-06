@@ -1,7 +1,8 @@
 function scoreFun(object,opts){
+	var imgWidth = $('.star_score').width();
 	// 默认属性
 	var defaults={
-		fen_d:22,  // 每个a的宽度
+		fen_d:imgWidth/10,  // 每个a的宽度
 		ScoreGrade:10,  // a的个数
 		types:["很不满意",
 		       "差得太离谱，与卖家描述的严重不符，非常不满",
