@@ -189,6 +189,7 @@ function closeWindows() {
 };
 
 $('.comment').click(function() {
+	console.log('123');
 	var parentNode = $(this);
 	if ($(this).hasClass('lecturer')) {
 		var btag = $('<button>');

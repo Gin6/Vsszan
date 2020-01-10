@@ -133,22 +133,22 @@ a, div {
 .main {
   width: 100%;
   background:rgba(255,255,255,1);
-  padding-top: px2rem(118);
+  padding-top: px2rem(88);
   //@include px-dpr(padding-top, 118px);
   .scroll {
-    padding-left: px2rem(30);
-    padding-right: px2rem(30);
+    // padding-left: px2rem(30);
+    // padding-right: px2rem(30);
     // @include px-dpr(padding-left, 30px);
     // @include px-dpr(padding-right, 30px);
     //@include px-dpr(height, 268px);
-    height: px2rem(268);
+    height: px2rem(400);
     .container {
       width: 100%;
       height: 100%;
       overflow: hidden;
       position: relative;
       margin: 0 auto;
-      border-radius: px2rem(6);
+      // border-radius: px2rem(6);
       //@include px-dpr(border-radius, 6px);
       .list {
         width: 500%;
@@ -159,6 +159,58 @@ a, div {
           float: left;
           width: 20%;
           height: 100%;
+      }
+    }
+  }
+  .search {
+    width: 100%;
+    height: px2rem(64);
+    position: absolute;
+    top: px2rem(108);
+    -webkit-transition: all 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+    .search_box {
+      height: 100%;
+      margin: 0 px2rem(30);
+      background: #fff;
+      border-radius: px2rem(6);
+      img {
+        position: absolute;
+        width: px2rem(30);
+        height: px2rem(30);
+        top: px2rem(17);
+        left: px2rem(17);
+        z-index: 2;
+      }
+      input {
+        position: absolute;
+        height: px2rem(40);
+        @include font-dpr(30px);
+        @include font-fw;
+        color: #000;
+        @include px-dpr(line-height, 30px);
+        width: px2rem(596);
+        //width: px2rem(512);
+        border: none;
+        padding: px2rem(12) 0 px2rem(12) 0;
+        margin: 0 px2rem(30) 0 px2rem(64);
+        border-radius: px2rem(6);
+        -webkit-appearance:none;
+        outline:none;
+        background: transparent;
+      }
+      button {
+        @include font-dpr(28px);
+        @include font-fw;
+        color:rgba(0,0,0,1);
+        @include px-dpr(line-height, 64px);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 0 0 0 px2rem(30);
+        border: none;
+        font-size: 15px;
+        background: transparent;
       }
     }
   }

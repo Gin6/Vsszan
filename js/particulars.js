@@ -215,90 +215,105 @@ function closeWindows() {
 	document.body.removeEventListener('touchmove',bodyScroll, { passive: false });
 };
 
+var allowDemoRun = true;
+$('.praise').click(function() {
+	allowDemoRun = false;
+	var i = Number($(this).children('p').html());
+	i += 1;
+	$(this).children('p').html(i);
+	$(this).children('img').attr("src","image/video/praise-on.png");
+	setTimeout(function(){
+		allowDemoRun = true;
+	},300);
+});
+
 $('.main-comment').click(function() {
-	var parentNode = $(this);
-	if ($(this).hasClass('lecturer')) {
-		var btag = $('<button>');
-		btag.html('举报');
-		btag.attr({
-			type: 'button',
-			class: 'der repbut drr'
-		});
-		if ($(this).has('.myReply').length) {	
-			var btag2 = $('<button>');	
-			btag2.html('删除回复');	
-			btag2.attr({
-				type: 'button',
-				class: 'delreply drr'
-			});
-			$('.cancel').before(btag2,btag);
-			$('.delreply').click(function() {
-				closeWindows();
-				parentNode.find('.myReply').slideUp(300, function(){ parentNode.find('.myReply').remove() });
-			});
-		}else {
-			var btag3 = $('<button>');
-			btag3.html('回复');
-			btag3.attr({
-				type: 'button',
-				class: 'reply drr'
-			});
-			$('.cancel').before(btag3,btag);
-			$('.reply').click(function() {
-				closeWindows();
-				document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
-				$('.curtain').css({display: 'block'});
-				$('.reply-box').css({display: 'block'});
-				$('.reply-box').find('textarea').focus();
-			});
-		}
-	}else {
-		if ($(this).has('.evaluate').length) {	
-			var btag = $('<button>');
-			btag.html('删除');
-			btag.attr({
-				type: 'button',
-				class: 'der delbut drr'
-			});
-			$('.cancel').before(btag);
-			$('.delbut').click(function() {
-				parentNode.slideUp(300, function(){ parentNode.remove() });
-				closeWindows();
-			});
-		}else {
+	// var url = $(this).find('praise').children('img').attr("src");
+	if (allowDemoRun == true) {
+		var parentNode = $(this);
+		if ($(this).hasClass('lecturer')) {
 			var btag = $('<button>');
 			btag.html('举报');
 			btag.attr({
 				type: 'button',
 				class: 'der repbut drr'
 			});
-			$('.cancel').before(btag);
+			if ($(this).has('.myReply').length) {	
+				var btag2 = $('<button>');	
+				btag2.html('删除回复');	
+				btag2.attr({
+					type: 'button',
+					class: 'delreply drr'
+				});
+				$('.cancel').before(btag2,btag);
+				$('.delreply').click(function() {
+					closeWindows();
+					parentNode.find('.myReply').slideUp(300, function(){ parentNode.find('.myReply').remove() });
+				});
+			}else {
+				var btag3 = $('<button>');
+				btag3.html('回复');
+				btag3.attr({
+					type: 'button',
+					class: 'reply drr'
+				});
+				$('.cancel').before(btag3,btag);
+				$('.reply').click(function() {
+					closeWindows();
+					document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
+					$('.curtain').css({display: 'block'});
+					$('.reply-box').css({display: 'block'});
+					$('.reply-box').find('textarea').focus();
+				});
+			}
+		}else {
+			if ($(this).has('.evaluate').length) {	
+				var btag = $('<button>');
+				btag.html('删除');
+				btag.attr({
+					type: 'button',
+					class: 'der delbut drr'
+				});
+				$('.cancel').before(btag);
+				$('.delbut').click(function() {
+					parentNode.slideUp(300, function(){ parentNode.remove() });
+					closeWindows();
+				});
+			}else {
+				var btag = $('<button>');
+				btag.html('举报');
+				btag.attr({
+					type: 'button',
+					class: 'der repbut drr'
+				});
+				$('.cancel').before(btag);
+			}
 		}
+
+		$('.copy-btn').click(function(){
+			var e = parentNode.find(".tex").text();
+			var t = parentNode.find("textarea");
+			t.text(e);
+			//实例化clipboard
+			var clipboard = new ClipboardJS('#copy-btn');
+			clipboard.on("success", function(e){
+				console.log('success');
+				e.clearSelection();
+			});
+			clipboard.on("error", function(e){
+				console.log('error');
+			});
+		});
+
+		$('.repbut').click(function() {
+			$('.dr').css({bottom: '-'+drHeight+'px'});
+			$('.toReport').css({display: 'block', bottom: '0'});
+		});
+
+		$('.curtain_2').css({display: 'block'});
+		$('.dr').css({display: 'block', bottom: '0'});
+		document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
 	}
-
-	$('.copy-btn').click(function(){
-		var e = parentNode.find(".tex").text();
-		var t = parentNode.find("textarea");
-		t.text(e);
-		//实例化clipboard
-		var clipboard = new ClipboardJS('#copy-btn');
-		clipboard.on("success", function(e){
-			console.log('success');
-			e.clearSelection();
-		});
-		clipboard.on("error", function(e){
-			console.log('error');
-		});
-	});
-
-	$('.repbut').click(function() {
-		$('.dr').css({bottom: '-'+drHeight+'px'});
-		$('.toReport').css({display: 'block', bottom: '0'});
-	});
-
-	$('.curtain_2').css({display: 'block'});
-	$('.dr').css({display: 'block', bottom: '0'});
-	document.body.addEventListener('touchmove',bodyScroll, { passive: false });	
 });
 
 $('.cancel').click(function() {

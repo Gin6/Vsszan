@@ -660,7 +660,7 @@ textarea {
         @include font-dpr(28px);
         @include font-fw;
         color: rgba(255,255,255,1);
-        @include px-dpr(line-height, 36px);
+        @include px-dpr(line-height, 60px);
       }
     }
   }
@@ -914,4 +914,8 @@ textarea {
       border-top: px2rem(1) solid rgba(238,238,238,1);
     }
   }
+}
+
+.test {
+  width: px2rem(27);
 }
